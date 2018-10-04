@@ -1,0 +1,30 @@
+Zadanie 1:
+
+W szkole podstawowej uczniowie uczą się na pamięć zasad podzielności danej liczby przez 2, 3, 4, 5, 6, 9 i 10. Napisz program, który pomoże uczniowi sprawdzić, czy liczba ma rzeczywiście takie dzielniki, jakich się spodziewał.
+
+1. Program ma wczytać liczbę całkowitą z klawiatury.
+2. Po wczytaniu, program ma po kolei sprawdzić które liczby dzielą wpisaną przez nas liczbę i wypisać ten fakt na ekranie. (W naszym programie wystarczy sprawdzić podzielność przez 2, 3, 4, 5.) Przykład jednego z komunikatów: 'Liczba 213 jest podzielna przez 3'.
+
+PODPOWIEDŹ: do sprawdzenia podzielności najłatwiej użyć operatora '%'. Zwraca on resztę z dzielenia pierwszej liczby przez drugą. Przykład: 13 % 5 jako wynik zwróci nam 3 (polecam potestować w REPLu).
+
+Jeśli Twój program działa jak powyżej, możesz rozszerzyć jego działanie:
+- Przypuśćmy, że mamy bardzo wolny komputer, więc nie chcemy wykonywać zbędnych obliczeń. Zmodyfikuj program tak, aby sprawdzał czy liczba jest:
+    - podzielna przez 4 TYLKO WTEDY gdy wiemy, że jest podzielna przez 2,
+    - podzielna przez 9 TYLKO WTEDY gdy wiemy, że jest podzielna przez 3,
+- Jeśli użytkownik wpisze pusty string '', funkcja int('') zwróci 0. W naszym programie będzie to nieintuicyjne, więc chcielibyśmy, żeby w takim przypadku program wypisał na ekran informację 'Nie podano liczby' i zakończył działanie. Uwaga! W przypadku podania liczby '0', program ma nadal kontynuować pracę.
+
+Zadanie 2:
+
+Program ma imitować sytuację, w której zamawiamy kawę. Do wyboru będą: kawa czarna lub biała, z mlekiem krowim lub sojowym.
+
+1. Program ma zapytać się użytkownika, czy chce kawę z mlekiem. Odpowiedź może być 'tak' lub 'nie'.
+2. Jeśli 'tak', ma zapytać się go o to, czy ma być to mleko sojowe czy krowie. Odpowiedź może być 'sojowe' lub 'krowie'. W zależności od odpowiedzi program ma wypisać na ekran 'Wybrano kawę z mlekiem sojowym' lub 'Wybrano kawę z mlekiem krowim' i zakończyć pracę.
+3. Jeśli odpowiedź na pierwsze pytanie była 'nie', program ma wypisać na ekran 'Wybrano kawę czarną.' i zakończyć pracę.
+4. Jeżeli w jakimkolwiek momencie użytkownik wpisał odpowiedź, której się nie spodziewamy, należy wypisać na ekran komunikat 'Nie rozumiem odpowiedzi' i zakończyć pracę.
+
+Jeśli Twój program działa jak powyżej, możesz rozszerzyć jego działanie:
+- Do dotychczasowych dodać skrócone odpowiedzi 't' lub 'n' dla pierwszego pytania, 's' lub 'k' dla drugiego
+- (Trudne) Przebudować program tak, aby niezależnie od tego jaką kawę wybraliśmy, zostało na koniec zadane pytanie: 'Z cukrem, czy bez?' UWAGA: do tego zadania polecam wykorzystać funkcję 'exit()', która przerywa działanie skryptu.
+
+
+
