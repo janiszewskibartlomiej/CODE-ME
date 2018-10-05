@@ -1,0 +1,4 @@
+Wczytaj imię z klawiatury.
+W instrukcji warunkowej sprawdź czy użytkownik coś wpisał (pamiętaj, że każdy string, oprócz pustego, rzutuje się na wartość True).
+Jeśli tak, przywitaj użytkownika (np. 'Witaj, Zenon')
+Jeśli nie, pożegnaj się (np. 'Do widzenia!')

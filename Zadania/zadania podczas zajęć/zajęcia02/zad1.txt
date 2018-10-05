@@ -1,0 +1,4 @@
+Napisz program który:
+Wczyta dwie liczby całkowite, jedna po drugiej i zapisze je do zmiennych.
+Doda te liczby i wynik zapisze do kolejnej zmiennej.
+Wypisze wynik na ekran.
