@@ -2,7 +2,6 @@ from datetime import datetime
 
 while True:
 
-
     try:
         data_urodzenia = input('Wprowadź datę urodzin celebryty w formacie [RRRR-MM-DD]:')
         konwertowanie_daty = datetime.strptime(data_urodzenia, '%Y-%m-%d')
@@ -14,5 +13,3 @@ while True:
     except ValueError:
         print('Wprowadzono nie prawiłowe dane!')
         continue
-
-
