@@ -1,10 +1,13 @@
 from datetime import datetime
 
 def wypisanie_historii():
-      plik = open('uruchomienia.log', 'r')
-      zawartosc = plik.read()
-      print('Uruchomienia do tej pory: ')
-      return zawartosc
+    try:
+          plik = open('uruchomienia.log', 'r')
+          zawartosc = plik.read()
+          print('Uruchomienia do tej pory: ')
+    except FileNotFoundError:
+        print('Brak historii uruchomień')
+    return zawartosc
 
 def zapisanie_uruchomienia():
     plik = open('uruchomienia.log', 'a')
