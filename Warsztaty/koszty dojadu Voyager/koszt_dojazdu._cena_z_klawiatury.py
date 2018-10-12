@@ -1,13 +1,3 @@
-import html
-
-url_strony = 'https://www.e-petrol.pl/notowania/rynek-krajowy/ceny-stacje-paliw'
-
-xpath_lpg = '/html/body/div[2]/div/div[3]/div[3]/div[1]/div[1]/table/tbody/tr/td[6]'
-
-#strona_lpg = open(url_strony)
-
-cena_lpg = xpath_lpg(url_strony)
-
 spalanie_na_trasie = 17
 
 spalanie_w_mieście = 20
@@ -22,13 +12,13 @@ if not odpowiedz.isdigit() or odpowiedz == '':
 
 ilosc_kilometrow = int(odpowiedz)
 
-#odpowiedz2 = input('Podaj cenę LPG [użyj kropki zamiast przecinka]:')
+odpowiedz2 = input('Podaj cenę LPG [użyj kropki zamiast przecinka]:')
+cena_lpg = float(odpowiedz2)
 
-# if not odpowiedz2.isdecimal() or odpowiedz == '':
+# if not odpowiedz2 == float:
 #    print('Wpisana ilość nie jest liczbą!')
 #    exit()
 
-#cena_lpg = float(odpowiedz2)
 
 wynik_trasa = round((((ilosc_kilometrow / 100 )* spalanie_na_trasie) * cena_lpg), 2)
 
