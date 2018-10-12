@@ -1,11 +1,9 @@
 from random import sample
 
-
 def chybil_trafil():
     zbior = range(1, 20)
     cztery_liczby = sample(zbior, k=4)
     return sorted(cztery_liczby)
-
 
 wynik = chybil_trafil()
 
