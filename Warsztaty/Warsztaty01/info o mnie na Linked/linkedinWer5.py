@@ -1,41 +1,30 @@
 from datetime import datetime
+
 obecnie = {'Python': 'SQL', 'w szkole CODE:ME': 'in infoShare Academy'}
 staz = 'FNX Group'
 k = 'Tester oprogramowania'
 c = 'ISTQB FL'
 
-teraz = datetime.now()
-#
-# while True:
-#     dzien = input('Wpisz dzień: ')
-#     miesiac = input('Wpisz miesiąc: ')
-#     rok = input('Wpisz rok: ')
-#     try:
-#         liczba_z_dzien = int(dzien)
-#         liczba_z_miesiac = int(miesiac)
-#         liczba_z_rok = int(rok)
-#         break
-#     except ValueError:
-#         print('Wprowadzone wartość nie są liczbami całkowitymi, proszę wpisać je ponownie!')
+teraz = datetime(2018,11,1)
+print('Teraz jest:',teraz)
 
-if liczba_z_dzien <= 30 and liczba_z_miesiac <= 11 and liczba_z_rok <= 2018:
-    print('Ukończyłem kurs: {}. Posiadam certyfikat: {}.\n'
+if teraz <= datetime(2018,11,30):
+    print('\nUkończyłem kurs: {}. Posiadam certyfikat: {}.\n'
           '\nObecnie odbywam staż w {}.'.format(k, c, staz), end='\n')
-    if liczba_z_dzien <= 31 and liczba_z_miesiac <= 10 and liczba_z_rok <= 2018:
+    if teraz <= datetime(2018,10,31):
         print('\nUczę się języka {}'.format(' '.join(obecnie)))
     else:
-        print('\nUkończyłem, również kurs: {}.'.format(' '.join(obecnie)))
+        print('\nUkończyłem również kurs: {}.'.format(' '.join(obecnie)))
 else:
-    print('Odbyłem staż w FNX Group. Ukończyłem m.in. kurs: {}, {}. '
-          '\nPosiadam certyfikat: {}.'
-          '\n\nJestem otwarty na nowe wyzwania :)'.format(' '.join(obecnie), k, c))
+    print('\nOdbyłem staż w FNX Group i Jestem otwarty na nowe wyzwania :). \n\nUkończyłem m.in. kurs: {}, {}. '
+          '\n\nPosiadam certyfikat: {} oraz {}.'.format(' '.join(obecnie), k, c, 'Python'))
 
-if liczba_z_dzien >= 14 and liczba_z_miesiac >= 11 and liczba_z_rok >= 2018:
+if datetime(2018,11,14) < teraz < datetime(2019,1,16):
     print('\nI\'m lerning', obecnie['Python'], obecnie['w szkole CODE:ME'])
-print('\nDużą radość sprawia mi, jak kod zacznie działać ! :}')
+print('\nDużą radość sprawia mi, jak kod zacznie w końcu działać ! :}')
 
 znam = ['\nProgramy które znam to: Python, Pycharm, Git, Selenium IDE, Katalon Recorder,'
-        '\nJira, Enterprise Architect, Photoshop, MS FrondPage, Slack, Skitch, Podio']
+        '\nJira, Enterprise Architect, Photoshop, MS FrondPage, Slack, Skitch, Podio. Uczę się równiez Selenium WebDriver.']
 
 while True:
     pytanie = input('\nCzy chcesz wiedzieć jakie znam programy ? [napisz Tak lub Nie]: ')
