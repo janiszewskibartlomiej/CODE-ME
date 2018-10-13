@@ -5,7 +5,7 @@ staz = 'FNX Group'
 k = 'Tester oprogramowania'
 c = 'ISTQB FL'
 
-teraz = datetime(2018,11,1)
+teraz = datetime.now()
 print('Teraz jest:',teraz)
 
 if teraz <= datetime(2018,11,30):
