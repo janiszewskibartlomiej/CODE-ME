@@ -29,7 +29,7 @@ if datetime(2018,11,14) < teraz < datetime(2019,1,16):
 print('\nDużą radość sprawia mi, jak kod zacznie w końcu działać ! :}')
 
 znam = ['\nProgramy które znam to: Python, Pycharm, Git, Selenium IDE, Katalon Recorder,'
-        '\nJira, Enterprise Architect, Photoshop, MS FrondPage, Slack, Skitch, Podio. Uczę się równiez Selenium WebDriver.']
+        '\nJira, Enterprise Architect, Photoshop, MS FrondPage, Slack, Skitch, Podio. Uczę się również Selenium WebDriver.']
 
 while True:
     pytanie = input('\nCzy chcesz wiedzieć jakie znam programy ? [napisz Tak lub Nie]: ')
