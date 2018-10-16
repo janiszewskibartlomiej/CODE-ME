@@ -10,8 +10,10 @@ class Plecak:
     def dodaj_przedmiot(self, przedmiot):
         self.zawartosc.append(przedmiot)
 
-p1 = Plecak(30)
-print(p1.zawartosc)
+if __name__ == '__main__':
 
-p1.dodaj_przedmiot('konserwa')
-print(p1.zawartosc)
+    p1 = Plecak(30)
+    print(p1.zawartosc)
+
+    p1.dodaj_przedmiot('konserwa')
+    print(p1.zawartosc)
