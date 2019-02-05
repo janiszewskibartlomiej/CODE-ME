@@ -1,0 +1,306 @@
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> 123
+123
+>>> 4
+4
+>>> 3
+3
+>>> 5
+5
+>>> 6456
+6456
+>>> 3 + 4
+7
+>>> 5 - 10
+-5
+>>> 4 * 5
+20
+>>> 34 / 2
+17.0
+>>> 10**3
+1000
+>>> 17 / 2
+8.5
+>>> 17 // 2
+8
+>>> 19 // 10
+1
+>>> 19 / 10
+1.9
+>>> 19 // 10
+1
+>>> 19 % 2
+1
+>>> 19 % 3
+1
+>>> 19 % 12
+7
+>>> 9 % 2
+1
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> help\
+...
+Type help() for interactive help, or help(object) for help about object.
+>>> help()
+
+Welcome to Python 3.7's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at https://docs.python.org/3.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> topics
+
+Here is a list of available topics.  Enter any topic name to get more help.
+
+ASSERTION           DELETION            LOOPING             SHIFTING
+ASSIGNMENT          DICTIONARIES        MAPPINGMETHODS      SLICINGS
+ATTRIBUTEMETHODS    DICTIONARYLITERALS  MAPPINGS            SPECIALATTRIBUTES
+ATTRIBUTES          DYNAMICFEATURES     METHODS             SPECIALIDENTIFIERS
+AUGMENTEDASSIGNMENT ELLIPSIS            MODULES             SPECIALMETHODS
+BASICMETHODS        EXCEPTIONS          NAMESPACES          STRINGMETHODS
+BINARY              EXECUTION           NONE                STRINGS
+BITWISE             EXPRESSIONS         NUMBERMETHODS       SUBSCRIPTS
+BOOLEAN             FLOAT               NUMBERS             TRACEBACKS
+CALLABLEMETHODS     FORMATTING          OBJECTS             TRUTHVALUE
+CALLS               FRAMEOBJECTS        OPERATORS           TUPLELITERALS
+CLASSES             FRAMES              PACKAGES            TUPLES
+CODEOBJECTS         FUNCTIONS           POWER               TYPEOBJECTS
+COMPARISON          IDENTIFIERS         PRECEDENCE          TYPES
+COMPLEX             IMPORTING           PRIVATENAMES        UNARY
+CONDITIONAL         INTEGER             RETURNING           UNICODE
+CONTEXTMANAGERS     LISTLITERALS        SCOPING
+CONVERSIONS         LISTS               SEQUENCEMETHODS
+DEBUGGING           LITERALS            SEQUENCES
+
+help> exit
+Help on Quitter in module _sitebuiltins object:
+
+exit = class Quitter(builtins.object)
+ |  exit(name, eof)
+ |
+ |  Methods defined here:
+ |
+ |  __call__(self, code=None)
+ |      Call self as a function.
+ |
+ |  __init__(self, name, eof)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __repr__(self)
+ |      Return repr(self).
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+
+help> q
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+>>> import antigravity
+>>>
+>>>
+>>>
+>>>
+>>> 23
+23
+>>> 2**64
+18446744073709551616
+>>> 2**32
+4294967296
+>>> 2**32 / 2
+2147483648.0
+>>> 0b111
+7
+>>> 0b1110
+14
+>>> 0xff
+255
+>>> 0x10
+16
+>>> 1_000_000_000
+1000000000
+>>> 1000____000000
+  File "<stdin>", line 1
+    1000____000000
+        ^
+SyntaxError: invalid token
+>>> 1000_0000_00
+1000000000
+>>> type(32)
+<class 'int'>
+>>> type(0xfff)
+<class 'int'>
+>>> 4.3
+4.3
+>>> type(232.2)
+<class 'float'>
+>>> 123e3
+123000.0
+>>> type(2e-4)
+<class 'float'>
+>>> 2e-4
+0.0002
+>>> None
+>>> type(None)
+<class 'NoneType'>
+>>> True
+True
+>>> False
+False
+>>> type(True)
+<class 'bool'>
+>>> True + 3
+4
+>>> False + 1
+1
+>>> False + 2
+2
+>>>
+>>> 'to jest tekst'
+'to jest tekst'
+>>> "to jest inny tekst"
+'to jest inny tekst'
+>>> '''to jest
+...
+... tekst'''
+'to jest\n\ntekst'
+>>> """trzy nowe
+...
+...
+... linie"""
+'trzy nowe\n\n\nlinie'
+>>> type(54)
+<class 'int'>
+>>> print('tekst')
+tekst
+>>> print('to jest\n\n\n tekst')
+to jest
+
+
+ tekst
+>>> print(321)
+321
+>>> 'to jest' + 'tekst'
+'to jesttekst'
+>>> 'to jest' + ' tekst'
+'to jest tekst'
+>>> 'to jest' + " tekst"
+'to jest tekst'
+>>> 'tekst' * 3
+'tekstteksttekst'
+>>> 'tekst' * 'inny tekst'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+>>> 'x' *  10
+'xxxxxxxxxx'
+>>> 'coś innego'
+'coś innego'
+>>> type('coś innego')
+<class 'str'>
+>>> 'coś innego'
+'coś innego'
+>>> b'tekst bajtowy'
+b'tekst bajtowy'
+>>> b'tekst żółty'
+  File "<stdin>", line 1
+SyntaxError: bytes can only contain ASCII literal characters.
+>>> type(b'kolejny tekst')
+<class 'bytes'>
+>>> liczba = 42
+>>> 42
+42
+>>> liczba = 42
+>>> liczba
+42
+>>> liczba + liczba
+84
+>>> liczba * 2
+84
+>>> liczba * 3
+126
+>>> liczba+liczba
+84
+>>> 323                +                 54
+377
+>>> liczba2 = 237e-5
+>>> liczba2
+0.00237
+>>> wynik = (4 + 12) / 7
+>>> wynik
+2.2857142857142856
+>>> wynik = 'tekst wyniku'
+>>> wynik
+'tekst wyniku'
+>>> wynik / 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+>>> type(wynik)
+<class 'str'>
+>>> del wynik
+>>> wynik
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'wynik' is not defined
