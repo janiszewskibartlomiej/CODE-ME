@@ -1,0 +1,242 @@
+    'to jest inny tekst"
+                       ^
+SyntaxError: EOL while scanning string literal
+>>> "to jest inny tekst"
+'to jest inny tekst'
+>>> '''to jest
+...
+... tekst'''
+'to jest\n\ntekst'
+>>>
+>>> print('tekst')
+tekst
+>>> print("to jest\n\n\n tekst')
+  File "<stdin>", line 1
+    print("to jest\n\n\n tekst')
+                               ^
+SyntaxError: EOL while scanning string literal
+>>> print('to jest\n\n\n tekst')
+to jest
+
+
+ tekst
+>>> print(321)
+321
+>>>
+>>> 'to jest'+'tekst'
+'to jesttekst'
+>>> 'to jest'+' tekst'
+'to jest tekst'
+>>> 'to jest'+" tekst"
+'to jest tekst'
+>>>
+>>> 'tekst'*3
+'tekstteksttekst'
+>>> 'tekst'*'inny tekst'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+>>> 'x'*10
+'xxxxxxxxxx'
+>>>
+>>>
+>>> b'tekst'
+b'tekst'
+>>>
+>>> b'tekst ��ty'
+  File "<stdin>", line 1
+SyntaxError: bytes can only contain ASCII literal characters.
+>>> type(b'kolejny tekst')
+<class 'bytes'>
+>>>
+>>>
+>>> liczba=42
+>>> liczba
+42
+>>> liczba + liczba
+84
+>>> liczba * 3
+126
+>>> liczba2 = 237e-5
+>>> liczba2
+0.00237
+>>> wynik = (4 + 12) / 7
+>>> wynik
+2.2857142857142856
+>>> wynik = 'tekst wyniku'
+>>> wynik
+'tekst wyniku'
+>>> wynik / 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+>>> type(wynik)
+<class 'str'>
+>>> del wynik
+>>> wynik
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'wynik' is not defined
+>>> int = 13
+>>> del int
+>>> exit
+Use exit() or Ctrl-Z plus Return to exit
+>>> ^Z
+
+
+C:\Users\USER>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> liczba = 14
+>>> Liczba = 1003
+>>> liczba
+14
+>>> liczbe
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'liczbe' is not defined
+>>>
+>>>
+>>> liczba_kursantow = 16
+>>> liczba kursanow = 16
+  File "<stdin>", line 1
+    liczba kursanow = 16
+                  ^
+SyntaxError: invalid syntax
+>>> 2nascie = 12
+  File "<stdin>", line 1
+    2nascie = 12
+          ^
+SyntaxError: invalid syntax
+>>> int(123)
+123
+>>> int
+<class 'int'>
+>>>
+>>>
+>>>
+>>> cena_paliwa = 5.08
+>>> dystans = 250
+>>> spalanie_na100km = 6.7
+>>> spalanie_na100km * dystans 100 * cena_paliwa
+  File "<stdin>", line 1
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+>>> spalanie_na100km * dystans / 100 * cena_paliwa
+85.09
+>>> koszt = spalanie_na100km * dystans / 100 * cena_paliwa
+>>> koszt
+85.09
+>>> koszt = spalanie_na100km * dystans / 100 * cena_paliwa
+>>> koszt
+85.09
+>>> exit ()
+
+
+
+C:\Users\USER\Desktop>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+C:\Users\USER\Desktop>python skrypt.py
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>skrypt.pl
+'skrypt.pl' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\USER\Desktop>skrypt.py
+  File "C:\Users\USER\Desktop\skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>^Z
+C:\Users\USER\Desktop>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> ^Z
+
+
+C:\Users\USER\Desktop>python skrypt.py
+  File "skrypt.py", line 4
+    spalanie_na100km * dystans 100 * cena_paliwa
+                                 ^
+SyntaxError: invalid syntax
+
+C:\Users\USER\Desktop>python skrypt.py
+Koszt wyprawy to:
+85.09
+
+C:\Users\USER\Desktop>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print = 1
+>>> print
+1
+>>> print ( ' dzien dobry ' )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not callable
+>>> del print
+>>> print ( ' dzien dobry ' )
+ dzien dobry
+>>> abc
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'abc' is not defined
+>>> import builtins
+>>> dir(builtins)
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '_', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'builtins']
+>>> liczba = 13
+>>> liczba
+13
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'builtins', 'liczba']
+>>> print = 1
+>>> print
+1
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'builtins', 'liczba', 'print']
+>>> del print
+>>> del liczba
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'builtins']
+>>> sum = 134
+>>> suma_ziemniak�w = 134
+>>> s = 56
+>>> t = 8
+>>>
