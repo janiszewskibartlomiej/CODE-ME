@@ -100,7 +100,7 @@ TypeError: can't multiply sequence by non-int of type 'str'
 >>> b'tekst'
 b'tekst'
 >>>
->>> b'tekst ¿ó³ty'
+>>> b'tekst ï¿½ï¿½ty'
   File "<stdin>", line 1
 SyntaxError: bytes can only contain ASCII literal characters.
 >>> type(b'kolejny tekst')
@@ -190,48 +190,6 @@ SyntaxError: invalid syntax
 85.09
 >>> exit ()
 
-C:\Users\USER>cd desktop
-
-C:\Users\USER\Desktop>dir
- Volume in drive C has no label.
- Volume Serial Number is 9A5A-CF87
-
- Directory of C:\Users\USER\Desktop
-
-2018-09-04  19:51    <DIR>          .
-2018-09-04  19:51    <DIR>          ..
-2017-12-04  11:19            38 070 24231816_1608700355861324_8223837107041855045_n.jpg
-2018-06-08  21:37    <DIR>          allegro
-2018-05-23  20:44    <DIR>          broszki
-2018-07-18  22:40           103 928 CV Bart³omiej JaniszewskANALITYK.pdf
-2018-07-17  19:11               368 cv.txt
-2018-05-24  14:53         2 124 629 IMAG9204.jpg
-2018-07-12  12:09         2 824 058 IMG_20180712_120756.jpg
-2018-07-27  22:50         3 727 692 IMG_20180725_135352.jpg
-2018-07-27  22:51         4 841 058 IMG_20180725_144444.jpg
-2018-07-27  22:49         3 902 679 IMG_20180725_144454.jpg
-2018-06-08  10:12            21 632 KANCELARIA ADWOKACKA.docx
-2018-06-08  21:29           181 606 Karta zg³oszenia na  OR I st._3-19.08.2018.rtf
-2018-07-30  09:24            11 284 mbanko odp wezwanie.docx
-2017-10-23  09:33    <DIR>          modlitwy
-2017-02-20  17:39            29 256 NOWENNA DO MATKI BO¯EJ JASNOGÓRSKIEJ I.docx
-2017-06-07  22:33         1 900 251 Obrot dziel sztuki - Bartosz  Krapinski - ebook (1).pdf
-2018-07-30  21:44           113 439 pismo dot Bart³omiej Janiszewski.pdf
-2018-08-02  08:40            58 153 PSZ-ZBG.pdf
-2018-09-04  19:52    <DIR>          python
-2017-09-26  22:27           188 579 Rachunek_sumienia_przygotowjacy_do_spowiedzi_generalnej.pdf
-2018-05-09  13:13            32 206 stopka.png
-2018-03-31  18:31    <DIR>          studia podatkowe
-2017-02-13  23:33            26 145 sw-rita.jpg
-2018-07-17  14:21    <DIR>          Targi sztuki
-2018-09-01  08:33           297 736 tech.3camp.pdf
-2017-03-13  22:40            19 915 tekst do t³umaczenia.docx
-2017-10-17  19:40             3 126 wybrane foto.txt
-2018-07-20  23:22            68 528 wypowiedzenie umowy.pdf
-2018-02-04  13:01           161 709 ZASADY-DK.pdf
-2018-02-24  22:29            21 979 Ze wzglêdu na nasz¹ wiedzê i 40.docx
-              24 File(s)     20 698 026 bytes
-               8 Dir(s)   9 308 569 600 bytes free
 
 C:\Users\USER\Desktop>python
 Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
