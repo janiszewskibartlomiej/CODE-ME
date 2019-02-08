@@ -1,0 +1,23 @@
+# Podpowiedzi:
+
+Zadanie 1:
+- Skrypt powinien składać się z kilku if'ów następujących bezpośrednio po sobie.
+- Każdy if powinien sprawdzać podzielność przez inną liczbę.
+- Jeśli reszta z dzielenia liczby przez 3 równa się 0, to liczba jest podzielna przez 3.
+
+Zadanie 1 (rozszerzenie 1):
+- Wewnątrz if'a, który sprawdza czy liczba jest podzielna przez 2 można, po wypisaniu komunikatu, zagnieździć jeszcze jednego if'a, który sprawdzi, czy liczba jest podzielna przez 4. To samo dla 3 i 9.
+
+Zadanie 1 (rozszerzenie 2):
+- Na początku, pierwszy if sprawdza, czy dostaliśmy pusty string. Jeśli tak, piszemy komunikat, że nie wpisano liczby. W bloku 'else' umieszczamy rzutowanie wpisanej liczby na typ int i przeklejamy cały nasz program (uwaga! przeklejamy do WEWNĄTRZ bloku 'else').
+
+Zadanie 2:
+- Do stringa proszącego o wpisanie odpowiedzi dobrze jest dodać na końcu '[tak/nie]', aby użytkownik wiedział, jakie ma opcje.
+- Zadanie opiera się na porownaniu za pomocą operatora '==' wczytanego z klawiatury stringa do jakiegoś konkretnego, zaszytego w programie.
+- Całe zadanie opiera się na wykorzystaniu if/elif/else. W pierwszym porównujemy wpisany z klawiatury tekst do stringa 'tak'. Jeśli nie, to w 'elif' sprawdzamy czy tekst to 'nie'. Jeśli również się nie udało, to w bloku 'else' piszemy, że nie rozumiemy podanej odpowiedzi.
+
+Zadanie 2 (rozszerzenie 1):
+- W działającym programie wystarczy obok warunku przyrównującego wpisany tekst to 'tak' dopisać operator 'or' i podać warunek porównujący do stringa 't'.
+
+Zadanie 2 (rozszerzenie 2):
+- Zamiast używać funkcji print() wewnątrz if'a, deklarujemy wewnątrz if'a zmienną o nazwie 'wybrana_kawa', do której zapisujemy stringa, który chcielibyśmy wypisać na ekran. Na końcu programu piszemy oddzielnego if'a, który pyta się o cukier i w zależności od odpowiedzi dodaje (operatorem '+') do stringa wybrana_kawa stringa 'z cukrem' albo 'bez cukru'.
