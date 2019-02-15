@@ -12,4 +12,4 @@ Napisz program który:
 - Ponownie wypisze zawartość listy na ekran.
 
 Rozszerzenie:
-- wczytaj z klawiatury indeks imienia, które zamienić na imię 'Guido'
+- wczytaj z klawiatury imię oraz indeks imienia, które chcesz zamienić.
