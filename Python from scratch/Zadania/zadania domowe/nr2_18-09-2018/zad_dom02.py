@@ -18,4 +18,4 @@ print(lista_wyr)
 
 #lista_wyrazow = str(lista_wyr)
 
-print(lista_wyr[:3], lista_wyr[-3:])
+print('\n', lista_wyr[:3], lista_wyr[-3:])

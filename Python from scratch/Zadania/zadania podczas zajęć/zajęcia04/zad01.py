@@ -10,7 +10,8 @@ print('Liczba: ', liczba, 'jest podzielna przez: ', lista_dzielnikow)
 
 #
 
-#mój pomysł
+#druga wersja
+
 # lista_dzielnikow =[]
 #
 # liczba = int(input('Proszę podać liczbę: '))

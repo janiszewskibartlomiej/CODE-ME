@@ -11,3 +11,4 @@ while True:
 
     else: print('Suma wprowadzonych liczb jest większa niż 100! ')
 
+
