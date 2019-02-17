@@ -1,5 +1,5 @@
 cena_gazu = 2.08
-dystans = int(input('Podaj przejechany dystans:'))
+
 
 if dystans is not 0:
     spalanie_na100km = 12.8
