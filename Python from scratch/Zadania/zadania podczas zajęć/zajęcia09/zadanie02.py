@@ -1,7 +1,6 @@
-liczba1 = int(input('Wpisz liczbę naturalną nr 1:'))
-liczba2 = int(input('Wpisz liczbę naturalną nr 2:'))
+from math import gcd
 
-import math
-wyliczenie = math.gcd(liczba1, liczba2)
+a = int(input('Podaj pierwszą liczbę całkowitą: '))
+b = int(input('Podaj drugą liczbę całkowitą: '))
 
-print(f'Największy wspólny dzielnik liczb {liczba1} i {liczba2} to: {wyliczenie}')
+print('Największy wspólny dzielnik liczb {} i {} to {}.'.format(a, b, gcd(a, b)))
