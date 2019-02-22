@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="" />
+    <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_data1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_data2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_datetime1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_datetime2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_datetime3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_godzina1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_godzina2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/listy_slowniki_sciaga.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/losowanie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/pasek.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01a.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01b.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/duzy_sklep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/funkcje_sklep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/maly_sklep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/funkcje_sklepy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/funkcje_sklepy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/sklep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/sklep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep01.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep02.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep03.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep04.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep04.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,14 +41,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr1_08-09-2018/zad_domowe_nr_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="160">
               <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_data1.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/duzy_sklep.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/generator_hasla.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/sklep.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -43,7 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -66,13 +139,6 @@
               <item name="Python from scratch" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python from scratch" type="462c0819:PsiDirectoryNode" />
               <item name="Zadania" type="462c0819:PsiDirectoryNode" />
-              <item name="zadania domowe" type="462c0819:PsiDirectoryNode" />
-              <item name="nr1_08-09-2018" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python from scratch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python from scratch" type="462c0819:PsiDirectoryNode" />
-              <item name="Zadania" type="462c0819:PsiDirectoryNode" />
               <item name="zadania podczas zajęć" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -80,16 +146,33 @@
               <item name="Python from scratch" type="462c0819:PsiDirectoryNode" />
               <item name="Zadania" type="462c0819:PsiDirectoryNode" />
               <item name="zadania podczas zajęć" type="462c0819:PsiDirectoryNode" />
-              <item name="zajęcia02" type="462c0819:PsiDirectoryNode" />
+              <item name="zajęcia10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python from scratch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python from scratch" type="462c0819:PsiDirectoryNode" />
+              <item name="Zadania" type="462c0819:PsiDirectoryNode" />
+              <item name="zadania podczas zajęć" type="462c0819:PsiDirectoryNode" />
+              <item name="zajęcia10" type="462c0819:PsiDirectoryNode" />
+              <item name="zadanie_sklep" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10\zadanie_sklep" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -154,15 +237,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23363096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
@@ -170,6 +248,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -180,12 +262,50 @@
     <option name="LAST_COMMIT_MESSAGE" value="Nowa odsłona zadan domowych nr 1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep01.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr1_08-09-2018/zad_domowe_nr_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="160">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/generator_hasla.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/sklep.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/duzy_sklep.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_data1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
