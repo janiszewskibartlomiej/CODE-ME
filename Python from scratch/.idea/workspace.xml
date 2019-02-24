@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału">
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python from scratch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python from scratch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/generator_hasla+a+b+c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01c.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01c.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
