@@ -1,6 +1,4 @@
 class CzasBiegacza:
-    _minuty = int
-    _sekundy = int
 
     def __init__(self, minuty, sekundy):
         if minuty >= 0:
