@@ -1,6 +1,6 @@
 import unittest
 
-from zaddom01 import CzasBiegacza
+from zaddom02 import CzasBiegacza
 
 
 class TestEtap2(unittest.TestCase):

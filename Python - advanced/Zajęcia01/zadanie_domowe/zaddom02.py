@@ -38,9 +38,7 @@ class CzasBiegacza:
 if __name__ == '__main__':
     # tutaj można pisać dowolny kod, nie wpływa to na testy
     tablica = []
-    # print(CzasBiegacza(10, 20))
-    # print(CzasBiegacza(10, -20))
-    # print(CzasBiegacza(-10, 20))
+
     tablica.append(CzasBiegacza(3, 3))
     tablica.append(CzasBiegacza(2, 3))
     tablica.append(CzasBiegacza(2, 3))

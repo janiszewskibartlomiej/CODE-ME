@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału">
-      <change afterPath="$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/etap5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/etap6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/etap_1_2_3_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/rozszerzenie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap02.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap03.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap04.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/test_zaddom_etap04.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom02.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom03.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/Zajęcia01/zadanie_domowe/zaddom03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -343,6 +345,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23363096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
