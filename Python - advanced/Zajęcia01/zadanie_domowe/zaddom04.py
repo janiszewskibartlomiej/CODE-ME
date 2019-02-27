@@ -43,20 +43,15 @@ class CzasBiegacza:
         return CzasBiegacza(minuty_nowe, sekundy_nowe)
 
     def __sub__(self, other):
-        try:
-            odejmowane_minuty = self._minuty - other._minuty
-            odejmowane_sekundy = self._sekundy - other._sekundy
-            if odejmowane_sekundy < 0:
-                try:
-                    odejmowane_minuty -= 1
-                    odejmowane_sekundy +=60
 
-                except:
-                    ValueError('ujemny wynik')
-        except:
-            ValueError('ujemny wynik !')
+        odejmowane_minuty = self._minuty - other._minuty
+        odejmowane_sekundy = self._sekundy - other._sekundy
+        if odejmowane_sekundy < 0:
+            odejmowane_minuty -= 1
+            odejmowane_sekundy += 60
 
         return CzasBiegacza(odejmowane_minuty, odejmowane_sekundy)
+
 
 if __name__ == '__main__':
     # tutaj można pisać dowolny kod, nie wpływa to na testy
@@ -86,7 +81,7 @@ if __name__ == '__main__':
 
     czas3 = CzasBiegacza(1, 59)
     czas3 -= CzasBiegacza(1, 58)
-    print('\n',czas3)
+    print('\n', czas3)
 
     czas4 = CzasBiegacza(2, 1)
     czas4 -= CzasBiegacza(0, 22)
@@ -96,4 +91,3 @@ if __name__ == '__main__':
     czas5 -= CzasBiegacza(2, 22)
     print('\n', czas5)
     pass
-
