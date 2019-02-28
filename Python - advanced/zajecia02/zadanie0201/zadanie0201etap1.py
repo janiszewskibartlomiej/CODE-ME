@@ -1,21 +1,24 @@
 class ParzysteLiczby:
-    def __init__(self, gorna_granica, start=0):
-        self.liczba = start-2
-        self.maksimum = gorna_granica
+    def __init__(self, end, start=0): #atrybuty z wartością domyślna wrzucamy na koniec
+        self.liczba = start
+        self.end = end
 
     def __next__(self):
-        self.liczba += 2
-
-        if self.liczba > self.maksimum -2:
+        if self.liczba >= self.end:
             raise StopIteration
-        return self.liczba
+        zwracana = self.liczba
+        self.liczba += 2
+        return zwracana
 
     def __iter__(self):
         return self
 
 
 if __name__ == '__main__':
-
-    liczby = list(ParzysteLiczby(80, -4))
-    print(liczby)
+    liczby = ParzysteLiczby(80, -4)
+    print(list(liczby))
+    liczby = list(ParzysteLiczby(100))
+    print('\n', liczby)
+    liczby = list(ParzysteLiczby(20, 10))
+    print('\n', liczby)
     pass  # tutaj możesz testować działanie funkcji
