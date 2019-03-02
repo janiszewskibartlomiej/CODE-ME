@@ -15,6 +15,6 @@ for index, symbol in enumerate(karty):
 #print(karty)
 
 print('\n', cart)
-print()
+print(len(karty))
 print(karty)
 print(cart in karty)
