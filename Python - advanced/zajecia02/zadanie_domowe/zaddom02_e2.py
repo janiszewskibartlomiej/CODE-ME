@@ -1,4 +1,4 @@
-# tutaj wpisz swoje imię i nazwisko
+# Bartłomiej Janiszewski
 
 from zaddom02_e1 import TaliaKart
 
