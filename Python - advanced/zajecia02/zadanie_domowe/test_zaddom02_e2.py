@@ -26,7 +26,6 @@ class Etap2(unittest.TestCase):
         karty_z_pustego = rozdaj_karty(talia, 10)
         self.assertEqual(len(karty_z_pustego), 0)
 
-
     def test_rozdanie_nieprawidlowej_liczby(self):
         talia = TaliaKart()
 
@@ -35,3 +34,7 @@ class Etap2(unittest.TestCase):
 
         karty_minus = rozdaj_karty(talia, -10)
         self.assertEqual(karty_minus, [])
+
+
+if __name__ == '__main__':
+    unittest.main()

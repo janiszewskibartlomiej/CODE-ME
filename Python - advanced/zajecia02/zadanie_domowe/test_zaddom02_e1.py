@@ -30,3 +30,7 @@ class Etap1(unittest.TestCase):
             if next(talia1) == next(talia2):
                 return
         self.fail()
+
+
+if __name__ == '__main__':
+    unittest.main()

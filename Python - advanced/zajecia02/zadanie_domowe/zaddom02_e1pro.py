@@ -17,13 +17,13 @@ class TaliaKart:
             raise StopIteration
 
         cart = sample(self._karty, k=1)
-        aktualne_losowania.append(cart)
-        # for index, symbol in enumerate(self._karty):
+        aktualne_losowania.append(cart[0])
+        # for symbol in self._karty:
         #
         #     if symbol == cart:
-        #         self._karty.remove(self._karty[index])
-        k = self._karty
-        return cart
+        #         self._karty.remove(cart[0])
+
+        return self._karty
 
     def __iter__(self):
         return self

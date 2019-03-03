@@ -17,12 +17,9 @@ class TaliaKart:
 
         cart = sample(self._karty, k=1)
 
-        for index, symbol in enumerate(self._karty):
+        self._karty.remove(cart[0])
 
-            if symbol == cart:
-                self._karty.remove(self._karty[index])
-
-        return cart
+        return self._karty
 
     def __iter__(self):
         return self
@@ -31,6 +28,6 @@ class TaliaKart:
 if __name__ == '__main__':
     # tutaj można pisać dowolny kod, nie wpływa to na testy
     a1 = TaliaKart()
-    print(a1)
+    print(list(a1))
     pass
 
