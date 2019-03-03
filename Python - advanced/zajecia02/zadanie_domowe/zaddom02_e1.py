@@ -19,7 +19,7 @@ class TaliaKart:
 
         self._karty.remove(cart[0])
 
-        return self._karty
+        return cart
 
     def __iter__(self):
         return self
@@ -27,11 +27,10 @@ class TaliaKart:
 
 if __name__ == '__main__':
     # tutaj można pisać dowolny kod, nie wpływa to na testy
+
     a1 = TaliaKart()
     print(list(a1))
-    a1 = TaliaKart()
-    print(list(a1))
-    a1 = TaliaKart()
-    print(list(a1))
+    print(len(list(a1)))
+
     pass
 

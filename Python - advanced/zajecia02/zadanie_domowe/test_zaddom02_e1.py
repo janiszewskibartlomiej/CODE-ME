@@ -12,7 +12,7 @@ class Etap1(unittest.TestCase):
 
     def test_losowanie_wszystkich(self):
         talia = TaliaKart()
-        wszystkie_rozne_karty = set(talia)
+        wszystkie_rozne_karty = list(talia)
 
         self.assertEqual(len(wszystkie_rozne_karty), 52)
 
