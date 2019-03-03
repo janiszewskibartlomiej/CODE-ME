@@ -29,5 +29,9 @@ if __name__ == '__main__':
     # tutaj można pisać dowolny kod, nie wpływa to na testy
     a1 = TaliaKart()
     print(list(a1))
+    a1 = TaliaKart()
+    print(list(a1))
+    a1 = TaliaKart()
+    print(list(a1))
     pass
 
