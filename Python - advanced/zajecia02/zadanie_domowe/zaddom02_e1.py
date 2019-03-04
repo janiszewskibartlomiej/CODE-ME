@@ -1,6 +1,6 @@
 # Bartłomiej Janiszewski
 
-from random import sample
+from random import choice
 
 class TaliaKart:
     def __init__(self):
@@ -15,9 +15,9 @@ class TaliaKart:
         if self._karty == []:
             raise StopIteration
 
-        cart = sample(self._karty, k=1)
+        cart = choice(self._karty)
 
-        self._karty.remove(cart[0])
+        self._karty.remove(cart)
 
         return cart
 
