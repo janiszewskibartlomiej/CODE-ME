@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału" />
+    <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału">
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzanie_logiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzanie_logiki.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzenie_logiki_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzenie_logiki_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/test_zaddom02_e1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/test_zaddom02_e1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/zaddom02_e2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/zaddom02_e2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklepyyyy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
+            <state relative-caret-position="375">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -419,6 +425,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklepyyyy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/funkcje_sklepyyyyyyyy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -446,16 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
           <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklepyyyy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

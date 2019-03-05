@@ -20,8 +20,8 @@ def rozdaj_karty(talia, ile_kart=1):
 
         try:
             for element in range(ile_kart):
-                next(talia)
-                lista_kart.append(talia)
+
+                lista_kart.append(next(talia))
 
         except StopIteration:
             lista_kart

@@ -6,6 +6,7 @@ karty = ['2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠'
          'J♦', 'Q♦', 'K♦', 'A♦']
 
 cart = sample(karty, k=1)
+cart = str(cart)
 
 
 for index, symbol in enumerate(karty):
