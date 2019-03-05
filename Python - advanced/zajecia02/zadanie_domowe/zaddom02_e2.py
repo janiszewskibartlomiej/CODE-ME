@@ -12,14 +12,19 @@ def rozdaj_karty(talia, ile_kart=1):
     if ile_kart == 1:
         lista_kart.append(talia)
 
-    if 53 > ile_kart > 1:
-        for element in range(ile_kart):
-            lista_kart.append(talia)
+    # if 53 > ile_kart > 1:
+    #     for element in range(ile_kart):
+    #         lista_kart.append(talia)
 
-    if ile_kart > 52:
-        x =len(lista_kart)
-        for element in range(x):
-            lista_kart.append(talia)
+    if ile_kart > 1:
+
+        try:
+            for element in range(ile_kart):
+                next(talia)
+                lista_kart.append(talia)
+
+        except StopIteration:
+            lista_kart
 
     return lista_kart
 
