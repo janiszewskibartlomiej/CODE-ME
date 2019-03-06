@@ -28,6 +28,7 @@ def rozdaj_karty(talia, ile_kart=1):
 if __name__ == '__main__':
     talia = TaliaKart()
 
+    #print(list(talia))
     gracz1 = rozdaj_karty(talia, 14)
     gracz2 = rozdaj_karty(talia, 14)
     gracz3 = rozdaj_karty(talia, 14)
