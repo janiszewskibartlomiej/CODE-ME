@@ -1,0 +1,20 @@
+def fibo():
+    a = 0
+    b = 1
+    while True:
+        yield a
+        (a, b) = (a + b, a)  # podstawiamy pod a nowa wartosc a+ b  a pod b podstwaiamy a
+
+
+if __name__ == '__main__':
+    x = fibo()
+
+    for _ in range(10):  # _ oznacza że te wartosci nie mają znaczenia
+        print(next(x))
+    # print(next(x))
+    # print(next(x))
+    # print(next(x))
+    # print(next(x))
+    # print(next(x))
+    # print(next(x))
+    # print(next(x))

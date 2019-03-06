@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału">
-      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzanie_logiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzanie_logiki.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzenie_logiki_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/sprawdzenie_logiki_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/test_zaddom02_e1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/test_zaddom02_e1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/zaddom02_e2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia02/zadanie_domowe/zaddom02_e2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
