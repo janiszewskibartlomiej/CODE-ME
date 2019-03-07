@@ -6,15 +6,19 @@ def fibo():
         (a, b) = (a + b, a)  # podstawiamy pod a nowa wartosc a+ b  a pod b podstwaiamy a
 
 
+
+
 if __name__ == '__main__':
     x = fibo()
 
     for _ in range(10):  # _ oznacza że te wartosci nie mają znaczenia
         print(next(x))
-    # print(next(x))
-    # print(next(x))
-    # print(next(x))
-    # print(next(x))
-    # print(next(x))
-    # print(next(x))
-    # print(next(x))
+
+#inne podejście do podmiany danych:
+#def recur_fib(a,b):
+#    yield a
+#    yield from recur_fib(b,a+b)
+
+#a = recur_fib(0,1)
+#for _ in range(10):
+#    print(next(a))
