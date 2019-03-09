@@ -6,6 +6,6 @@ zawartosc = list(f)
 # Obie powyższe linijki robią to samo.
 # Obie jednak nie zadziałają razem. Każda wysyca iterator.
 
-print(zawartosc)
+#print(zawartosc)
 
 # Z danych w zmiennej `zawartosc` możemy skorzystać wielokrotnie.
