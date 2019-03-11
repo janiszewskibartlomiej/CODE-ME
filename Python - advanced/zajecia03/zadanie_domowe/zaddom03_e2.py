@@ -3,14 +3,19 @@
 
 def unikalne_adresy_ip():
     plik = open('apache_logs', mode='r')
-    ip_log =[]
-    for element in plik.readlines():
-        element = element.split()
-        element = element[0]
-        ip_log.append(element)
-
+    ip_log = [(element.split())[0] for element in plik.readlines()]
     new_ip_log = list(set(ip_log))
     return new_ip_log
+
+
+    # ip_log =[]
+    # for element in plik.readlines():
+    #     element = element.split()
+    #     element = element[0]
+    #     ip_log.append(element)
+    #
+    # new_ip_log = list(set(ip_log))
+    # return new_ip_log
 
 
 if __name__ == '__main__':
