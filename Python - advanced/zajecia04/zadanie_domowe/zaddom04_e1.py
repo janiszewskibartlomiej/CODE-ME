@@ -19,7 +19,7 @@ class Timer:
 
 
 def timer(funkcja):
-    pass
+    return
 
 
 
