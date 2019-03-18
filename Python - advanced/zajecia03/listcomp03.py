@@ -1,3 +1,5 @@
+#https://hackernoon.com/list-comprehension-in-python-c762ba1f523f
+
 from panstwa import panstwa
 
 # Państwa o nazwie dłuższej niż 13 znaków
