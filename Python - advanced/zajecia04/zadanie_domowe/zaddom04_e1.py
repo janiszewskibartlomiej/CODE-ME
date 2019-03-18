@@ -6,12 +6,10 @@ import random
 
 
 def timer(funkcja):
-    t = datetime.now()
+    first = datetime.now()
     funkcja()
-    n = datetime.now()
-
-
-    return print(f'\nCzas wykonania: {n - t}')
+    second = datetime.now()
+    print(f'Czas wykonania: {second - first}')
 
 
 def przykladowa_funkcja():
