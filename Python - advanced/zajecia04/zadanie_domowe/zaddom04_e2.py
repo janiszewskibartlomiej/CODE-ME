@@ -1,11 +1,18 @@
-# tutaj wpisz swoje imię i nazwisko
+# Bartłomiej Janiszewski
 
 import time
 import random
+from datetime import datetime
 
 
 def timer_dekorator(funkcja):
-    pass
+    def run():
+        first = datetime.now()
+        funkcja()
+        second = datetime.now()
+        print(f'Czas wykonania: {second - first}')
+
+    return run
 
 
 @timer_dekorator
