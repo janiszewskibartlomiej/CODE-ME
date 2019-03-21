@@ -2,8 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb5aa77-4f02-4469-a4cf-5302706fc9e8" name="Default Changelist" comment="ponowne przerabianie materiału">
-      <change beforePath="$PROJECT_DIR$/../Python - advanced/zajecia03/zadanie_domowe/zaddom03_e2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python - advanced/zajecia03/zadanie_domowe/zaddom03_e2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_formatowanie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_timedelta1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_timedelta2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_timedelta3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_timedelta4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_wczytanie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/dane" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/dane-cp1250.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/dane.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/dane2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt1_bin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt4_poprawione.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/odczyt5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zapis1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zapis2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/znaki01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/znaki02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/znaki03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/znaki04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/dane.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_json6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_pickle_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/serializacja_pickle_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/sklep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/warzywa.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/warzywa.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zamkniecie1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zamkniecie2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zamkniecie3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy08.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01+a+b+c.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01+a+b+c.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01+a+b.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01+a+b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01+a.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01+a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/odczyt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/odczyt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/uruchomienia.log" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/uruchomienia.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01_etap1.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01_etap1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01_etap2.md" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01_etap2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01a.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01ab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01ab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01abc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01abc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zapis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zapis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,62 +74,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/sklepyyyy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/zadanie_sklepyyyy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/rozszerzenie.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/listaslownikow.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/zadDom_e3.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/funkcje_sklepyyyyyyyy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/czas_data1.py">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie01.py">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_formatowanie.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zapis1.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zapis.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01abc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/warzywa.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy01.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -116,7 +158,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,7 +210,7 @@
               <item name="Python from scratch" type="462c0819:PsiDirectoryNode" />
               <item name="Zadania" type="462c0819:PsiDirectoryNode" />
               <item name="zadania podczas zajęć" type="462c0819:PsiDirectoryNode" />
-              <item name="zajęcia11" type="462c0819:PsiDirectoryNode" />
+              <item name="zajęcia13" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -180,13 +222,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10\zadanie_sklep" />
-      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia12\zadanie01" />
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia11\zadanie01" />
       <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania domowe\nr4_06-10-2018" />
       <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10\zadanie_sklep" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia13" />
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia12" />
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia11" />
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10\zadanie_sklep" />
+      <recent name="F:\IT\MÓJ GITHUB\Python_Code\Python from scratch\Zadania\zadania podczas zajęć\zajęcia10" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -347,7 +394,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23363096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -440,6 +486,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/rozszerzenie.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/listaslownikow.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia10/zadanie_sklep/funkcje_sklepyyyyyyyy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -470,18 +527,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr4_06-10-2018/rozszerzenie.py">
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/zadDom_e3.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/listaslownikow.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zadanie01/zadanie01.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/czas_formatowanie.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia11/zapis1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zapis.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/zadanie01/zadanie01abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zadania/zadania domowe/nr3_30-09-2018/zadDom_e3.py">
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia12/warzywa.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zadania/zadania podczas zajęć/zajęcia13/klasy01.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>

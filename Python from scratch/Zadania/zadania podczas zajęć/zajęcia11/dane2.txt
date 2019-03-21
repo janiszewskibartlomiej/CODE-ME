@@ -1,0 +1,12 @@
+XXX
+Jakiœ tekst w pierwszej linii.
+Druga linia.Linia numer 0.
+Linia numer 1.
+Linia numer 2.
+Linia numer 3.
+Linia numer 4.
+Linia numer 5.
+Linia numer 6.
+Linia numer 7.
+Linia numer 8.
+Linia numer 9.
