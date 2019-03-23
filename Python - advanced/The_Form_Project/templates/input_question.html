@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+
+<h1>Dodaj pytanie do formularza:</h1>
+<br>
+<form method="GET">
+    <label for="question">Pytanie</label>
+    <input name="question" id="question" size="35" required>
+    <br>
+    <br>
+    <p>Odpowiedź:<p>
+    <input type="radio" name="answer" id="yes" value="yes"> Tak
+    <input type="radio" name="answer" id="no" value="no" > Nie
+    <input type="radio" name="answer" id="dn" value="dn" > Nie wiem
+    <input type="submit" value="Dodaj">
+</form>
+<br>
+<p>Teraz jest: {{ echo }}</p>
+
+</html>
