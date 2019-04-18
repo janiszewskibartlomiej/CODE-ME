@@ -5,8 +5,17 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET'])
+def pobierz_dane():
+    with open('user.json') as f:
+        return json.load(f)
+
+@app.route('/', methods=['POST', 'GET'])
 def log_in():
+    return render_template('log_in.html')
+
+
+@app.route('/questions', methods=['POST', 'GET'])
+def enter_questions():
     question = request.args.get('question')
     correct_answer = request.args.get('answer')
 
@@ -30,5 +39,6 @@ def log_in():
 
     return render_template('input_question.html', echo=teraz)
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

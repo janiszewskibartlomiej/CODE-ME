@@ -5,24 +5,51 @@
 <head>
     Wprowadzanie danych do folmularza
 </head>
-    
-    
+<style>
+    h2 {
+    color: blue;
+    font-family: verdana;
+    font-size: 130%}
+
+    input {
+    font-size: 110%}
+
+    .button {
+    background: red;}
+
+
+    .box {
+    font-size: 20px;
+    }
+    h4 {
+    font-size: 14px:
+    }
+
+</style>
+
+
 <body>
-<h1>Dodaj pytanie do formularza:</h1>
+<!--<h2>Dodaj pytanie do formularza:</h2>-->
 <br>
 <form method="GET">
-    <label for="question">Pytanie</label>
+    <label for="question"><h3>Pytanie:</h3></label>
     <input name="question" id="question" size="35" required>
     <br>
     <br>
-    <p>Odpowiedź:<p>
-    <input type="radio" name="answer" id="yes" value="yes"> Tak
-    <input type="radio" name="answer" id="no" value="no" > Nie
-    <input type="radio" name="answer" id="dn" value="dn" > Nie wiem
-    <input type="submit" value="Dodaj">
+    <p>
+    <h3>Odpowiedź prawidłowa:</h3>
+    <p>
+    <div class="box">
+        <input type="checkbox" name="answer" id="yes" value="yes" > Tak
+        <input type="checkbox" name="answer" id="no" value="no"> Nie
+        <!--<input type="checkbox" name="answer" id="dn" value="d_know"> Nie wiem-->
+        <input type="checkbox" name="answer" id="dc" value="discribe"> Napisz odp
+        <input class="button" type="submit" value="Dodaj">
+    </div>
+
 </form>
 <br>
-<p>Teraz jest: {{ echo }}</p>
+<p><h4>Teraz jest: {{ echo }}</h4></p>
 </body>
-    
+
 </html>
