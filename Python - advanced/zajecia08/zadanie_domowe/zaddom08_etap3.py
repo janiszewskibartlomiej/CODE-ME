@@ -41,10 +41,6 @@ if __name__ == '__main__':
 
     print(f'Uruchomiono program w trybie: {wybrany_szablon}')
 
-    ln = args.lenline
-    wybrany_szablon = ln
-    print(wybrany_szablon)
-
     ustaw_logger(poziom_logowania)
     wynik = wc(nazwa_pliku, wybrany_szablon)
 
