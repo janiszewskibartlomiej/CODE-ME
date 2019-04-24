@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osoba</title>
+</head>
+<body>
+
+<h1>Indeks: {{ indeks }}</h1>
+
+{% if imie %}
+<p>Imię: {{ imie }}</p>
+{% elif error %}
+<p style="color: red">Błąd o treści: {{ error }}</p>
+{% endif %}
+
+<a href="/">Wróć do strony głównej</a>
+
+</body>
+</html>

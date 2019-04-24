@@ -1,0 +1,4 @@
+Zespoły z górnej połowy tabeli:
+{% for zespol in zespoly if zespol.position <= 10 %}
+{{ zespol.position }}. {{ zespol.name }}, różnica goli: {{ zespol.goals_for - zespol.goals_against }}
+{% endfor %}

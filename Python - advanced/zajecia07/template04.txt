@@ -1,0 +1,14 @@
+Iteracja po kluczach:
+{% for klucz in czlowiek %}
+{{ klucz }}
+{% endfor %}
+
+Iteracja po wartościach:
+{% for wartosc in czlowiek.values() %}
+{{ wartosc }}
+{% endfor %}
+
+Iteracja po kluczach i wartościach:
+{% for klucz, wartosc in czlowiek.items() %}
+{{ klucz }}  {{ wartosc }}
+{% endfor %}

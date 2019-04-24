@@ -7,7 +7,7 @@ lista = ['Ambroży', 'Barnaba', 'Celina', 'Danuta', 'Eligiusz', 'Felicja']
 
 @app.route('/osoby')
 def odczyt_z_listy():
-    # spróbuj http://127.0.0.1:5000/osoby?id=2
+    # spróbuj http://127.0.0.1:5000/osoby?id=2  query string to jest w tym wypadku id=2
 
     indeks = request.args.get('id')
     if indeks:

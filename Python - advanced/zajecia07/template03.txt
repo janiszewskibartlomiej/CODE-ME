@@ -1,0 +1,2 @@
+Frazy z listy to:
+{{ frazy }}

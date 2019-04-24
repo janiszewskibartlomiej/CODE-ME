@@ -1,0 +1,44 @@
+[
+  {
+    "nazwa": "Kark\u00f3wka bez ko\u015bci",
+    "cena": 8.99,
+    "jednostka": "kg",
+    "promocja": true
+  },
+  {
+    "nazwa": "Twar\u00f3g sernikowy 1kg",
+    "cena": 5.99,
+    "jednostka": "op",
+    "promocja": true
+  },
+  {
+    "nazwa": "Mleko \u015awie\u017ce 2%",
+    "cena": 1.99,
+    "jednostka": "op",
+    "promocja": true
+  },
+  {
+    "nazwa": "Herbata torebki 200g",
+    "cena": 9.99,
+    "jednostka": "op",
+    "promocja": false
+  },
+  {
+    "nazwa": "Czekolada",
+    "cena": 2.49,
+    "jednostka": "op",
+    "promocja": true
+  },
+  {
+    "nazwa": "Gruszki",
+    "cena": 2.99,
+    "jednostka": "kg",
+    "promocja": true
+  },
+  {
+    "nazwa": "Cytryny",
+    "cena": 7.99,
+    "jednostka": "kg",
+    "promocja": false
+  }
+]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+</head>
+<body>
+
+<h1>Lista osób:</h1>
+
+<ul>
+    {% for osoba in lista_osob %}
+    <li>
+        <a href="/osoba/{{ loop.index0 }}">{{ osoba }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

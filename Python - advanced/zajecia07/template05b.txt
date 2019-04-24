@@ -1,0 +1,4 @@
+Wszyscy ludzie:
+{% for czlowiek in ludzie %}
+{{ loop.index }}. {{ czlowiek.imie }} {{ czlowiek.nazwisko }}
+{% endfor %}

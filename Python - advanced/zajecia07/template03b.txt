@@ -1,0 +1,4 @@
+Frazy z listy to:
+{% for fraza in frazy %}
+{{ fraza }}
+{% endfor %}

@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<h1>Promocyjne produkty:</h1>
+<table>
+    <tr>
+        <th>numer</th>
+        <th>produkt</th>
+        <th>cena</th>
+    </tr>
+
+    {% for produkt in produkty if produkt.promocja%}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ produkt.nazwa }}</td>
+        <td>{{ produkt.cena }} zł/{{ produkt.jednostka }}</td>
+    </tr>
+    {% endfor %}
+</table>

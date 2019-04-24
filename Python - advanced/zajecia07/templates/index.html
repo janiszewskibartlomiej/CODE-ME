@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Formularz</h1>
+
+
+<form method="get">
+    Wprowadź liczbę całkowitą: <input type="text" name="liczba">
+    <input type="submit">
+</form>
+
+{% if error %}
+<p style="color: red">
+    {{ error }}
+</p>
+{% endif %}
+
+{% if liczba %}
+<p>
+    Wprowadzona wcześniej liczba to: {{ liczba }}
+</p>
+{% endif %}
+
+
+</body>
+</html>

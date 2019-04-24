@@ -1,0 +1,6 @@
+{% for produkt in produkty %}
+małe litery: {{ produkt.nazwa | lower }}
+ilość znaków: {{ produkt.nazwa | count }}
+skrócona nazwa: {{ produkt.nazwa | truncate(10) }}
+
+{% endfor %}

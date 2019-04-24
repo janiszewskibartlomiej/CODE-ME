@@ -1,0 +1,7 @@
+{% for produkt in produkty %}
+{% if produkt.promocja %}
+*PROMOCJA* {{ produkt.nazwa }} *PROMOCJA*
+{% else %}
+{{ produkt.nazwa }}
+{% endif %}
+{% endfor %}

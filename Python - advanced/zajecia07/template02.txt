@@ -1,0 +1,1 @@
+Mądrość na dziś to: "{{ fraza }}"

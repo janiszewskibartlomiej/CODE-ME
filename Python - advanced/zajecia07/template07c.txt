@@ -1,0 +1,6 @@
+Produkty na wagę:
+{% for produkt in produkty %}
+{% if produkt.jednostka in 'kg' %}
+-> {{ produkt.nazwa }} {{ produkt.cena }}zł/kg
+{% endif %}
+{% endfor %}
