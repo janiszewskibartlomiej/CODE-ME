@@ -8,7 +8,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 
 <ul>
 <li>Administrator będzie miał możliwość zalogowania się do swojego panelu.</li>
-<li>Administrator będzie miał możliwość  zdefiniowania własnych pytań w formularzu oraz odpowiedzi.</li>
+<li>Administrator będzie miał możliwość  zdefiniowania własnych pytań w formularzu oraz w miarę potrzeby określenia prawidłowych odpowiedzi.</li>
 <li>Pytania zostaną zapisane w badzie danych SQLite3.</li>
 <li>Formularz będzie prezentowany w przeglądarce.</li>
 <li>Użytkownicy będą wypełniali formularz, który zostanie zapisany w badzie danych.</li>
@@ -16,4 +16,6 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Administrator będzie miał możliwość analizy danych lub ich oceny.</li>
 </ul>
 
-<h3>Narzędzia: Python 3.7, SQLite3, Flask, Jinja2, HTML5, CSS.</h3>
+----------
+
+NARZĘDZIA: <h3>Python 3.7, SQLite3, Flask, Jinja2, HTML5, CSS.</h3>
