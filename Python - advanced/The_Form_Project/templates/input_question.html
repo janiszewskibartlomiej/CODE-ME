@@ -1,55 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-
+<html lang="pl">
 <head>
-    Wprowadzanie danych do folmularza
+    <meta charset="UTF-8">
+    <title> LOG IN to the Form</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image/png" sizes="150x150" href="static/mstile-150x150.png">
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
-<style>
-    h2 {
-    color: blue;
-    font-family: verdana;
-    font-size: 130%}
-
-    input {
-    font-size: 110%}
-
-    .button {
-    background: red;}
-
-
-    .box {
-    font-size: 20px;
-    }
-    h4 {
-    font-size: 14px:
-    }
-
-</style>
-
 
 <body>
 <!--<h2>Dodaj pytanie do formularza:</h2>-->
-<br>
-<form method="GET">
-    <label for="question"><h3>Pytanie:</h3></label>
-    <input name="question" id="question" size="35" required>
+<div class="log_container">
     <br>
-    <br>
-    <p>
-    <h3>Odpowiedź prawidłowa:</h3>
-    <p>
-    <div class="box">
-        <input type="checkbox" name="answer" id="yes" value="yes" > Tak
-        <input type="checkbox" name="answer" id="no" value="no"> Nie
-        <!--<input type="checkbox" name="answer" id="dn" value="d_know"> Nie wiem-->
-        <input type="checkbox" name="answer" id="dc" value="discribe"> Napisz odp
-        <input class="button" type="submit" value="Dodaj">
-    </div>
 
-</form>
+    <form class="question" method="GET">
+        <p class="header">Wprowadzanie danych do folmularza</p>
+        <br>
+        <label class="question_word">Wpisz pytanie:</label>
+        <br>
+        <br>
+        <input name="question" class="in" required>
+        <br>
+        <br>
+        <p>
+        <p class="head_end">Prawidłowa odpowiedź:</p>
+        <p>
+        <div class="box">
+            <input class="checkbox" type="checkbox" name="answer" value="yes"> Tak
+            <input class="checkbox" type="checkbox" name="answer" value="no"> Nie
+            <input class="checkbox" type="checkbox" name="answer" value="d_know"> Nie wiem
+            <input class="checkbox " type="checkbox" name="answer" value="discribe"> Odpowiedź opisowa
+
+        </div>
+        <br>
+        <div class="button_dodaj">
+            <input id="button" type="submit" value="Dodaj">
+        </div>
+    </form>
+</div>
+
 <br>
 <p><h4>Teraz jest: {{ echo }}</h4></p>
 </body>
 
 </html>
+
+

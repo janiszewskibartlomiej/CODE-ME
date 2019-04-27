@@ -4,9 +4,9 @@ conn = sqlite3.connect('baza.db')
 c = conn.cursor()
 
 zapytanie = """
-SELECT instrumenty.nazwa
+SELECT instrumenty.instrument
 FROM beatles 
-JOIN instrumenty on beatles.id = instrumenty.id_muzyka
+JOIN instrumenty on beatles.id = instrumenty.muzyk_id
 WHERE beatles.imie = ?;
 """
 

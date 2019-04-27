@@ -10,9 +10,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='Program like WC in linux', description='Prosty program do logów.')
     parser.add_argument('filename', help='Nazwa pliku który zostanie użyty do analizy')
 
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-l', '--loglevel', choices=logging._nameToLevel, default='WARNING',
+    parser.add_argument('-l', '--loglevel', choices=logging._nameToLevel, default='WARNING',
                        help='Uruchomienia programu w trybie logging LEVEL')
+    group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-ln', '--line', action='store_const', const='linie',
                        help='Uruchomienie programu w trybie liczenia linii')
     group.add_argument('-w', '--words', action='store_const', const='words', help='Uruchomienie programu w trybie liczenia wyrazów')

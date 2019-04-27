@@ -13,7 +13,7 @@ SELECT NAZWA FROM PLECAK WHERE RODZAJ = 'jedzenie' ORDER BY "nazwa";
 """
 
 zapytanie_waga = """
-SELECT SUM("waga") FROM "plecak";
+SELECT SUM("waga" * "ilosc") FROM "plecak";
 """
 
 print('Sprzęt:')
@@ -50,6 +50,6 @@ c.execute(zapytanie_waga)
 
 suma = c.fetchmany()[0][0]
 
-print(f'Waga zawartości: {suma*1000}g')
+print(f'Waga zawartości: {suma*1000:.3f}g')
 
 conn.close()
