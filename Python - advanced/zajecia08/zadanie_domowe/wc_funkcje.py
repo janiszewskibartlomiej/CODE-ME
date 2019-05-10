@@ -28,7 +28,9 @@ def wc(nazwa_pliku, wybrany_szablon):
         exit()
 
     szablony = {'pelny': '{linie} {wyrazy} {bajty} {nazwa_pliku}',
-                'linie': '{linie} {nazwa_pliku}'}
+                'linie': '{linie} {nazwa_pliku}',
+                'words': '{wyrazy}',
+                'bytes': '{bajty}'}
 
     logging.info('wybrano szablon pełny')
     szablon = szablony[wybrany_szablon]
