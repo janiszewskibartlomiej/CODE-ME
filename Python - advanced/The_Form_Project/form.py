@@ -33,7 +33,7 @@ def log_in():
     zapytanie_password = """
     SELECT 'password' FROM "login" WHERE 'user' = ?;
     """
-    c.execute(zapytanie_password, (user))
+    c.execute(zapytanie_password, user)
     password_base = c.fetchone()
     print(password_base)
     try:
