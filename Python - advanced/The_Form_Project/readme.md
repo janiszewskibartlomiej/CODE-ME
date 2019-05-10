@@ -8,12 +8,12 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 
 <ul>
 <li>Administrator będzie miał możliwość zalogowania się do swojego panelu.</li>
-<li>Administrator będzie miał możliwość  zdefiniowania własnych pytań w formularzu oraz w miarę potrzeby określenia prawidłowych odpowiedzi.</li>
+<li>Administrator będzie miał możliwość  zdefiniowania własnych pytań w formularzu oraz określenia pól, które bedą wyswietlane podczas przerowadzania ankiety.</li>
 <li>Pytania zostaną zapisane w badzie danych SQLite3.</li>
 <li>Formularz będzie prezentowany w przeglądarce.</li>
 <li>Użytkownicy będą wypełniali formularz, który zostanie zapisany w badzie danych.</li>
 <li>Użytkownicy po wypełnieniu formularza otrzymają zwrotnie wyniki w postaci średniej procentowej.</li>
-<li>Administrator będzie miał możliwość analizy danych lub ich oceny.</li>
+<li>Administrator będzie miał możliwość analizy danych.</li>
 </ul>
 
 ----------
