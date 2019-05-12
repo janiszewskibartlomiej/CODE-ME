@@ -74,7 +74,11 @@ def data():
     c.execute(zapytanie)
     pytania = c.fetchall()
 
-    context = {'pytania': pytania}
+    lista_pytan = []
+    for x in pytania:
+        lista_pytan.append(x[0])
+    print(lista_pytan)
+    context = {'pytania': lista_pytan}
     return render_template('data.html', **context)
 
 
