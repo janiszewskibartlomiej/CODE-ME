@@ -1,11 +1,10 @@
 import datetime
 import json
 import sqlite3
+import time
 
 from flask import Flask, render_template, request
 
-conn = sqlite3.connect('loginDataBase.db')
-c = conn.cursor()
 
 app = Flask(__name__)
 
@@ -13,35 +12,44 @@ def pobierz_dane():
     with open('user.json') as f:
         return json.load(f)
 
-@app.route('/', methods=['get', 'post'])
+@app.route('/', methods=['GET', 'POST'])
 def log_in():
 
     return render_template('log_in.html')
 
-    username = request.form.get('username')
-    password = request.form.get('password')
+@app.route('/input_question', methods=['GET', 'POST'])
+def input_question():
+    conn = sqlite3.connect('loginDataBase.db')
+    c = conn.cursor()
+    username = request.form['username']
+    password = request.form['password']
     print(username)
     print(password)
 
-    zapytanie_user = """
-    SELECT user FROM "login";
-    """
-    c.execute(zapytanie_user)
-    user = c.fetchall()
-    print(user)
+    # zapytanie_user = """
+    # SELECT user FROM "login";
+    # """
+    # c.execute(zapytanie_user)
+    # user = c.fetchall()
+    # print(user)
 
     zapytanie_password = """
-    SELECT 'password' FROM "login" WHERE 'user' = ?;
+    SELECT password FROM "login" WHERE user = ?;
     """
-    c.execute(zapytanie_password, user)
+    c.execute(zapytanie_password, (username,))
     password_base = c.fetchone()
-    print(password_base)
-    try:
-        username in user#_baza
-        if password == password_base:
-            return render_template('input_question.html')
-    except ValueError:
-        print('Brak uprawnień')
+    password_base = password_base[0]
+
+    print('hasła:', password, password_base)
+
+    if password == password_base:
+        return render_template('input_question.html')
+    else:
+        return 'Brak uprawnień'
+        # time.sleep(2)
+        # return redirect('/')
+
+    # return '???'
 
 
 @app.route('/questions', methods=['POST', 'GET'])

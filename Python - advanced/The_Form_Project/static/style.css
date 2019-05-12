@@ -39,6 +39,15 @@ body {
     font-size: 1.4vw;
     margin-left: 15px;
     }
+#button_baza {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 3px;
+    height: 2.0vw;
+    width: 7.5vw;
+    font-size: 1.4vw;
+    margin-right: 14vw;
+    }
 
 .header {
     font-weight: ;
@@ -107,4 +116,3 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;}
-
