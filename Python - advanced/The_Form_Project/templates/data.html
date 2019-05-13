@@ -14,13 +14,20 @@
 
 <body>
     <div class="log_container">
-        <div class="question">
+        <table>
+            <tr>
+                <th>
+                    Lista pytań
+                </th>
+            </tr>
            {% for p in pytania %}
+            <tr>
+                <td class="questions_list">{{loop.index}}. {{ p }}</td>
 
-            <td>{{ p }}</td>
+
             {% endfor %}
-        </div>
-
+            </tr>
+        </table>
     </div>
 </body>
 

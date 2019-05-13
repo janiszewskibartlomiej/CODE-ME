@@ -2,6 +2,7 @@ import datetime
 import json
 import sqlite3
 import time
+import hashlib
 
 from flask import Flask, render_template, request, redirect
 
@@ -18,9 +19,15 @@ def formularz():
     conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
     username = request.form['username']
+
     password = request.form['password']
     print(username)
     print(password)
+    password = password.encode()
+
+    password = hashlib.sha256(password)
+    password = password.digest()
+
 
     zapytanie_password = """
     SELECT password FROM "login" WHERE user = ?;
