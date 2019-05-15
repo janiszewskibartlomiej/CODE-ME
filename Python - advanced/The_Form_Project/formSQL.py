@@ -4,15 +4,22 @@ import sqlite3
 import time
 import hashlib
 
-
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
 
+with open('session_key.txt', 'r') as f:
+    key = f.readline()
+app.secret_key = key
 
 @app.route('/', methods=['GET', 'POST'])
 def log_in():
-    return render_template('log_in.html')
+    if not session:
+        return render_template('log_in.html')
+
+    id = session.get('user_id')
+    user = session.get('user')
+    return redirect('/formularz')
 
 
 @app.route('/formularz', methods=['POST'])
@@ -38,8 +45,8 @@ def formularz():
     print('hasła:', password, password_base)
 
     if password_base and password == password_base[0]:
-        # session['user_id'] = password_base['id']
-        # session['username'] = password_base['username']
+        session['user_id'] = password_base[0]
+        session['user'] = password_base['user']
 
         return render_template('input_question.html')
 
@@ -103,9 +110,8 @@ def delete():
         """
     usun = request.args.get('id')
     # print(usun)
-    c.execute(zapytanie, (usun, ))
+    c.execute(zapytanie, (usun,))
     conn.commit()
-
 
     return redirect('/baza')
 
