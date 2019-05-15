@@ -141,7 +141,8 @@ body {
     width: 5.5vw;
     font-size: 1.4vw;
     margin-right: 5vw;
-    margin-left: -3vw;}
+    margin-left: -3vw;
+    padding: 2px;}
 
 .button_dodaj_pytanie {
     color: red;
@@ -150,7 +151,8 @@ body {
     border-radius: 3px;
     height: 2.7vw;
     width: 10.0vw;
-    font-size: 1.4vw;}
+    font-size: 1.4vw;
+    padding: 2px;}
 
 .dwa_przyciski {
     display: flex;
