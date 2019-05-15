@@ -4,7 +4,8 @@ import sqlite3
 import time
 import hashlib
 
-from flask import Flask, render_template, request, redirect
+
+from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
 
@@ -28,7 +29,6 @@ def formularz():
     password = hashlib.sha256(password)
     password = password.digest()
 
-
     zapytanie_password = """
     SELECT password FROM "login" WHERE user = ?;
     """
@@ -38,6 +38,9 @@ def formularz():
     print('hasła:', password, password_base)
 
     if password_base and password == password_base[0]:
+        # session['user_id'] = password_base['id']
+        # session['username'] = password_base['username']
+
         return render_template('input_question.html')
 
     else:
@@ -46,7 +49,6 @@ def formularz():
 
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
-
     if request.method == 'POST':
         conn = sqlite3.connect('questionDataBase.db')
         c = conn.cursor()
@@ -71,22 +73,41 @@ def add():
     if request.method == 'GET':
         return render_template('input_question.html')
 
+
 @app.route('/baza')
 def data():
     conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
     zapytanie = """
-    SELECT pytanie FROM "questions";
+    SELECT id, pytanie FROM "questions";
     """
     c.execute(zapytanie)
     pytania = c.fetchall()
-
-    lista_pytan = []
+    # print(pytania)
+    slownik = {}
     for x in pytania:
-        lista_pytan.append(x[0])
-    print(lista_pytan)
-    context = {'pytania': lista_pytan}
+        # print(x)
+        dodaj_do_slownika = {x[0]: x[1]}
+        slownik.update(dodaj_do_slownika)
+    # print(slownik)
+    context = {'pytania': slownik}
     return render_template('data.html', **context)
+
+
+@app.route('/usun')
+def delete():
+    conn = sqlite3.connect('questionDataBase.db')
+    c = conn.cursor()
+    zapytanie = """
+        DELETE FROM "questions" WHERE id = ?;
+        """
+    usun = request.args.get('id')
+    # print(usun)
+    c.execute(zapytanie, (usun, ))
+    conn.commit()
+
+
+    return redirect('/baza')
 
 
 if __name__ == "__main__":
