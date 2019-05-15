@@ -37,16 +37,16 @@ def formularz():
     password = password.digest()
 
     zapytanie_password = """
-    SELECT password FROM "login" WHERE user = ?;
+    SELECT id, user, password FROM "login" WHERE user = ?;
     """
     c.execute(zapytanie_password, (username,))
-    password_base = c.fetchone()
+    line_from_base = c.fetchone()
 
-    print('hasła:', password, password_base)
+    print('hasła:', password, line_from_base)
 
-    if password_base and password == password_base[0]:
-        session['user_id'] = password_base[0]
-        session['user'] = password_base['user']
+    if line_from_base[2] and password == line_from_base[2]:
+        session['user_id'] = line_from_base[0]
+        session['user'] = line_from_base[1]
 
         return render_template('input_question.html')
 
