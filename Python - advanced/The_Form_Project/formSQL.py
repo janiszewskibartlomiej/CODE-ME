@@ -55,16 +55,16 @@ def log_in():
         c.execute(zapytanie_password, (username,))
         line_from_base = c.fetchone()
 
-        if line_from_base == None or line_from_base[1] is not username:
+        print('hasła:', password, line_from_base)
+
+        if line_from_base == None or password != line_from_base[2]:
+
             flash('błędna nazwa użytkownika lub hasło')
             return redirect('/login')
-        
-        print('hasła:', password, list(line_from_base))
 
-        if line_from_base[2] and password == line_from_base[2]:
+        if password == line_from_base[2]:
             session['user_id'] = line_from_base[0]
             session['user'] = line_from_base[1]
-
             return redirect('/formularz')
 
 
