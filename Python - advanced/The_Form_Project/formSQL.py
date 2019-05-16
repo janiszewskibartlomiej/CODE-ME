@@ -55,7 +55,7 @@ def log_in():
         c.execute(zapytanie_password, (username,))
         line_from_base = c.fetchone()
 
-        if line_from_base == None:
+        if line_from_base == None or line_from_base[1] is not username:
             flash('błędna nazwa użytkownika lub hasło')
             return redirect('/login')
         
