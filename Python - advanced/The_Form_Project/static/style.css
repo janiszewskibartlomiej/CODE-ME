@@ -160,3 +160,13 @@ body {
     justify-content: center;
     margin-bottom: 2vw;
     margin-top: 1vw;}
+
+.alert {
+    padding: 1.1vw;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 2vw;
+    text-align:center;
+    font-size:1.3vw;
+    display: block;
+    }
