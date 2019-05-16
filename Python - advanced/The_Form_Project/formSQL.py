@@ -55,6 +55,10 @@ def log_in():
         c.execute(zapytanie_password, (username,))
         line_from_base = c.fetchone()
 
+        if line_from_base == None:
+            flash('błędna nazwa użytkownika lub hasło')
+            return redirect('/login')
+        
         print('hasła:', password, list(line_from_base))
 
         if line_from_base[2] and password == line_from_base[2]:
@@ -62,9 +66,6 @@ def log_in():
             session['user'] = line_from_base[1]
 
             return redirect('/formularz')
-
-        flash('błędna nazwa użytkownika lub hasło')
-        return redirect('/login')
 
 
 @app.route('/formularz', methods=['GET', 'POST'])
