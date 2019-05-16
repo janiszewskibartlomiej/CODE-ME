@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, redirect, session, get_flashe
 
 app = Flask(__name__)
 
-with open('session_key.txt', 'r') as f:
+with open('session_k.txt', 'r') as f:
     key = f.readline()
 app.secret_key = key
 
