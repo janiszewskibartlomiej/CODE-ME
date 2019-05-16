@@ -17,7 +17,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 </ul>
 
 
-<h4>Instrukcja uruchomienia</h4>
+<h3>Instrukcja uruchomienia</h3>
 
 <ol>
 <li>Uruchom plik createQuestionDataBase.py</li>
@@ -25,7 +25,8 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>W pliku session_k.txt wpisz dowolny ciąg znaków</li>
 <li>Uruchom plik formSQL.py</li>
 </ol>
+
 ----------
 
-> NARZĘDZIA: 
+ NARZĘDZIA: 
 <h3>Python 3.7, SQLite3, SQL, Flask, Jinja2, HTML5, CSS, Git.</h3>
