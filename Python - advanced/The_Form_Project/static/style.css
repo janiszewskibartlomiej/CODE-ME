@@ -75,7 +75,9 @@ body {
     text-align: left;
     }
 .in {
-    width: 100%;}
+    width: 100%;
+    height: 2vw;
+    font-size: 1.50vw}
 
 .question_word {
     font-size: 1.6vw;
