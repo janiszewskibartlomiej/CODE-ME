@@ -16,7 +16,9 @@
 
         <form method="post" action="/login">
             <p class="header">Logowanie do formularza</p>
-            <br>
+            {% if messages %}
+                <div class="alert">{{ messages[0] }}</div>
+            {% endif %}
             <div class="inputs">
                 <div class="user">
                     <label class="label_user" for="username">Username</label>
