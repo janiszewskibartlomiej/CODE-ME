@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background: #f7fafa;
+    font-family: Helvetica, Arial, sans-serif;
     }
 .log_container {
     display: flex;
@@ -12,47 +14,44 @@ body {
     display:flex;
     justify-content: center;}
 .log {
-    border: 8px solid #dddee0;
+    border: 0.1vw solid #dddee0;
     border-radius: 4px;
-    background: #f7f5f5;
+    background: white;
+    padding: 1.0rem 1rem 1rem 1rem;
+    width: 16%;
+    white-space: nowrap;
+    font: inherit;
+    }
+.question {
+    border: 4px solid #dddee0;
+    border-radius: 4px;
+    background: white;
     padding: 1.2rem 1rem 2rem 1rem;
     width: 25%;
     white-space: nowrap;
     font: inherit;
-    font-family: Helvetica, Arial, sans-serif;
-    }
-.question {
-    border: 8px solid #dddee0;
-    border-radius: 4px;
-    background: #f7f5f5;
-    padding: 1.2rem 1rem 2rem 1rem;
-    width: 42%;
-    white-space: nowrap;
-    font: inherit;
-    font-family: Helvetica, Arial, sans-serif;
     }
 .questions_list {
-    display:center;
-    border: 4px solid #dddee0;
-    border-radius: 4px;
-    background: #f7f5f5;
-    padding: 1rem 1rem 1rem 1rem;
+    border: 2px solid #dddee0;
+    border-radius: 10vw;
+    background: white;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
     width: 100%;
-    height:100%
     white-space: nowrap;
-
-    font-family: Helvetica, Arial, sans-serif;
+    margin: auto;
     }
 
 #button {
-    color: red;
+    display: center;
+    align-items: center;
+    justify-content: center;
+    color: #dc3b3b;
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
     border-radius: 0.5vw;
-    height: 2.4vw;
-    width: 5.5vw;
-    font-size: 1.4vw;
-    margin-left: 15px;
+    height: 1.6vw;
+    width: 3.5vw;
+    font-size: 1.0vw;
     }
 #button_baza {
     cursor: pointer;
@@ -65,46 +64,58 @@ body {
     }
 
 .header {
-    font-weight: ;
-    font-size: 2vw;
+    font-size: 1.3vw;
     text-align: center;
+    color: #dc3b3b;
+    margin-bottom: 1.5vw;
     }
 .head_end {
-    font-weight: ;
     font-size: 1.6vw;
     text-align: left;
     }
 .in {
-    width: 100%;
-    height: 2vw;
-    font-size: 1.3vw}
+    width: 63%;
+    height: 1.4vw;
+    font-size: 0.9vw;
+    text-align: center;
+    }
+
+.in_for {
+    width: 95%;
+    height: 1.4vw;
+    font-size: 0.9vw;
+    padding-left: 0.5vw;
+    }
 
 .question_word {
-    font-size: 1.6vw;
-    margin: 3px;}
+    font-size: 1.0vw;
+    margin: 3px;
+    color: gray;}
 
 .inputs {
     text-align: center;
-    font-size: 1.3vw;
+    font-size: 1.0vw;
     }
 .user {
     width: 100%;
-    margin-right: 10px;
     display: flex;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+    margin-right: 0;}
 
 .password {
+    margin-right: 0;
     width: 100%;
-    margin-right: 10px;
     display: flex;
     margin-bottom: 20px;}
 
 .label_user {
     margin-right: 3%;
     margin-top: 3px;
-    display: flex;}
+    display: flex;
+    color: gray;}
 
 .label_password {
+    color: gray;
     margin-right: 4%;
     margin-top: 3px;
     display: flex;}
@@ -147,27 +158,31 @@ body {
 
 .logout {
     display: flex;
-    color: red;
+    color: #dc3b3b;
     cursor: pointer;
     border-radius: 0.50vw;
-    height: 2.4vw;
-    width: 5.5vw;
-    font-size: 1.4vw;
+    box-shadow: 5px 5px 5px #ccc;
+    height: 1.6vw;
+    width: 4.0vw;
+    font-size: 1.0vw;
     padding: 1px;
     margin: auto;
     align-items: center;
     justify-content: center;}
 
-.button_dodaj_pytanie {
-    color: red;
+.logout_lista {
+    display: flex;
+    color: #dc3b3b;
     cursor: pointer;
-    box-shadow: 5px 5px 5px #ccc;
     border-radius: 0.50vw;
-    height: 2.7vw;
-    width: 10.0vw;
-    font-size: 1.4vw;
-    padding: 2px;
-    }
+    box-shadow: 5px 5px 5px #ccc;
+    height: 1.6vw;
+    width: 4.0vw;
+    font-size: 1.0vw;
+    padding: 1px;
+    margin-right: 4vw;
+    align-items: center;
+    justify-content: center;}
 
 .dwa_przyciski {
     display: flex;
@@ -178,31 +193,43 @@ body {
     }
 
 .alert {
-    padding: 1.1vw;
+    padding: 1.0vw;
     background-color: #f44336; /* Red */
     color: white;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     text-align:center;
-    font-size:1.3vw;
+    font-size: 1.8vh;
     display: block;
     }
 
 .del {
     background-color: #007bff;
     border-color: #007bff;
-    padding: 0.5vw 1vw;
-    font-size: 1.2vw;
-    line-height: 1vw;
-    border-radius: 2vw;}
+    padding: 0.2vw 0.3vw;
+    font-size: 0.8vw;
+    border-radius: 1vw;}
 
 .baza {
     background-color: #007bff;
-    padding: 0.5vw 0.6vw;
-    font-size: 1.3vw;
+    border-color: #007bff;
+    padding: 0.3vw 0.4vw;
+    font-size: 0.90vw;
     border-radius: 1vw;
     margin-right: 14vw}
 
+.dodaj {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.2vw 0.4vw;
+    font-size: 0.90vw;
+    border-radius: 1vw;
+    color: white;}
+
 a{
     text-decoration:none;
-    color: white;
-}
+    color: white;}
+
+input {
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            border-radius: .25vw;
+    }
