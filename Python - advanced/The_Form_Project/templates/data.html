@@ -23,9 +23,9 @@
         {% for klucz, wartosc in pytania.items() %}
 
         <tr>
-            <td class="questions_list">{{loop.index}}. {{ wartosc }}</td>
+            <td class="questions_list">{{loop.index}}.  {{ wartosc }}</td>
 
-            <td><a href="/usun?id={{ klucz }}"/> usuń</td>
+            <td ><a class="del" href="/usun?id={{ klucz }}" role="button"/> usuń</td>
 
 
         </tr>
@@ -35,12 +35,12 @@
 <div class="dwa_przyciski">
     <div>
         <form action="/logout">
-            <input class="button_logout" type="submit" value="Log out">
+            <input class="logout_lista" type="submit" value="Log out">
         </form>
     </div>
     <div>
         <form action="/dodaj">
-            <input class="button_dodaj_pytanie" type="submit" value="Dodaj pytanie">
+            <input class="dodaj" type="submit" value="Dodaj pytanie">
         </form>
     </div>
 </div>
