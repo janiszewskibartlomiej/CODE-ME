@@ -48,7 +48,7 @@ body {
     color: red;
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
-    border-radius: 3px;
+    border-radius: 0.5vw;
     height: 2.4vw;
     width: 5.5vw;
     font-size: 1.4vw;
@@ -57,7 +57,7 @@ body {
 #button_baza {
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
-    border-radius: 3px;
+    border-radius: 0.5vw;
     height: 2.0vw;
     width: 7.5vw;
     font-size: 1.4vw;
@@ -130,13 +130,14 @@ body {
 .button_dodaj {
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+    }
 
 .button_logout {
     color: red;
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
-    border-radius: 3px;
+    border-radius: 0.50vw;
     height: 2.7vw;
     width: 5.9vw;
     font-size: 1.4vw;
@@ -146,12 +147,12 @@ body {
 
 .logout {
     display: flex;
-    color: blue;
+    color: red;
     cursor: pointer;
-    border-radius: 3px;
-    height: 2vw;
-    width: 4.5vw;
-    font-size: 1vw;
+    border-radius: 0.50vw;
+    height: 2.4vw;
+    width: 5.5vw;
+    font-size: 1.4vw;
     padding: 1px;
     margin: auto;
     align-items: center;
@@ -161,18 +162,20 @@ body {
     color: red;
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
-    border-radius: 3px;
+    border-radius: 0.50vw;
     height: 2.7vw;
     width: 10.0vw;
     font-size: 1.4vw;
-    padding: 2px;}
+    padding: 2px;
+    }
 
 .dwa_przyciski {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2vw;
-    margin-top: 1vw;}
+    margin-top: 1vw;
+    }
 
 .alert {
     padding: 1.1vw;
@@ -183,3 +186,23 @@ body {
     font-size:1.3vw;
     display: block;
     }
+
+.del {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.5vw 1vw;
+    font-size: 1.2vw;
+    line-height: 1vw;
+    border-radius: 2vw;}
+
+.baza {
+    background-color: #007bff;
+    padding: 0.5vw 0.6vw;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    margin-right: 14vw}
+
+a{
+    text-decoration:none;
+    color: white;
+}
