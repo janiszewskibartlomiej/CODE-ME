@@ -17,12 +17,11 @@
     <br>
 
     <form class="question" method="POST" action="/dodaj">
-        <p class="header">Wprowadzanie danych do folmularza</p>
+        <p class="header">Wprowadzanie danych do bazy</p>
+        <label class="question_word">Pytanie:</label>
         <br>
-        <label class="question_word">Wpisz pytanie:</label>
         <br>
-        <br>
-        <input name="question" class="in">
+        <input type="text" name="question" class="in_for" placeholder="Wpisz pytanie które zostanie dodane do bazy">
 
         <br>
         <br>
@@ -33,7 +32,7 @@
                         <a href="/baza"/>Baza pytań
                     </div>
                 </div>
-                <input id="button" type="submit" value="Dodaj">
+                <input class="dodaj" type="submit" value="Dodaj">
             </div>
         </div>
     </form>
