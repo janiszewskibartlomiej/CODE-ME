@@ -29,4 +29,4 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 ----------
 
  NARZĘDZIA: 
-<h3>Python 3.7, SQLite3, SQL, Flask, Jinja2, HTML5, CSS, Git.</h3>
+<h3>Python 3.7, SQLite3, SQL, Flask, Jinja2, HTML5, CSS, HTTP, Git.</h3>
