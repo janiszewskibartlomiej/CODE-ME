@@ -26,7 +26,55 @@ def index():
 
     id = session.get('user_id')
     user = session.get('user')
-    return redirect('/formularz')
+    return redirect('/wpisz_pytanie')
+
+
+@app.route('/registerghuewrdb', methods=['GET', 'POST'])
+def register():
+    if request.method == 'GET':
+        validator = get_flashed_messages()
+        return render_template('register_user.html', validator=validator)
+
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        password2 = request.form['password2']
+
+        conn = get_connection()
+        c = conn.cursor()
+
+        print(username)
+        print(password)
+        print(password2)
+
+        password = password.encode()
+
+        password = hashlib.sha256(password)
+        password = password.digest()
+
+        password2 = password2.encode()
+
+        password2 = hashlib.sha256(password2)
+        password2 = password2.digest()
+
+        print(password)
+        print(password2)
+
+        if password == password2:
+            password_ok = password
+
+            zapytanie = """
+                        INSERT INTO "login"(id, user, password, admin) VALUES (NULL, ?, ?,'false');"""
+
+            c.execute(zapytanie, (username, password_ok))
+
+            print('hasła:', password, password2)
+
+            return redirect('/login')
+
+        else:
+            flash('Wpisane hasła nie są identyczne')
+            return redirect('/registerghuewrdb')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -58,18 +106,17 @@ def log_in():
         print('hasła:', password, line_from_base)
 
         if line_from_base == None or password != line_from_base[2]:
-
-            flash('błędna nazwa użytkownika lub hasło')
+            flash('Błędna nazwa użytkownika lub hasło')
             return redirect('/login')
 
         if password == line_from_base[2]:
             session['user_id'] = line_from_base[0]
             session['user'] = line_from_base[1]
-            return redirect('/formularz')
+            return redirect('/wpisz_pytanie')
 
 
-@app.route('/formularz', methods=['GET', 'POST'])
-def formularz():
+@app.route('/wpisz_pytanie', methods=['GET', 'POST'])
+def wpisz_pytanie():
     if session:
         return render_template('input_question.html')
 

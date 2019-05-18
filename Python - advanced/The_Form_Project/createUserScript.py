@@ -18,11 +18,13 @@ haslo = hashlib.sha256(haslo)
 haslo = haslo.digest()
 print(haslo)
 
-admin = input('Czy użytkownik ma mieć uprawnienia "Admin" [T lub N]: ')
-if admin == 'T' or 't':
-    admin = 'true'
-else:
-    admin = 'false'
+admin = 'true'
+
+# admin = input('Czy użytkownik ma mieć uprawnienia "Admin" [T lub N]: ')
+# if admin == 'T' or 't':
+#     admin = 'true'
+# else:
+#     admin = 'false'
 
 c.execute(zapytanie, (login, haslo, admin))
 

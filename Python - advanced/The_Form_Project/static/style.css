@@ -53,6 +53,19 @@ body {
     width: 3.5vw;
     font-size: 1.0vw;
     }
+
+#button_register {
+    display: center;
+    align-items: center;
+    justify-content: center;
+    color: #dc3b3b;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 0.5vw;
+    height: 1.6vw;
+    width: 5.0vw;
+    font-size: 1.0vw;
+    }
 #button_baza {
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
@@ -78,6 +91,13 @@ body {
     height: 1.4vw;
     font-size: 0.9vw;
     text-align: center;
+    }
+
+.label_confirm {
+    color: gray;
+    margin-right: 9%;
+    margin-top: 3px;
+    display: flex;
     }
 
 .in_for {

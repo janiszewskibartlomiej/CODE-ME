@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>LOG IN to the Form</title>
+    <title> Register</title>
     <link rel="stylesheet" href="static/style.css">
     <link rel="icon" type="image/png" sizes="150x150" href="static/mstile-150x150.png">
     <link rel="icon" href="static/favicon.ico">
@@ -14,22 +14,26 @@
 <div class="log_container">
     <div class="log">
 
-        <form method="post" action="/login">
-            <p class="header">Logowanie do formularza</p>
-            {% if messages %}
-                <div class="alert">{{ messages[0] }}</div>
+        <form method="post" action="/registerghuewrdb">
+            <p class="header">Rejestracja użytkownika</p>
+            {% if validator %}
+                <div class="alert">{{ validator[0] }}</div>
             {% endif %}
             <div class="inputs">
                 <div class="user">
                     <label class="label_user" for="username">Username</label>
-                    <input class="in" name="username" id="username" placeholder="Wpisz login" required>
+                    <input class="in" name="username" id="username" placeholder="Podaj login" required>
                 </div>
                 <div class="password">
                     <label class="label_password">Password</label>
-                    <input class="in" type="password" name="password" placeholder="Wpisz hasło" required>
+                    <input class="in" type="password" name="password" placeholder="Podaj hasło" required>
+                </div>
+                <div class="password">
+                    <label class="label_confirm">Confirm</label>
+                    <input class="in" type="password" name="password2" placeholder="Potwierdź hasło" required>
                 </div>
                 <div>
-                    <input id="button" type="submit" value="Log in">
+                    <input id="button_register" type="submit" value="Register">
                 </div>
             </div>
         </form>
