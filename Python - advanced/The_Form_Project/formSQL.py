@@ -169,12 +169,13 @@ def form():
         for i in answers:
             for one in i:
                 print(one)
-                if one[0].isnumeric() or one[0:2].isnumeric():
-                    print(one[0:2])
-                    odp = one[-1]
-                    l = one[:2]
-                    l = l.strip()
-                    answer_dict[l] = odp
+                id = one.strip(' NT')
+                # if one[0].isnumeric() or one[0:2].isnumeric():
+                    # print(one[0:2])
+                odp = one[-1]
+                    # l = one[:2]
+                    # l = l.strip()
+                answer_dict[id] = odp
 
         print(answer_dict)
 
