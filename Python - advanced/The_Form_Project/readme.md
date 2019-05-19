@@ -20,9 +20,9 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <h4>Lista alertów:<h4>
 
 <ul>
-<li>Błędne hasło lub login.</li>
-<li>Hasło w panelu "Register" nie jest identyczne.</li>
-<li>Podany login już istnije</li>
+<li>Sprawdzenie hasła oraz loginu w panelu "Login".</li>
+<li>Walidacja hasła w panelu "Register".</li>
+<li>Walidacja loginu w panelu "Register".</li>
 </ul>
 
 <h3>Instrukcja uruchomienia:</h3>
