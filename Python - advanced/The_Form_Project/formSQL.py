@@ -33,7 +33,8 @@ def index():
 def register():
     if request.method == 'GET':
         validator = get_flashed_messages()
-        return render_template('register_user.html', validator=validator)
+        double_user = get_flashed_messages()
+        return render_template('register_user.html', validator=validator, double_user=double_user)
 
     if request.method == 'POST':
         username = request.form['username']
@@ -66,7 +67,12 @@ def register():
             zapytanie = """
                         INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?,'false');"""
 
-            c.execute(zapytanie, (username, password_ok))
+            try:
+                c.execute(zapytanie, (username, password_ok))
+            except sqlite3.IntegrityError:
+                double_user = flash('Ten login już istnije')
+                return redirect('/registerghuewrdb')
+
 
             print('dane:', username, password2)
             conn.commit()
