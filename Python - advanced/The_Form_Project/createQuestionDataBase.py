@@ -9,9 +9,9 @@ zapytanie1 = """
 
     CREATE TABLE "login" (
     "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    "user"	TEXT UNIQUE,
-    "password"	TEXT,
-    "admin" TEXT);
+    "user"	TEXT NOT NULL UNIQUE ,
+    "password"	TEXT NOT NULL,
+    "admin" TEXT NOT NULL);
     """
 c.executescript(zapytanie1)
 
@@ -23,9 +23,9 @@ zapytanie2 = """
     
     CREATE TABLE "questions" (
     "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    "tworca"	TEXT,
-    "pytanie"	TEXT,
-    "typ" TEXT);
+    "id_user"	INTEGER NOT NULL,
+    "question"	TEXT,
+    "type" TEXT NOT NULL);
     """
 c.executescript(zapytanie2)
 
@@ -34,9 +34,10 @@ zapytanie3 = """
     
     CREATE TABLE "answers" (
     "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    "uzytkownik"	TEXT,
-    "id_pytania"	INTEGER,
-    "odpowiedz" TEXT);
+    "id_user"	INTEGER NOT NULL,
+    "id_question"	INTEGER NOT NULL,
+    "answer" TEXT NOT NULL,
+    "is_answer" TEXT);
     """
 c.executescript(zapytanie3)
 

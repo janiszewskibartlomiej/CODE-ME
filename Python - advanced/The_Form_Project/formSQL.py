@@ -134,7 +134,7 @@ def form():
         conn = sqlite3.connect('questionDataBase.db')
         c = conn.cursor()
         zapytanie = """
-            SELECT id, pytanie FROM "questions";
+            SELECT id, question FROM "questions";
             """
         c.execute(zapytanie)
         pytania = c.fetchall()
@@ -201,19 +201,14 @@ def add():
         c = conn.cursor()
         question = request.form['question']
         autor = session.get('user_id')
-        # yes = request.form['answer_yes']
-        # no = request.form['answer_no']
-        # dknow = request.form['answer_dknow']
-        # discribe = request.form['answer_discribe']
-        # print(question, yes, no, dknow, discribe)
 
-        dodaj_pytanie = """
-        INSERT INTO "questions" ("id", "tworca", "pytanie", "typ") VALUES (NULL, ?, ?,'tn')"""
+        add_question = """
+        INSERT INTO "questions" ("id", "id_user", "question", "type") VALUES (NULL, ?, ?,'tn')"""
 
         parametry = (autor, question)
         print(parametry)
 
-        c.execute(dodaj_pytanie, parametry)
+        c.execute(add_question, parametry)
         conn.commit()
         return redirect('/dodaj')
 
@@ -226,7 +221,7 @@ def data():
     conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
     zapytanie = """
-    SELECT id, pytanie FROM "questions";
+    SELECT id, question FROM "questions";
     """
     c.execute(zapytanie)
     pytania = c.fetchall()
