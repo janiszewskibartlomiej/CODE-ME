@@ -14,11 +14,11 @@ body {
     display:flex;
     justify-content: center;}
 .log {
-    border: 0.1vw solid #dddee0;
+    border: 0.2vw solid #dddee0;
     border-radius: 4px;
     background: white;
-    padding: 1.0rem 1rem 1rem 1rem;
-    width: 16%;
+    padding: 0rem 1rem 1rem 1rem;
+    width: 23%;
     white-space: nowrap;
     font: inherit;
     }
@@ -27,7 +27,7 @@ body {
     border-radius: 4px;
     background: white;
     padding: 1.2rem 1rem 2rem 1rem;
-    width: 25%;
+    width: 30%;
     white-space: nowrap;
     font: inherit;
     }
@@ -35,10 +35,10 @@ body {
     border: 2px solid #dddee0;
     border-radius: 10vw;
     background: white;
-    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
-    width: 100%;
-    white-space: nowrap;
-    margin: auto;
+    padding: 1.8vw 1.8vw 1.8vw 1.8vw;
+    width: 80%;
+    text-align: center;
+    font-size: 1.4vw;
     }
 
 #button {
@@ -47,11 +47,12 @@ body {
     justify-content: center;
     color: #dc3b3b;
     cursor: pointer;
+    height: 2.2vw;
+    width: 5.0vw;
+    font-size: 1.3vw;
     box-shadow: 5px 5px 5px #ccc;
     border-radius: 0.5vw;
-    height: 1.6vw;
-    width: 3.5vw;
-    font-size: 1.0vw;
+    padding: initial
     }
 
 #button_register {
@@ -62,9 +63,10 @@ body {
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
     border-radius: 0.5vw;
-    height: 1.6vw;
-    width: 5.0vw;
-    font-size: 1.0vw;
+    height: 2.7vw;
+    width: 5.9vw;
+    font-size: 1.3vw;
+    padding: initial
     }
 #button_baza {
     cursor: pointer;
@@ -77,7 +79,7 @@ body {
     }
 
 .header {
-    font-size: 1.3vw;
+    font-size: 1.7vw;
     text-align: center;
     color: #dc3b3b;
     margin-bottom: 1.5vw;
@@ -87,28 +89,29 @@ body {
     text-align: left;
     }
 .in {
-    width: 63%;
-    height: 1.4vw;
-    font-size: 0.9vw;
+    width: 67%;
+    height: 1.6vw;
+    font-size: 1.1vw;
     text-align: center;
     }
 
 .label_confirm {
     color: gray;
-    margin-right: 9%;
+    margin-right: 8%;
     margin-top: 3px;
     display: flex;
+    font-size: 1.1vw;
     }
 
 .in_for {
     width: 95%;
-    height: 1.4vw;
-    font-size: 0.9vw;
+    height: 1.6vw;
+    font-size: 1.1vw;
     padding-left: 0.5vw;
     }
 
 .question_word {
-    font-size: 1.0vw;
+    font-size: 1.3vw;
     margin: 3px;
     color: gray;}
 
@@ -120,40 +123,44 @@ body {
     width: 100%;
     display: flex;
     margin-bottom: 20px;
-    margin-right: 0;}
+    margin-right: 0;
+    margin-top: 2vw;}
 
 .password {
     margin-right: 0;
     width: 100%;
     display: flex;
-    margin-bottom: 20px;}
+    margin-bottom: 2vw;}
 
 .label_user {
     margin-right: 3%;
     margin-top: 3px;
     display: flex;
-    color: gray;}
+    color: gray;
+    font-size: 1.1vw;}
 
 .label_password {
     color: gray;
     margin-right: 4%;
     margin-top: 3px;
-    display: flex;}
+    display: flex;
+    font-size: 1.1vw;}
 
 
 .box {
     display: flex;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
     font-size: 1.5vw;
     }
 
 .checkbox {
-    display: center;
-    width: 2vw;
-    height: 2vw;
-    font-size: 10vw;
-    margin: auto;}
+    display: inline-flex;
+    text-align: inline;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: -50%;
+    }
 
 .answer {
     width: 2vw;}
@@ -171,10 +178,10 @@ body {
     border-radius: 0.50vw;
     height: 2.7vw;
     width: 5.9vw;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     margin-right: 5vw;
     margin-left: -3vw;
-    padding: 2px;}
+    padding: initial}
 
 .logout {
     display: flex;
@@ -182,27 +189,26 @@ body {
     cursor: pointer;
     border-radius: 0.50vw;
     box-shadow: 5px 5px 5px #ccc;
-    height: 1.6vw;
-    width: 4.0vw;
-    font-size: 1.0vw;
-    padding: 1px;
+    height: 2.1vw;
+    width: 5.3vw;
+    font-size: 1.3vw;
     margin: auto;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+    padding: initial}
 
 .logout_lista {
-    display: flex;
+    display: inline-flex;
     color: #dc3b3b;
     cursor: pointer;
     border-radius: 0.50vw;
     box-shadow: 5px 5px 5px #ccc;
-    height: 1.6vw;
-    width: 4.0vw;
-    font-size: 1.0vw;
-    padding: 1px;
-    margin-right: 4vw;
-    align-items: center;
-    justify-content: center;}
+    height: 2.1vw;
+    width: 5.3vw;
+    font-size: 1.3vw;
+    justify-content: center;
+    margin-right: 5vw;
+    }
 
 .dwa_przyciski {
     display: flex;
@@ -212,28 +218,38 @@ body {
     margin-top: 1vw;
     }
 
+.dwa_przyciski_baza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    margin-left: -5vw;
+    }
+
 .alert {
     padding: 1.0vw;
     background-color: #f44336; /* Red */
     color: white;
     margin-bottom: 1vw;
     text-align:center;
-    font-size: 1.8vh;
+    font-size: 2.5vh;
     display: block;
     }
 
 .del {
     background-color: #007bff;
     border-color: #007bff;
-    padding: 0.2vw 0.3vw;
-    font-size: 0.8vw;
-    border-radius: 1vw;}
+    padding: 0.6vw 0.6vw;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    margin-left: 0.9vw;}
 
 .baza {
     background-color: #007bff;
     border-color: #007bff;
     padding: 0.3vw 0.4vw;
-    font-size: 0.90vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
     margin-right: 14vw}
 
@@ -241,9 +257,12 @@ body {
     background-color: #007bff;
     border-color: #007bff;
     padding: 0.2vw 0.4vw;
-    font-size: 0.90vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
-    color: white;}
+    color: white;
+    cursor: pointer;
+    margin-right: 7vw;
+    margin-left: 5vw;}
 
 a{
     text-decoration:none;
@@ -252,4 +271,19 @@ a{
 input {
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
             border-radius: .25vw;
+    }
+
+.question_form {
+    display: flex;
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-left: 25%;}
+
+#checkbox1 {
+    margin-right: 3vw;
+    text-align: center;
+    }
+.label_form {
+    font-size: 1.2vw;
+    vertical-align: 0.3vw;
     }

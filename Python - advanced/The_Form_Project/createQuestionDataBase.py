@@ -9,7 +9,7 @@ zapytanie1 = """
 
     CREATE TABLE "login" (
     "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    "user"	TEXT,
+    "user"	TEXT UNIQUE,
     "password"	TEXT,
     "admin" TEXT);
     """

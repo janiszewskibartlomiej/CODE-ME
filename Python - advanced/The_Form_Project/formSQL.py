@@ -64,11 +64,12 @@ def register():
             password_ok = password
 
             zapytanie = """
-                        INSERT INTO "login"(id, user, password, admin) VALUES (NULL, ?, ?,'false');"""
+                        INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?,'false');"""
 
             c.execute(zapytanie, (username, password_ok))
 
-            print('hasła:', password, password2)
+            print('dane:', username, password2)
+            conn.commit()
 
             return redirect('/login')
 
@@ -98,7 +99,7 @@ def log_in():
         password = password.digest()
 
         zapytanie_password = """
-            SELECT id, user, password FROM "login" WHERE user = ?;
+            SELECT id, user, password, admin FROM "login" WHERE user = ?;
             """
         c.execute(zapytanie_password, (username,))
         line_from_base = c.fetchone()
@@ -112,7 +113,53 @@ def log_in():
         if password == line_from_base[2]:
             session['user_id'] = line_from_base[0]
             session['user'] = line_from_base[1]
-            return redirect('/wpisz_pytanie')
+
+            if line_from_base[3] == 'true':
+                return redirect('/wpisz_pytanie')
+
+            else:
+                return redirect('/ankieta')
+
+
+@app.route('/ankieta', methods=['GET', 'POST'])
+def form():
+    if request.method == 'GET':
+
+        conn = sqlite3.connect('questionDataBase.db')
+        c = conn.cursor()
+        zapytanie = """
+            SELECT id, pytanie FROM "questions";
+            """
+        c.execute(zapytanie)
+        pytania = c.fetchall()
+        # print(pytania)
+        slownik = {}
+        for x in pytania:
+            # print(x)
+            dodaj_do_slownika = {x[0]: x[1]}
+            slownik.update(dodaj_do_slownika)
+        # print(slownik)
+        context = {'pytania': slownik}
+
+        return render_template('form_for_user.html', **context)
+
+    if request.method == 'POST':
+        conn = get_connection()
+        c = conn.cursor()
+        # answers = request.form
+        # print(answers)
+        # print(type(answers))
+
+        answers = dict(
+            (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
+            key in request.form.keys())
+
+        print(answers)
+
+
+        # print(f'id = {answer[0]} odpowiedź: {answer[1]}')
+
+        return 'Dziekujemy za wypełnienie ankiety'
 
 
 @app.route('/wpisz_pytanie', methods=['GET', 'POST'])
@@ -126,7 +173,7 @@ def wpisz_pytanie():
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
-        conn = sqlite3.connect('questionDataBase.db')
+        conn = get_connection()
         c = conn.cursor()
         question = request.form['question']
         autor = 'test'
