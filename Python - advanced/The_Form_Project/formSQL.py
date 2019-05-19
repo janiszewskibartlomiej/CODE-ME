@@ -170,6 +170,7 @@ def form():
             for one in i:
                 print(one)
                 id = one.strip(' NT')
+                id = int(id)
                 # if one[0].isnumeric() or one[0:2].isnumeric():
                     # print(one[0:2])
                 odp = one[-1]
@@ -199,7 +200,7 @@ def add():
         conn = get_connection()
         c = conn.cursor()
         question = request.form['question']
-        autor = 'test'
+        autor = session.get('user_id')
         # yes = request.form['answer_yes']
         # no = request.form['answer_no']
         # dknow = request.form['answer_dknow']
