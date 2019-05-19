@@ -20,7 +20,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <h4>Lista alertów<h4>
 
 <ul>
-<li>Bedne hasło lub login.</li>
+<li>Błędne hasło lub login.</li>
 <li>Hasło w panelu "Register" nie jest identyczne.</li>
 <li>Podany login już istnije</li>
 </ul>
