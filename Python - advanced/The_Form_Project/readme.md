@@ -17,7 +17,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Administrator będzie miał możliwość analizy danych zapisanych w bazie.</li>
 </ul>
 
-<h4>Lista alertów<h4>
+<h4>Lista alertów:<h4>
 
 <ul>
 <li>Błędne hasło lub login.</li>
@@ -25,7 +25,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Podany login już istnije</li>
 </ul>
 
-<h3>Instrukcja uruchomienia</h3>
+<h3>Instrukcja uruchomienia:</h3>
 
 <ol>
 <li>Uruchom plik createQuestionDataBase.py</li>
