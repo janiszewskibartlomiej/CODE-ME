@@ -29,5 +29,16 @@ zapytanie2 = """
     """
 c.executescript(zapytanie2)
 
+zapytanie3 = """
+    DROP TABLE IF EXISTS 'answers';
+    
+    CREATE TABLE "answers" (
+    "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    "uzytkownik"	TEXT,
+    "id_pytania"	INTEGER,
+    "odpowiedz" TEXT);
+    """
+c.executescript(zapytanie3)
+
 conn.commit()
 conn.close()

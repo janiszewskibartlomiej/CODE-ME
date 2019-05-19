@@ -156,6 +156,19 @@ def form():
 
         print(answers)
 
+        answers = answers.values()
+
+        print(answers)
+        answer_dict = {}
+        for i in answers:
+            for one in i:
+                print(one)
+                if one[:2].isnumeric():
+                    odp = one[-1]
+                    answer_dict[one[:2]] = odp
+
+        print(answer_dict)
+
 
         # print(f'id = {answer[0]} odpowiedź: {answer[1]}')
 
