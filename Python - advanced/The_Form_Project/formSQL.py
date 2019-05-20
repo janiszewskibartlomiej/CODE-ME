@@ -73,7 +73,6 @@ def register():
                 double_user = flash('Ten login już istnije')
                 return redirect('/registerghuewrdb')
 
-
             print('dane:', username, password2)
             conn.commit()
 
@@ -180,42 +179,43 @@ def form():
 
         print(answers_dict)
 
-        # wprowadzenie_ankiety = """
-        # INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
-        # """
-
         conn = get_connection()
         c = conn.cursor()
 
-        id_user = session.get('user_id')
-        is_answer = 'not now'
-
         for key, volume in answers_dict.items():
-            key= f'"{key}"'
-            # volume = f'"{volume}"'
-            wprowadzenie_ankiety = f'INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, {id_user}, {key}, {volume}, {is_answer});'
-            # wprowadzenie_ankiety = f'"""{wprowadzenie_ankiety}"""'
+            add_answers_to_data = """
+                    INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
+                    """
+            id_user = session.get('user_id')
+            id_question = key
+            answer = volume
+            is_answer = 'true'
 
-            print(wprowadzenie_ankiety)
-            c.execute(wprowadzenie_ankiety)
+            print(add_answers_to_data)
+            c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
             conn.commit()
-            conn.close()
+        conn.close()
 
-        # INSERT
-        # INTO
-        # "answers"("id", "id_user", "id_question", "answer", "is_answer")
-        # VALUES(NULL, 1, 5, 'N', 'notnow');
+        return redirect('/wyniki')
 
-        # print(f'odp z ankiety id user: {id_user}, id question: {id_question}, answer:  {answer}')
+@app.route('/wyniki', methods=['GET', 'POST'])
+def results():
 
+    wyniki_ankiet = """
+    SELECT id_question, answer FROM "answers";
+    """
 
+    conn = sqlite3.connect('questionDataBase.db')
+    c = conn.cursor()
 
+    c.execute(wyniki_ankiet)
 
-        # c.execute(wpisz_pytanie, (id_user, id_question, answer, is_answer))
+    wyniki = c.fetchall()
 
-        # print(f'id = {answer[0]} odpowiedź: {answer[1]}')
+    print((wyniki))
 
-        return 'Dziekujemy za wypełnienie ankiety'
+    context = {'wyniki': wyniki}
+    return render_template('results.html', **context)
 
 
 @app.route('/wpisz_pytanie', methods=['GET', 'POST'])
