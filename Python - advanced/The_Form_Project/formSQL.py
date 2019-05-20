@@ -150,9 +150,9 @@ def form():
         return render_template('form_for_user.html', **context)
 
     if request.method == 'POST':
-        conn = get_connection()
-        c = conn.cursor()
-        # answers = request.form
+        # conn = get_connection()
+        # c = conn.cursor()
+        # # answers = request.form
         # print(answers)
         # print(type(answers))
 
@@ -165,21 +165,49 @@ def form():
         answers = answers.values()
 
         print(answers)
-        answer_dict = {}
+        answers_dict = {}
         for i in answers:
             for one in i:
                 print(one)
                 id = one.strip(' NT')
                 id = int(id)
                 # if one[0].isnumeric() or one[0:2].isnumeric():
-                    # print(one[0:2])
+                # print(one[0:2])
                 odp = one[-1]
-                    # l = one[:2]
-                    # l = l.strip()
-                answer_dict[id] = odp
+                # l = one[:2]
+                # l = l.strip()
+                answers_dict[id] = odp
 
-        print(answer_dict)
+        print(answers_dict)
 
+        # wprowadzenie_ankiety = """
+        # INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
+        # """
+
+        conn = get_connection()
+        c = conn.cursor()
+
+        id_user = session.get('user_id')
+        is_answer = 'not now'
+
+        for key, volume in answers_dict.items():
+            key= f'"{key}"'
+            # volume = f'"{volume}"'
+            wprowadzenie_ankiety = f'INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, {id_user}, {key}, {volume}, {is_answer});'
+            # wprowadzenie_ankiety = f'"""{wprowadzenie_ankiety}"""'
+
+            print(wprowadzenie_ankiety)
+            c.execute(wprowadzenie_ankiety)
+            conn.commit()
+            conn.close()
+
+
+        # print(f'odp z ankiety id user: {id_user}, id question: {id_question}, answer:  {answer}')
+
+
+
+
+        # c.execute(wpisz_pytanie, (id_user, id_question, answer, is_answer))
 
         # print(f'id = {answer[0]} odpowiedź: {answer[1]}')
 
