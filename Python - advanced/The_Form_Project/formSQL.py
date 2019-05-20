@@ -201,6 +201,10 @@ def form():
             conn.commit()
             conn.close()
 
+        # INSERT
+        # INTO
+        # "answers"("id", "id_user", "id_question", "answer", "is_answer")
+        # VALUES(NULL, 1, 5, 'N', 'notnow');
 
         # print(f'odp z ankiety id user: {id_user}, id question: {id_question}, answer:  {answer}')
 
