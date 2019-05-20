@@ -298,10 +298,10 @@ input {
     }
 
 .question_form {
-    display: flex;
+    display: -webkit-inline-box;
     text-align: center;
     margin-top: 1.5vw;
-    margin-left: 4vw;}
+    }
 
 #checkbox1 {
     margin-right: 3vw;
