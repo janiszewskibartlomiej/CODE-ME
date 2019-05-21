@@ -29,7 +29,7 @@ def index():
     return redirect('/wpisz_pytanie')
 
 
-@app.route('/auth/register', methods=['GET', 'POST'])
+@app.route('/registerghuewrdb', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
         validator = get_flashed_messages()
