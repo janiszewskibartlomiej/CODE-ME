@@ -29,7 +29,7 @@ def index():
     return redirect('/wpisz_pytanie')
 
 
-@app.route('/registerghuewrdb', methods=['GET', 'POST'])
+@app.route('/auth/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
         validator = get_flashed_messages()
@@ -162,7 +162,6 @@ def form():
         print(answers)
         # answers = answers.values()
 
-        print(answers)
         answers_dict = {}
         for k, v in answers.items():
             id = k.strip(' answer')
