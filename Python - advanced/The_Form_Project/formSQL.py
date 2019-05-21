@@ -169,7 +169,7 @@ def form():
             for one in i:
                 print(one)
                 id = one.strip(' NT')
-                id = int(id)
+                # id = int(id)
                 # if one[0].isnumeric() or one[0:2].isnumeric():
                 # print(one[0:2])
                 odp = one[-1]

@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 <form action="/ankieta" method="post">
     <div class="list">
 
@@ -23,24 +24,28 @@
                 </th>
             </tr>
             {% for klucz, wartosc in pytania.items() %}
-            <tr>
-                <div class="">
-                    <td class="questions_list ">{{loop.index}}. {{ wartosc }}
-                </div>
-                <br>
-                <div class="question_form">
-                    <div id="checkbox1">
-                        <input class="checkbox" type="checkbox" name="answer" value="{{klucz}} T"> <label
-                            class="label_form">Tak</label>
-                    </div>
-                    <div>
-                        <input class="checkbox" type="checkbox" name="answer" value="{{klucz}} N"> <label
-                            class="label_form">Nie</label>
-                    </div>
-                </div>
-                </td>
+                <div>
+                    <tr>
+                        <div class="">
+                            <td class="questions_list ">{{loop.index}}. {{ wartosc }}
+                        </div>
+                        <br>
 
-            </tr>
+                            <div class="question_form">
+                                <div id="checkbox1">
+                                    <input class="checkbox" type="radio" name="answer" value="{{klucz}} T"> <label
+                                        class="label_form">Tak</label>
+                                </div>
+
+                                    <div>
+                                        <input class="checkbox" type="radio" name="answer" value="{{klucz}} N"> <label
+                                            class="label_form">Nie</label>
+                                    </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                </div>
             {% endfor %}
         </table>
     </div>
@@ -49,12 +54,14 @@
         <div>
             <input class="wyslij_ankiete" type="submit" value="Wyślij ankietę">
         </div>
+        <div class="n_log">
+            <form action="/logout">
+                <input class="logout_ankieta" type="submit" value="Log out">
+            </form>
+        </div>
+    </div>
+
 </form>
-<div>
-    <form action="/logout">
-        <input class="logout_ankieta" type="submit" value="Log out">
-    </form>
-</div>
 </div>
 
 
