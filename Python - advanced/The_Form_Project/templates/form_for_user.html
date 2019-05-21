@@ -24,28 +24,29 @@
                 </th>
             </tr>
             {% for klucz, wartosc in pytania.items() %}
-                <div>
-                    <tr>
-                        <div class="">
-                            <td class="questions_list ">{{loop.index}}. {{ wartosc }}
+            <section>
+                <tr>
+                    <div class="">
+                        <td class="questions_list ">{{loop.index}}. {{ wartosc }}
+                    </div>
+                    <br>
+
+                    <div class="question_form">
+                        <div id="checkbox1">
+                            <input class="checkbox" type="radio" name="answer" value="{{klucz}} T"> <label
+                                class="label_form">Tak</label>
                         </div>
-                        <br>
 
-                            <div class="question_form">
-                                <div id="checkbox1">
-                                    <input class="checkbox" type="radio" name="answer" value="{{klucz}} T"> <label
-                                        class="label_form">Tak</label>
-                                </div>
+                        <div>
+                            <input class="checkbox" type="radio" name="answer" value="{{klucz}} N"> <label
+                                class="label_form">Nie</label>
+                        </div>
 
-                                    <div>
-                                        <input class="checkbox" type="radio" name="answer" value="{{klucz}} N"> <label
-                                            class="label_form">Nie</label>
-                                    </div>
-                            </div>
-                        </td>
+                    </div>
+                    </td>
 
-                    </tr>
-                </div>
+                </tr>
+            </section>
             {% endfor %}
         </table>
     </div>
