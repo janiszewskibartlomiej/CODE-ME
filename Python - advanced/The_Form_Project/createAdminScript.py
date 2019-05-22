@@ -1,5 +1,6 @@
 import sqlite3
 import hashlib
+from werkzeug.security import generate_password_hash
 
 conn = sqlite3.connect('questionDataBase.db')
 
@@ -10,13 +11,19 @@ zapytanie = """
     INSERT INTO "login" ("id", "user", "password", "admin") 
     
     VALUES (NULL, ?, ?, ?)"""
+
 login = input('Wpisz login: ')
 
 haslo = input('Wpisz hasło: ')
-haslo = haslo.encode()
-haslo = hashlib.sha256(haslo)
-haslo = haslo.digest()
-print(haslo)
+
+haslo_sha = generate_password_hash(haslo)
+
+
+
+# haslo = haslo.encode()
+# haslo = hashlib.sha256(haslo)
+# haslo = haslo.digest()
+print('Hasło: ', haslo, haslo_sha)
 
 admin = 'true'
 
@@ -26,7 +33,7 @@ admin = 'true'
 # else:
 #     admin = 'false'
 
-c.execute(zapytanie, (login, haslo, admin))
+c.execute(zapytanie, (login, haslo_sha, admin))
 
 conn.commit()
 
