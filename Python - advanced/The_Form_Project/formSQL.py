@@ -172,8 +172,7 @@ def form():
 
         print(answers_dict)
 
-        conn = get_connection()
-        c = conn.cursor()
+
 
         for key, volume in answers_dict.items():
             add_answers_to_data = """
@@ -184,10 +183,14 @@ def form():
             answer = volume
             is_answer = 1
 
+            conn = get_connection()
+            c = conn.cursor()
+
             print(add_answers_to_data)
             c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
             conn.commit()
         conn.close()
+
         session.clear()
         return render_template('thank_you.html')
 
