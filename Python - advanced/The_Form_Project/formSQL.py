@@ -26,7 +26,7 @@ def index():
 
     id = session.get('user_id')
     user = session.get('user')
-    return redirect('/wpisz_pytanie')
+    return redirect('/dodaj')
 
 
 @app.route('/registerghuewrdb', methods=['GET', 'POST'])
@@ -120,7 +120,7 @@ def log_in():
             session['user'] = line_from_base[1]
 
             if line_from_base[3] == 1:
-                return redirect('/wpisz_pytanie')
+                return redirect('/dodaj')
 
             else:
                 return redirect('/ankieta')
@@ -217,20 +217,21 @@ def results():
     return render_template('results.html', **context)
 
 
-@app.route('/wpisz_pytanie', methods=['GET', 'POST'])
-def wpisz_pytanie():
-    if session:
-        return render_template('input_question.html')
-
-    return redirect('/')
+# @app.route('/wpisz_pytanie', methods=['GET', 'POST'])
+# def wpisz_pytanie():
+#     if session:
+#         return render_template('input_question.html')
+#
+#     return redirect('/')
 
 
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
-
     if request.method == 'GET':
+        if session:
+            session.pop('_flashes', None)
 
-        return redirect('/wpisz_pytanie')
+            return render_template('input_question.html')
 
     if request.method == 'POST':
         added = get_flashed_messages()
@@ -249,9 +250,8 @@ def add():
         c.execute(add_question, parametry)
         conn.commit()
         flash('Pytanie zapisano w bazie')
-        return render_template('input_question.html', added=added)
 
-
+        return render_template('input_question.html', added=added, methods='GET')
 
 
 @app.route('/baza')

@@ -16,4 +16,5 @@ wykonaj_skrypt_sql('create_data.sql')
 conn.commit()
 conn.close()
 
-create_admin()
+if __name__ == '__main__':
+    create_admin()

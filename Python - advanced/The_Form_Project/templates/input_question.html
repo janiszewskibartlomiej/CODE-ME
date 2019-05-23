@@ -19,7 +19,7 @@
     <form class="question" method="POST" action="/dodaj">
         <p class="header">Wprowadzanie danych do bazy</p>
         {% if added %}
-        <div class="dodano">{{ added[0] }}</div>
+        <div class="dodano" style="font-size: 0px;">{{ added[0] }}</div>
         {% endif %}
         <label class="question_word">Pytanie:</label>
         <br>
@@ -31,12 +31,12 @@
         <br>
         <div>
             <div class="button_dodaj">
+                <section class="baza">
+                    <a href="/baza"/>Baza pytań
+                </section>
                 <div>
-                    <div class="baza">
-                        <a href="/baza"/>Baza pytań
-                    </div>
+                    <input class="dodaj" type="submit" value="Dodaj">
                 </div>
-                <input class="dodaj" type="submit" value="Dodaj">
             </div>
         </div>
     </form>
