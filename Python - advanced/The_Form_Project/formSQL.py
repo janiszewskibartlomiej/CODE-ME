@@ -241,6 +241,11 @@ def add():
         question = request.form['question']
         autor = session.get('user_id')
 
+        # print(type(question))
+
+        if question == '':
+            return redirect('/dodaj')
+
         add_question = """
         INSERT INTO "questions" ("id", "id_user", "question", "type") VALUES (NULL, ?, ?,'tn')"""
 
