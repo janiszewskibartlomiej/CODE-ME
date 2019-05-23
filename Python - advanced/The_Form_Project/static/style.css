@@ -237,7 +237,7 @@ body {
     margin-left: -5vw;
     }
 
-.dodano {animation: dodano 3s;}
+.alert {animation: dodano 3s;}
 
 @keyframes dodano
 {0%{
@@ -262,7 +262,7 @@ body {
 }
 /*100%{location.reload();}*/
 
-
+/*
 .alert {
     padding: 1.0vw;
     background-color: #f44336;
@@ -272,7 +272,7 @@ body {
     display: block;
     width: 90%;
     font-size: 1.3vw;
-    }
+    }*/
 
 .del {
     background-color: #007bff;
