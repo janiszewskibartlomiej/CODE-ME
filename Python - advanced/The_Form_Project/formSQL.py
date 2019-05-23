@@ -15,13 +15,12 @@ app.secret_key = key
 
 def get_connection():
     conn = sqlite3.connect('questionDataBase.db')
-    #conn.row_factory = sqlite3.Row
+    # conn.row_factory = sqlite3.Row
     return conn
 
 
 @app.route('/')
 def index():
-
     if not session:
         return redirect('/login')
 
@@ -32,7 +31,6 @@ def index():
 
 @app.route('/registerghuewrdb', methods=['GET', 'POST'])
 def register():
-
     if request.method == 'GET':
         validator = get_flashed_messages()
         double_user = get_flashed_messages()
@@ -85,9 +83,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def log_in():
-
     if request.method == 'GET':
-
         messages = get_flashed_messages()
         return render_template('log_in.html', messages=messages)
 
@@ -162,7 +158,6 @@ def form():
         answers_dict = {}
 
         for k, v in answers.items():
-
             id = k.strip(' answer')
             # for one in i:
             # print(one)
@@ -181,7 +176,6 @@ def form():
         c = conn.cursor()
 
         for key, volume in answers_dict.items():
-
             add_answers_to_data = """
                     INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
                     """
@@ -200,7 +194,6 @@ def form():
 
 @app.route('/wyniki', methods=['GET', 'POST'])
 def results():
-
     wyniki_ankiet = """
     SELECT id_question, answer FROM "answers";
     """
@@ -219,7 +212,6 @@ def results():
 
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
-
     if request.method == 'GET':
         if session:
             # session.pop('_flashes', None)
@@ -254,7 +246,6 @@ def add():
 
 @app.route('/baza')
 def data():
-
     conn = get_connection()
     c = conn.cursor()
 
@@ -278,7 +269,6 @@ def data():
 
 @app.route('/usun')
 def delete():
-
     conn = get_connection()
     c = conn.cursor()
 
@@ -295,7 +285,6 @@ def delete():
 
 @app.route('/logout')
 def logout():
-
     session.clear()
 
     return redirect('/')
