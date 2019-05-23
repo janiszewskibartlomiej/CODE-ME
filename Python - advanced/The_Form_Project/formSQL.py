@@ -229,12 +229,12 @@ def results():
 def add():
     if request.method == 'GET':
         if session:
-            session.pop('_flashes', None)
-
-            return render_template('input_question.html')
+            # session.pop('_flashes', None)
+            added = get_flashed_messages()
+            return render_template('input_question.html', added=added)
 
     if request.method == 'POST':
-        added = get_flashed_messages()
+
         conn = sqlite3.connect('questionDataBase.db')
         c = conn.cursor()
 
@@ -251,7 +251,7 @@ def add():
         conn.commit()
         flash('Pytanie zapisano w bazie')
 
-        return render_template('input_question.html', added=added, methods='GET')
+        return redirect('/dodaj')
 
 
 @app.route('/baza')
