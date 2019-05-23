@@ -28,8 +28,8 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <h3>Instrukcja uruchomienia:</h3>
 
 <ol>
-<li>Uruchom plik createQuestionDataBase.py</li>
-<li>Uruchom plik createAdminScript.py</li>
+<li>Uruchom plik data_init.py</li>
+<li>W celu utworzenia dodatkowych kont "Admin" uruchom plik createAdminScript.py</li>
 <li>W pliku session_k.txt wpisz dowolny ciąg znaków</li>
 <li>Uruchom plik formSQL.py</li>
 </ol>

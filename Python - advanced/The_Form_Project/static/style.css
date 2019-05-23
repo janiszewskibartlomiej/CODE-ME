@@ -237,6 +237,31 @@ body {
     margin-left: -5vw;
     }
 
+.dodano {-webkit-animation: dodano 3s;
+        }
+
+@keyframes dodano
+{0%{
+    padding: 1.0vw;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 1vw;
+    text-align:center;
+    display: block;
+    width: 90%;
+    font-size: 1.3vw;
+    }
+    100%{padding: 1.0vw;
+    background-color: white; /* Red */
+    color: white;
+    margin-bottom: 1vw;
+    text-align:center;
+    display: block;
+    width: 90%;
+    font-size: 1.3vw;}
+}
+
+
 .alert {
     padding: 1.0vw;
     background-color: #f44336; /* Red */
@@ -308,3 +333,9 @@ input {
     font-size: 1.2vw;
     vertical-align: 0.3vw;
     }
+
+.thanks {
+    color: red;
+    display: flex;
+    padding: 200px;
+}

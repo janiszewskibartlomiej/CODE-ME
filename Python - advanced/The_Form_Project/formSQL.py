@@ -65,7 +65,7 @@ def register():
             password_ok = password
 
             zapytanie = """
-                        INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?,'false');"""
+                        INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?,0);"""
 
             try:
                 c.execute(zapytanie, (username, password_ok))
@@ -119,7 +119,7 @@ def log_in():
             session['user_id'] = line_from_base[0]
             session['user'] = line_from_base[1]
 
-            if line_from_base[3] == 'true':
+            if line_from_base[3] == 1:
                 return redirect('/wpisz_pytanie')
 
             else:
@@ -188,18 +188,18 @@ def form():
             id_user = session.get('user_id')
             id_question = key
             answer = volume
-            is_answer = 'true'
+            is_answer = 1
 
             print(add_answers_to_data)
             c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
             conn.commit()
         conn.close()
+        session.clear()
+        return render_template('thank_you.html')
 
-        return redirect('/wyniki')
 
 @app.route('/wyniki', methods=['GET', 'POST'])
 def results():
-
     wyniki_ankiet = """
     SELECT id_question, answer FROM "answers";
     """
@@ -227,9 +227,16 @@ def wpisz_pytanie():
 
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
+
+    if request.method == 'GET':
+
+        return redirect('/wpisz_pytanie')
+
     if request.method == 'POST':
-        conn = get_connection()
+        added = get_flashed_messages()
+        conn = sqlite3.connect('questionDataBase.db')
         c = conn.cursor()
+
         question = request.form['question']
         autor = session.get('user_id')
 
@@ -241,10 +248,10 @@ def add():
 
         c.execute(add_question, parametry)
         conn.commit()
-        return redirect('/dodaj')
+        flash('Pytanie zapisano w bazie')
+        return render_template('input_question.html', added=added)
 
-    if request.method == 'GET':
-        return render_template('input_question.html')
+
 
 
 @app.route('/baza')

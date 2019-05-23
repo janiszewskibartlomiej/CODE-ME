@@ -2,39 +2,37 @@ import sqlite3
 import hashlib
 from werkzeug.security import generate_password_hash
 
-conn = sqlite3.connect('questionDataBase.db')
 
-c = conn.cursor()
+def create_admin():
+    conn = sqlite3.connect('questionDataBase.db')
+    c = conn.cursor()
 
-zapytanie = """
-
+    zapytanie = """
     INSERT INTO "login" ("id", "user", "password", "admin") 
-    
     VALUES (NULL, ?, ?, ?)"""
 
-login = input('Wpisz login: ')
+    login = input('Wpisz login: ')
+    haslo = input('Wpisz hasło: ')
 
-haslo = input('Wpisz hasło: ')
+    haslo = haslo.encode()
 
-haslo_sha = generate_password_hash(haslo)
+    haslo = hashlib.sha256(haslo)
+    haslo = haslo.digest()
 
+    print('Hasło: ', login, haslo)
 
+    # admin = 1
 
-# haslo = haslo.encode()
-# haslo = hashlib.sha256(haslo)
-# haslo = haslo.digest()
-print('Hasło: ', haslo, haslo_sha)
+    # admin = input('Czy użytkownik ma mieć uprawnienia "Admin" [T lub N]: ')
+    # if admin == 'T' or 't':
+    #     admin = 'true'
+    # else:
+    #     admin = 'false'
 
-admin = 'true'
+    c.execute(zapytanie, (login, haslo, 1))
 
-# admin = input('Czy użytkownik ma mieć uprawnienia "Admin" [T lub N]: ')
-# if admin == 'T' or 't':
-#     admin = 'true'
-# else:
-#     admin = 'false'
+    conn.commit()
+    conn.close()
 
-c.execute(zapytanie, (login, haslo_sha, admin))
-
-conn.commit()
-
-conn.close()
+if __name__ == '__main__':
+    create_admin()
