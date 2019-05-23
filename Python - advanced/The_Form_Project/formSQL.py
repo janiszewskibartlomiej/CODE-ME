@@ -15,12 +15,13 @@ app.secret_key = key
 
 def get_connection():
     conn = sqlite3.connect('questionDataBase.db')
-    conn.row_factory = sqlite3.Row
+    #conn.row_factory = sqlite3.Row
     return conn
 
 
 @app.route('/')
 def index():
+
     if not session:
         return redirect('/login')
 
@@ -31,6 +32,7 @@ def index():
 
 @app.route('/registerghuewrdb', methods=['GET', 'POST'])
 def register():
+
     if request.method == 'GET':
         validator = get_flashed_messages()
         double_user = get_flashed_messages()
@@ -49,12 +51,10 @@ def register():
         print(password2)
 
         password = password.encode()
-
         password = hashlib.sha256(password)
         password = password.digest()
 
         password2 = password2.encode()
-
         password2 = hashlib.sha256(password2)
         password2 = password2.digest()
 
@@ -85,11 +85,14 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def log_in():
+
     if request.method == 'GET':
+
         messages = get_flashed_messages()
         return render_template('log_in.html', messages=messages)
 
     if request.method == 'POST':
+
         username = request.form['username']
         password = request.form['password']
 
@@ -99,7 +102,6 @@ def log_in():
         print(username)
         print(password)
         password = password.encode()
-
         password = hashlib.sha256(password)
         password = password.digest()
 
@@ -130,8 +132,9 @@ def log_in():
 def form():
     if request.method == 'GET':
 
-        conn = sqlite3.connect('questionDataBase.db')
+        conn = get_connection()
         c = conn.cursor()
+
         zapytanie = """
             SELECT id, question FROM "questions";
             """
@@ -149,21 +152,17 @@ def form():
         return render_template('form_for_user.html', **context)
 
     if request.method == 'POST':
-        # conn = get_connection()
-        # c = conn.cursor()
-        # # answers = request.form
-        # print(answers)
-        # print(type(answers))
 
         answers = dict(
             (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
             key in request.form.keys())
 
         print(answers)
-        # answers = answers.values()
 
         answers_dict = {}
+
         for k, v in answers.items():
+
             id = k.strip(' answer')
             # for one in i:
             # print(one)
@@ -182,6 +181,7 @@ def form():
         c = conn.cursor()
 
         for key, volume in answers_dict.items():
+
             add_answers_to_data = """
                     INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
                     """
@@ -200,15 +200,15 @@ def form():
 
 @app.route('/wyniki', methods=['GET', 'POST'])
 def results():
+
     wyniki_ankiet = """
     SELECT id_question, answer FROM "answers";
     """
 
-    conn = sqlite3.connect('questionDataBase.db')
+    conn = get_connection()
     c = conn.cursor()
 
     c.execute(wyniki_ankiet)
-
     wyniki = c.fetchall()
 
     print((wyniki))
@@ -217,16 +217,9 @@ def results():
     return render_template('results.html', **context)
 
 
-# @app.route('/wpisz_pytanie', methods=['GET', 'POST'])
-# def wpisz_pytanie():
-#     if session:
-#         return render_template('input_question.html')
-#
-#     return redirect('/')
-
-
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
+
     if request.method == 'GET':
         if session:
             # session.pop('_flashes', None)
@@ -235,7 +228,7 @@ def add():
 
     if request.method == 'POST':
 
-        conn = sqlite3.connect('questionDataBase.db')
+        conn = get_connection()
         c = conn.cursor()
 
         question = request.form['question']
@@ -261,8 +254,10 @@ def add():
 
 @app.route('/baza')
 def data():
-    conn = sqlite3.connect('questionDataBase.db')
+
+    conn = get_connection()
     c = conn.cursor()
+
     zapytanie = """
     SELECT id, question FROM "questions";
     """
@@ -270,19 +265,23 @@ def data():
     pytania = c.fetchall()
     # print(pytania)
     slownik = {}
+
     for x in pytania:
         # print(x)
         dodaj_do_slownika = {x[0]: x[1]}
         slownik.update(dodaj_do_slownika)
     # print(slownik)
+
     context = {'pytania': slownik}
     return render_template('data.html', **context)
 
 
 @app.route('/usun')
 def delete():
-    conn = sqlite3.connect('questionDataBase.db')
+
+    conn = get_connection()
     c = conn.cursor()
+
     zapytanie = """
         DELETE FROM "questions" WHERE id = ?;
         """
@@ -290,12 +289,13 @@ def delete():
     # print(usun)
     c.execute(zapytanie, (usun,))
     conn.commit()
-
+    conn.close()
     return redirect('/baza')
 
 
 @app.route('/logout')
 def logout():
+
     session.clear()
 
     return redirect('/')
