@@ -11,7 +11,7 @@ def wykonaj_skrypt_sql(skrypt):
     c.executescript(zapytanie)
 
 
-wykonaj_skrypt_sql('create_data.sql')
+wykonaj_skrypt_sql('data_sql_creating.sql')
 
 conn.commit()
 conn.close()

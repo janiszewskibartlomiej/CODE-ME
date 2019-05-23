@@ -338,5 +338,5 @@ input {
 .thanks {
     color: red;
     display: flex;
-    padding: 200px;
+    justify-content: center;
 }

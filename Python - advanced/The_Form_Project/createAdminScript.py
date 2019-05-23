@@ -1,7 +1,5 @@
 import sqlite3
-import hashlib
-from werkzeug.security import generate_password_hash
-
+from werkzeug.security import generate_password_hash, check_password_hash
 
 def create_admin():
     conn = sqlite3.connect('questionDataBase.db')
@@ -14,14 +12,12 @@ def create_admin():
     login = input('Wpisz login: ')
     haslo = input('Wpisz hasło: ')
 
-    haslo = haslo.encode()
+    haslo_hash = generate_password_hash(haslo)
 
-    haslo = hashlib.sha256(haslo)
-    haslo = haslo.digest()
 
-    print('Hasło: ', login, haslo)
+    print('Login: ', login, 'Haslo: ',haslo)
 
-    # admin = 1
+    admin = 1
 
     # admin = input('Czy użytkownik ma mieć uprawnienia "Admin" [T lub N]: ')
     # if admin == 'T' or 't':
@@ -29,7 +25,7 @@ def create_admin():
     # else:
     #     admin = 'false'
 
-    c.execute(zapytanie, (login, haslo, 1))
+    c.execute(zapytanie, (login, haslo_hash, admin))
 
     conn.commit()
     conn.close()

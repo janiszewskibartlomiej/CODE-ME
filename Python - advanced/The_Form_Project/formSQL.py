@@ -2,8 +2,7 @@ import datetime
 import json
 import sqlite3
 import time
-import hashlib
-
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, request, redirect, session, get_flashed_messages, flash
 
 app = Flask(__name__)
@@ -15,7 +14,7 @@ app.secret_key = key
 
 def get_connection():
     conn = sqlite3.connect('questionDataBase.db')
-    # conn.row_factory = sqlite3.Row
+    conn.row_factory = sqlite3.Row
     return conn
 
 
@@ -26,6 +25,8 @@ def index():
 
     id = session.get('user_id')
     user = session.get('user')
+    is_admin = session.get('is_admin')
+
     return redirect('/dodaj')
 
 
@@ -37,43 +38,31 @@ def register():
         return render_template('register_user.html', validator=validator, double_user=double_user)
 
     if request.method == 'POST':
+
         username = request.form['username']
         password = request.form['password']
         password2 = request.form['password2']
 
-        conn = get_connection()
-        c = conn.cursor()
-
-        print(username)
-        print(password)
-        print(password2)
-
-        password = password.encode()
-        password = hashlib.sha256(password)
-        password = password.digest()
-
-        password2 = password2.encode()
-        password2 = hashlib.sha256(password2)
-        password2 = password2.digest()
-
-        print(password)
-        print(password2)
+        print('user: ', username, 'password: ', password, 'pasword2: ', password2)
 
         if password == password2:
-            password_ok = password
 
+            conn = get_connection()
+            c = conn.cursor()
+
+            password_hash = generate_password_hash(password)
+            isn_admin = 0
             zapytanie = """
-                        INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?,0);"""
+                        INSERT INTO "login" ("id", "user", "password", "admin") VALUES (NULL, ?, ?, ?);"""
 
             try:
-                c.execute(zapytanie, (username, password_ok))
+                c.execute(zapytanie, (username, password_hash, isn_admin))
             except sqlite3.IntegrityError:
                 double_user = flash('Ten login już istnije')
                 return redirect('/registerghuewrdb')
 
-            print('dane:', username, password2)
             conn.commit()
-
+            print('dane:', username, password)
             return redirect('/login')
 
         else:
@@ -95,11 +84,7 @@ def log_in():
         conn = get_connection()
         c = conn.cursor()
 
-        print(username)
-        print(password)
-        password = password.encode()
-        password = hashlib.sha256(password)
-        password = password.digest()
+        print('user: ', username, 'password: ', password)
 
         zapytanie_password = """
             SELECT id, user, password, admin FROM "login" WHERE user = ?;
@@ -109,19 +94,21 @@ def log_in():
 
         print('hasła:', password, line_from_base)
 
-        if line_from_base == None or password != line_from_base[2]:
-            flash('Błędna nazwa użytkownika lub hasło')
-            return redirect('/login')
+        if line_from_base:
+            password_hash = line_from_base['password']
 
-        if password == line_from_base[2]:
-            session['user_id'] = line_from_base[0]
-            session['user'] = line_from_base[1]
+            if check_password_hash(password_hash, password):
+                session['user_id'] = line_from_base['id']
+                session['user'] = line_from_base['user']
+                session['is_admin'] = bool(line_from_base['admin'])
 
-            if line_from_base[3] == 1:
-                return redirect('/dodaj')
+                if line_from_base['admin']:
+                    return redirect('/dodaj')
 
-            else:
                 return redirect('/ankieta')
+
+        flash('Błędna nazwa użytkownika lub hasło')
+        return redirect('/login')
 
 
 @app.route('/ankieta', methods=['GET', 'POST'])
@@ -148,6 +135,8 @@ def form():
         return render_template('form_for_user.html', **context)
 
     if request.method == 'POST':
+        conn = get_connection()
+        c = conn.cursor()
 
         answers = dict(
             (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
@@ -172,45 +161,49 @@ def form():
 
         print(answers_dict)
 
-
-
-        for key, volume in answers_dict.items():
+        for k, volume in answers_dict.items():
             add_answers_to_data = """
                     INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
                     """
             id_user = session.get('user_id')
-            id_question = key
+            id_question = k
             answer = volume
             is_answer = 1
 
-            conn = get_connection()
-            c = conn.cursor()
-
             print(add_answers_to_data)
-            c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
-            conn.commit()
-        conn.close()
 
-        session.clear()
-        return render_template('thank_you.html')
+            try:
+                c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
+                conn.commit()
+            except sqlite3.OperationalError:
+                conn.close()
+                return redirect('/ankieta')
+
+            except sqlite3.IntegrityError:
+                redirect('/')
+
+    session.clear()
+    return render_template('thank_you.html')
 
 
 @app.route('/wyniki', methods=['GET', 'POST'])
 def results():
+
     wyniki_ankiet = """
     SELECT id_question, answer FROM "answers";
     """
 
-    conn = get_connection()
+    conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
 
     c.execute(wyniki_ankiet)
     wyniki = c.fetchall()
 
-    print((wyniki))
+
+    print(list(wyniki))
 
     context = {'wyniki': wyniki}
-    return render_template('results.html', **context)
+    return render_template('results.html')
 
 
 @app.route('/dodaj', methods=['GET', 'POST'])
