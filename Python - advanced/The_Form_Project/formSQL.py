@@ -113,6 +113,10 @@ def log_in():
 
 @app.route('/ankieta', methods=['GET', 'POST'])
 def form():
+
+    if not session:
+        return redirect('/login')
+
     if request.method == 'GET':
 
         conn = get_connection()
@@ -188,6 +192,8 @@ def form():
 
 @app.route('/wyniki', methods=['GET', 'POST'])
 def results():
+    if not session:
+        return redirect('/login')
 
     wyniki_ankiet = """
     SELECT id_question, answer FROM "answers";
@@ -208,6 +214,9 @@ def results():
 
 @app.route('/dodaj', methods=['GET', 'POST'])
 def add():
+    if not session:
+        return redirect('/login')
+
     if request.method == 'GET':
         if session:
             # session.pop('_flashes', None)
@@ -242,6 +251,9 @@ def add():
 
 @app.route('/baza')
 def data():
+    if not session:
+        return redirect('/login')
+
     conn = get_connection()
     c = conn.cursor()
 
@@ -265,6 +277,9 @@ def data():
 
 @app.route('/usun')
 def delete():
+    if not session:
+        return redirect('/login')
+
     conn = get_connection()
     c = conn.cursor()
 
