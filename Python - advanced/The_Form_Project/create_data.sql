@@ -18,7 +18,7 @@ CREATE TABLE "questions"
 (
 "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 "id_user"	INTEGER NOT NULL,
-"question"	TEXT,
+"question"	TEXT NOT NULL,
 "type" TEXT NOT NULL
 );
 
