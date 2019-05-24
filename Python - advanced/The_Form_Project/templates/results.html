@@ -21,7 +21,7 @@
                 <h3 class="header">Wyniki ankiety</h3>
             </th>
         </tr>
-        {% for key, volume in wyniki %}
+        {% for key, volume in wyniki.items() %}
         <tr>
             <td class="questions_list">{{loop.index}}. {{ volume }}</td>
         </tr>

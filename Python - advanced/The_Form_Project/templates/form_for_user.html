@@ -9,11 +9,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
+
 <form action="/ankieta" method="post">
     <div class="list">
+
         <table>
             <tr>
                 <th>
@@ -27,31 +30,39 @@
                         <td class="questions_list ">{{loop.index}}. {{ wartosc }}
                     </div>
                     <br>
+
                     <div class="question_form">
                         <div id="checkbox1">
-                            <input class="checkbox" type="radio" name="answer {{klucz}}" value="{{klucz}} T"><label
+                            <input class="checkbox" type="radio" name="answer {{klucz}}" value="{{klucz}} T"> <label
                                 class="label_form">Tak</label>
                         </div>
+
                         <div>
-                            <input class="checkbox" type="radio" name="answer {{klucz}}" value="{{klucz}} N"><label
+                            <input class="checkbox" type="radio" name="answer {{klucz}}" value="{{klucz}} N"> <label
                                 class="label_form">Nie</label>
                         </div>
+
                     </div>
                     </td>
+
                 </tr>
             </section>
             {% endfor %}
         </table>
     </div>
     <div class="dwa_przyciski">
+
         <div>
             <input class="wyslij_ankiete" type="submit" value="Wyślij ankietę">
         </div>
+
         <div>
             <a class="logout_ankieta" href="/logout">Log out</a>
         </div>
     </div>
+
 </form>
+
 </body>
 
 </html>
