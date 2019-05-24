@@ -195,74 +195,21 @@ def results():
     if not session:
         return redirect('/login')
 
-    def get_connection():
-        conn = sqlite3.connect('questionDataBase.db')
-        conn.row_factory = sqlite3.Row
-        return conn
+    wyniki_ankiet = """
+    SELECT id_question, answer FROM "answers";
+    """
 
-    conn = get_connection()
+    conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
 
-    def id_pytan():
-        zapytanie1 = """
-        SELECT id_question FROM "answers" GROUP BY id_question;
-        """
-        c.execute(zapytanie1)
-        lista_id_pytan = c.fetchall()
-        print(lista_id_pytan)
-        return lista_id_pytan
+    c.execute(wyniki_ankiet)
+    wyniki = c.fetchall()
 
-    def odpowiedzi_na_pytanie(id_question):
-        zapytanie2 = """
-        SELECT id_question, answer FROM "answers" WHERE id_question = ?;
-                """
-        c.execute(zapytanie2, (id_question,))
-        odpowiedzi = c.fetchall()
-        print(odpowiedzi)
-        return odpowiedzi
 
-    def policz_odpowiedzi(odpowiedzi):
-        odp_tak, odp_nie = 0, 0
-        for id_question, answer in odpowiedzi:
-            if answer == 'T':
-                odp_tak += 1
-            if answer == 'N':
-                odp_nie += 1
-        wynik = {'id_question': id_question, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
-        print(wynik)
-        return wynik
-
-    pogrupowana_lista_odpowiedzi = []
-
-    for id in id_pytan():
-        id = id[0]
-        odpowiedzi = odpowiedzi_na_pytanie(id)
-        wynik = policz_odpowiedzi(odpowiedzi)
-        pogrupowana_lista_odpowiedzi.append(wynik)
-
-    print(pogrupowana_lista_odpowiedzi)
-
-    def udzial_procentowy(i):
-        suma_pytan = i['odp_tak'] + i['odp_nie']
-        na_tak = (i['odp_tak'] / suma_pytan) * 100
-        na_tak = f'{na_tak:.2f} %'
-        na_tak = na_tak.replace('.', ',')
-        id_question = i['id_question']
-        na_nie = (i['odp_nie'] / suma_pytan) * 100
-        na_nie = f'{na_nie:.2f} %'
-        na_nie = na_nie.replace('.', ',')
-        wynik = {'id_question': id_question, 'na tak': na_tak, 'na nie:': na_nie}
-        return wynik
-
-    wyniki = []
-    for i in pogrupowana_lista_odpowiedzi:
-        wynik = udzial_procentowy(i)
-        wyniki.append(wynik)
-    print('----------------------')
-    print(wyniki)
+    print(list(wyniki))
 
     context = {'wyniki': wyniki}
-    return render_template('results.html', **context)
+    return render_template('results.html')
 
 
 @app.route('/dodaj', methods=['GET', 'POST'])

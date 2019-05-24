@@ -111,7 +111,7 @@ body {
 .question_word {
     font-size: 1.3vw;
     margin: 3px;
-    color: #636161;}
+    color: gray;}
 
 .inputs {
     text-align: center;
@@ -193,16 +193,15 @@ body {
     border-style: solid;}
 
 .logout_lista {
-    background-color: #dddddd;
-    border-color: #898989;
-    border-width: 1px 1px 2px 1px;
-    padding: 4px;
-    font-size: 1.2vw;
-    border-radius: 0.5vw;
+    display: inline-flex;
     color: #dc3b3b;
     cursor: pointer;
+    border-radius: 0.50vw;
     box-shadow: 5px 5px 5px #ccc;
-    border-style: solid;
+    height: 2.3vw;
+    width: 5.3vw;
+    font-size: 1.3vw;
+    justify-content: center;
     margin-left: 5vw;
     }
 
@@ -243,7 +242,7 @@ body {
 @keyframes dodano
 {0%{
     padding: 1.0vw;
-    background-color: #f44336;
+    background-color: #f44336; /* Red */
     color: white;
     margin-bottom: 1vw;
     text-align:center;
@@ -252,7 +251,7 @@ body {
     font-size: 1.3vw;
     }
 100%{padding: 1.0vw;
-    background-color: white;
+    background-color: white; /* Red */
     color: white;
     margin-bottom: 1vw;
     text-align:center;
@@ -337,6 +336,7 @@ input {
     }
 
 .thanks {
+    color: red;
     display: flex;
     justify-content: center;
-    }
+}
