@@ -7,13 +7,15 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <h3>Opis działania:</h3>
 
 <ul>
+<li>Aplikacja umożliwia storzenie kont administratora oraz uzytkownika. Konta będą posiadały osobne upranienia.</li>
 <li>Administrator będzie miał możliwość zalogowania się do swojego panelu.</li>
-<li>Administrator będzie miał możliwość  zdefiniowania własnych pytań w formularzu.</li>
+<li>Administrator będzie miał możliwość zdefiniowania pytań w formularzu.</li>
 <li>Pytania zostaną zapisane w badzie danych SQLite3.</li>
+<li>Administrator będzie miał możliwość zobaczenia pytań w przegladarce oraz usuwania poszczególnego pytania.</li>
 <li>Formularz będzie prezentowany w przeglądarce.</li>
-<li>Użytkownicy będą mogli  zarejestrować się przez panel "Register" a nastepnie zalogować się systemu.</li>
+<li>Użytkownicy będą mogli  zarejestrować się przez panel "Register", a nastepnie zalogować się systemu.</li>
 <li>Użytkownicy wypełnią formularz, który zostanie zapisany w badzie danych.</li>
-<li>Użytkownicy po wypełnieniu formularza otrzymają zwrotnie wyniki w postaci średniej procentowej odnośnie poszczególnych pytań.</li>
+<li>Administrator po wypełnieniu formularza będzię mial możliwość przgladania wyników ankiety w postaci średniej procentowej względem konkretnego pytania.</li>
 <li>Administrator będzie miał możliwość analizy danych zapisanych w bazie.</li>
 </ul>
 
@@ -23,6 +25,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Sprawdzenie hasła oraz loginu w panelu "Login".</li>
 <li>Walidacja hasła w panelu "Register".</li>
 <li>Walidacja loginu w panelu "Register".</li>
+<li>Dodanie pztania do bazy.</li>
 </ul>
 
 <h3>Instrukcja uruchomienia:</h3>
