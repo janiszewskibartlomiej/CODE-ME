@@ -25,7 +25,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Sprawdzenie hasła oraz loginu w panelu "Login".</li>
 <li>Walidacja hasła w panelu "Register".</li>
 <li>Walidacja loginu w panelu "Register".</li>
-<li>Dodanie pztania do bazy.</li>
+<li>Dodanie pytania do bazy.</li>
 </ul>
 
 <h3>Instrukcja uruchomienia:</h3>
