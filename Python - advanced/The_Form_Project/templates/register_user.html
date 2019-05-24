@@ -13,15 +13,13 @@
 <body>
 <div class="log_container">
     <div class="log">
-
         <form method="post" action="/registerghuewrdb">
             <p class="header">Rejestracja użytkownika</p>
-            {% if validator %}
+                {% if validator %}
                 <div class="alert" style="font-size: 0px;">{{ validator[0] }}</div>
-
-            {% elif double_user %}
-            <div class="alert" style="font-size: 0px;">{{ double_user[0] }}</div>
-            {% endif %}
+                {% elif double_user %}
+                <div class="alert" style="font-size: 0px;">{{ double_user[0] }}</div>
+                {% endif %}
             <div class="inputs">
                 <div class="user">
                     <label class="label_user" for="username">Username</label>
@@ -40,9 +38,7 @@
                 </div>
             </div>
         </form>
-
     </div>
-
 </div>
 </body>
 </html>
