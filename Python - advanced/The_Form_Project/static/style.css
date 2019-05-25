@@ -166,6 +166,7 @@ body {
 .button_dodaj {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     }
 
 .button_logout {
@@ -203,7 +204,7 @@ body {
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
     border-style: solid;
-    margin-left: 5vw;
+    margin-top: 1vw;
     }
 
 .logout_ankieta {
@@ -236,6 +237,15 @@ body {
     margin-bottom: 2vw;
     margin-top: 1vw;
     margin-left: -5vw;
+    }
+
+.trzy_przyciski_lista {
+    display: flex;
+    justify-content: start;
+    margin-left: 37.5%;
+    align-items: inherit;
+    width: 267px;
+    text-align: center;
     }
 
 .alert {animation: dodano 3s;}
@@ -289,18 +299,31 @@ body {
     padding: 0.3vw 0.4vw;
     font-size: 1.3vw;
     border-radius: 1vw;
-    margin-right: 14vw}
+    }
 
 .dodaj {
     background-color: #007bff;
     border-color: #007bff;
-    padding: 0.2vw 0.4vw;
+    padding: 0.2vw 0.3vw;
     font-size: 1.3vw;
     border-radius: 1vw;
     color: white;
     cursor: pointer;
-    margin-right: 5vw;
-    margin-left: 4vw;}
+
+    }
+
+.dodaj_w_wynikach {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 4px;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    color: white;
+    cursor: pointer;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
 
 .wyslij_ankiete {
     background-color: #007bff;
@@ -340,3 +363,85 @@ input {
     display: flex;
     justify-content: center;
     }
+
+.red {
+    color: red;
+    font-size: 1.5vw;}
+
+.green {
+    font-size: 1.5vw;
+    color: #5cd802}
+
+.logout_wyniki {
+    background-color: #dddddd;
+    border-color: #898989;
+    border-width: 1px 1px 2px 1px;
+    padding: 4px;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    border-style: solid;
+    margin-top: 1vw;
+    }
+
+.trzy_przyciski {
+    display: flex;
+    justify-content: space-around;
+    align-items: inherit;
+    margin: auto;
+    width: 27%;
+    }
+
+.baza2 {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 5px;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    color: white;
+    margin-top: 1vw;
+    }
+
+.dodaj_wyniki {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 5px;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    color: white;
+    cursor: pointer;
+    margin-top: 1vw;
+}
+
+.na_nie {
+    margin-left: 3vw;}
+
+.wyniki {
+    background-color: #dddddd;
+    border-color: #898989;
+    border-width: 1px 1px 2px 1px;
+    padding: 4px;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    color: #dc3b3b;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    border-style: solid;
+    margin-top: 1vw;
+ }
+
+.wyniki_input {
+    background-color: #dddddd;
+    border-color: #898989;
+    border-width: 1px 1px 2px 1px;
+    padding: 4px;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    color: #dc3b3b;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    border-style: solid;
+    }
+

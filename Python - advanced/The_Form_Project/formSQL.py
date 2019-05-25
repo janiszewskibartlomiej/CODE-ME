@@ -113,7 +113,6 @@ def log_in():
 
 @app.route('/ankieta', methods=['GET', 'POST'])
 def form():
-
     if not session:
         return redirect('/login')
 
@@ -195,11 +194,6 @@ def results():
     if not session:
         return redirect('/login')
 
-    def get_connection():
-        conn = sqlite3.connect('questionDataBase.db')
-        conn.row_factory = sqlite3.Row
-        return conn
-
     conn = get_connection()
     c = conn.cursor()
 
@@ -214,8 +208,8 @@ def results():
 
     def odpowiedzi_na_pytanie(id_question):
         zapytanie2 = """
-        SELECT id_question, answer FROM "answers" WHERE id_question = ?;
-                """
+        SELECT id_question, answer, question FROM "answers" INNER JOIN "questions" ON answers.id_question = questions.id WHERE id_question = ?;"""
+
         c.execute(zapytanie2, (id_question,))
         odpowiedzi = c.fetchall()
         print(odpowiedzi)
@@ -223,12 +217,13 @@ def results():
 
     def policz_odpowiedzi(odpowiedzi):
         odp_tak, odp_nie = 0, 0
-        for id_question, answer in odpowiedzi:
+        for id_question, answer, question in odpowiedzi:
             if answer == 'T':
                 odp_tak += 1
             if answer == 'N':
                 odp_nie += 1
-        wynik = {'id_question': id_question, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
+            pytanie = question
+        wynik = {'id_question': id_question,'pytanie': pytanie, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
         print(wynik)
         return wynik
 
@@ -251,13 +246,15 @@ def results():
         na_nie = (i['odp_nie'] / suma_pytan) * 100
         na_nie = f'{na_nie:.2f} %'
         na_nie = na_nie.replace('.', ',')
-        wynik = {'id_question': id_question, 'na tak': na_tak, 'na nie:': na_nie}
+        tresc_pytania = i['pytanie']
+        wynik = {'id_pytania': id_question, 'pytanie': tresc_pytania, 'na tak': na_tak, 'na nie:': na_nie}
         return wynik
 
     wyniki = []
     for i in pogrupowana_lista_odpowiedzi:
         wynik = udzial_procentowy(i)
         wyniki.append(wynik)
+
     print('----------------------')
     print(wyniki)
 

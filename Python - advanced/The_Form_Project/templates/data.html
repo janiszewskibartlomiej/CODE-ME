@@ -32,16 +32,15 @@
         {% endfor %}
     </table>
 </div>
-<div class="dwa_przyciski_baza">
-    <div>
-        <form action="/logout">
-            <input class="logout_lista" type="submit" value="Log out">
-        </form>
+<div class="trzy_przyciski_lista">
+    <div class="logout_lista">
+        <a href="/logout" style="color: #dc3b3b;">Log out</a>
     </div>
-    <div>
-        <form action="/dodaj">
-            <input class="dodaj" type="submit" value="Dodaj pytanie">
-        </form>
+    <div class="dodaj_w_wynikach">
+        <a href="/dodaj">Dodaj pytanie</a>
+    </div>
+    <div class="wyniki">
+        <a href="/wyniki" style="color: #dc3b3b;">Wyniki</a>
     </div>
 </div>
 </body>
