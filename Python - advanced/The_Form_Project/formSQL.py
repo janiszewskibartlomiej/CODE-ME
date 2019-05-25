@@ -23,6 +23,9 @@ def index():
     if not session:
         return redirect('/login')
 
+    if session['is_admin'] == False:
+        return redirect('ankieta')
+
     id = session.get('user_id')
     user = session.get('user')
     is_admin = session.get('is_admin')
@@ -193,6 +196,8 @@ def form():
 def results():
     if not session:
         return redirect('/login')
+    if session['is_admin'] == False:
+        return redirect('ankieta')
 
     conn = get_connection()
     c = conn.cursor()
@@ -223,7 +228,7 @@ def results():
             if answer == 'N':
                 odp_nie += 1
             pytanie = question
-        wynik = {'id_question': id_question,'pytanie': pytanie, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
+        wynik = {'id_question': id_question, 'pytanie': pytanie, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
         print(wynik)
         return wynik
 
@@ -266,6 +271,9 @@ def results():
 def add():
     if not session:
         return redirect('/login')
+
+    if session['is_admin'] == False:
+        return redirect('ankieta')
 
     if request.method == 'GET':
         if session:
