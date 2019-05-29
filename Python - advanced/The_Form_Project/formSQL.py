@@ -14,7 +14,7 @@ app.secret_key = key
 
 def get_connection():
     conn = sqlite3.connect('questionDataBase.db')
-    conn.row_factory = sqlite3.Row
+    # conn.row_factory = sqlite3.Row
     return conn
 
 
@@ -202,7 +202,7 @@ def results():
     conn = get_connection()
     c = conn.cursor()
 
-    def id_pytan():
+    def id_pytan_z_odp():
         zapytanie1 = """
         SELECT id_question FROM "answers" GROUP BY id_question;
         """
@@ -234,7 +234,7 @@ def results():
 
     pogrupowana_lista_odpowiedzi = []
 
-    for id in id_pytan():
+    for id in id_pytan_z_odp():
         id = id[0]
         odpowiedzi = odpowiedzi_na_pytanie(id)
         wynik = policz_odpowiedzi(odpowiedzi)
@@ -255,12 +255,45 @@ def results():
         wynik = {'id_pytania': id_question, 'pytanie': tresc_pytania, 'na tak': na_tak, 'na nie:': na_nie}
         return wynik
 
+    def spr_ilosci_wszystkich_pytan():
+        zapytanie = """
+        SELECT id, question FROM "questions";
+        """
+        c.execute(zapytanie)
+        lista_id = c.fetchall()
+        return lista_id
+
     wyniki = []
     for i in pogrupowana_lista_odpowiedzi:
         wynik = udzial_procentowy(i)
         wyniki.append(wynik)
 
     print('----------------------')
+    print(wyniki)
+    lista_wszystkich_pytan = spr_ilosci_wszystkich_pytan()
+
+    def spr_pytan_bez_odp(lista_odp):
+        for i in lista_odp:
+            print(i)
+            # print(lista)
+            for element in lista_wszystkich_pytan:
+                print(element)
+                if i[0] == element[0]:
+                    lista_wszystkich_pytan.remove(element)
+            print('lista do dodania: ', lista_wszystkich_pytan)
+        return lista_wszystkich_pytan
+
+    def dodanie_do_wyniku_pytan_bez_odp(lista_bez_odp):
+        lista_bez_odp = spr_pytan_bez_odp(id_pytan_z_odp())
+        for pytanie in lista_bez_odp:
+            id_pytania = pytanie[0]
+            tresc_pytania = pytanie[1]
+            wynik = {'id_pytania': id_pytania, 'pytanie': tresc_pytania, 'na tak': '0,00 %', 'na nie:': '0,00 %'}
+            wyniki.append(wynik)
+
+    pytania = id_pytan_z_odp()
+    sprawdzenie = spr_pytan_bez_odp(pytania)
+    dodanie = dodanie_do_wyniku_pytan_bez_odp(sprawdzenie)
     print(wyniki)
 
     context = {'wyniki': wyniki}
