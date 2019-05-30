@@ -1,5 +1,5 @@
 import sqlite3
-from createAdminScript import create_admin
+from createAdminAccount import create_admin
 
 conn = sqlite3.connect('questionDataBase.db')
 c = conn.cursor()
