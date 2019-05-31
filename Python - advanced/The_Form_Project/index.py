@@ -1,4 +1,4 @@
-from flask import session, Blueprint, Flask, redirect
+from flask import session, Blueprint, redirect
 
 home_page = Blueprint('/', __name__)
 
@@ -14,5 +14,6 @@ def index():
     id = session.get('user_id')
     user = session.get('user')
     is_admin = session.get('is_admin')
+    # print('id: ', id, 'user: ', user, 'is admin: ', is_admin)
 
     return redirect('/dodaj')

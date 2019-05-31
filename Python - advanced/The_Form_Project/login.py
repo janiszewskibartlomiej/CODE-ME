@@ -19,16 +19,14 @@ def log_in():
 
         conn = polaczenie()
         c = conn.cursor()
-
-        print('user: ', username, 'password: ', password)
+        # print('user: ', username, 'password: ', password)
 
         zapytanie_password = """
             SELECT id, user, password, admin FROM "login" WHERE user = ?;
             """
         c.execute(zapytanie_password, (username,))
         line_from_base = c.fetchone()
-
-        print('hasła:', password, line_from_base)
+        # print('hasła:', password, line_from_base)
 
         if line_from_base:
             password_hash = line_from_base['password']

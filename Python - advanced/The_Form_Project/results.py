@@ -21,7 +21,7 @@ def results():
         """
         c.execute(zapytanie1)
         lista_id_pytan = c.fetchall()
-        print(lista_id_pytan)
+        # print(lista_id_pytan)
         return lista_id_pytan
 
     def odpowiedzi_na_pytanie(id_question):
@@ -30,7 +30,7 @@ def results():
 
         c.execute(zapytanie2, (id_question,))
         odpowiedzi = c.fetchall()
-        print(odpowiedzi)
+        # print(odpowiedzi)
         return odpowiedzi
 
     def policz_odpowiedzi(odpowiedzi):
@@ -42,7 +42,7 @@ def results():
                 odp_nie += 1
             pytanie = question
         wynik = {'id_question': id_question, 'pytanie': pytanie, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
-        print(wynik)
+        # print(wynik)
         return wynik
 
     pogrupowana_lista_odpowiedzi = []
@@ -52,8 +52,7 @@ def results():
         odpowiedzi = odpowiedzi_na_pytanie(id)
         wynik = policz_odpowiedzi(odpowiedzi)
         pogrupowana_lista_odpowiedzi.append(wynik)
-
-    print(pogrupowana_lista_odpowiedzi)
+    # print(pogrupowana_lista_odpowiedzi)
 
     def udzial_procentowy(i):
         suma_pytan = i['odp_tak'] + i['odp_nie']
@@ -80,20 +79,19 @@ def results():
     for i in pogrupowana_lista_odpowiedzi:
         wynik = udzial_procentowy(i)
         wyniki.append(wynik)
-
-    print('----------------------')
-    print(wyniki)
+    # print('----------------------')
+    # print(wyniki)
     lista_wszystkich_pytan = spr_ilosci_wszystkich_pytan()
 
     def spr_pytan_bez_odp(lista_odp):
         for i in lista_odp:
-            print(i)
+            # print(i)
             # print(lista)
             for element in lista_wszystkich_pytan:
-                print(element)
+                # print(element)
                 if i[0] == element[0]:
                     lista_wszystkich_pytan.remove(element)
-            print('lista do dodania: ', lista_wszystkich_pytan)
+            # print('lista do dodania: ', lista_wszystkich_pytan)
         return lista_wszystkich_pytan
 
     def dodanie_do_wyniku_pytan_bez_odp(lista_bez_odp):

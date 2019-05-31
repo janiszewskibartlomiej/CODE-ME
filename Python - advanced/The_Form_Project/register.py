@@ -19,8 +19,7 @@ def register():
         username = request.form['username']
         password = request.form['password']
         password2 = request.form['password2']
-
-        print('user: ', username, 'password: ', password, 'pasword2: ', password2)
+        # print('user: ', username, 'password: ', password, 'pasword2: ', password2)
 
         if password == password2:
 
@@ -39,7 +38,7 @@ def register():
                 return redirect('/registerghuewrdb')
 
             conn.commit()
-            print('dane:', username, password)
+            # print('dane:', username, password)
             return redirect('/login')
 
         else:
