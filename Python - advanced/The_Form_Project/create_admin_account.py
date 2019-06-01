@@ -1,6 +1,7 @@
 import sqlite3
 from werkzeug.security import generate_password_hash
 
+
 def create_admin():
     conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
@@ -24,6 +25,7 @@ def create_admin():
     conn.commit()
     conn.close()
     return
+
 
 if __name__ == '__main__':
     create_admin()

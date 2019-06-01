@@ -39,8 +39,7 @@ def form():
         answers = dict(
             (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
             key in request.form.keys())
-
-        print(answers)
+        # print(answers)
 
         answers_dict = {}
 
@@ -56,8 +55,7 @@ def form():
             # l = one[:2]
             # l = l.strip()
             answers_dict[id] = odp
-
-        print(answers_dict)
+        # print(answers_dict)
 
         for k, volume in answers_dict.items():
             add_answers_to_data = """
@@ -67,8 +65,7 @@ def form():
             id_question = k
             answer = volume
             is_answer = 1
-
-            print(add_answers_to_data)
+            # print(add_answers_to_data)
 
             try:
                 c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))

@@ -1,6 +1,4 @@
 from flask import Flask
-from data_init import wykonaj_skrypt_sql
-from create_admin_account import create_admin
 from open_key import klucz
 from index import home_page
 from register import register_users
@@ -25,7 +23,5 @@ app.register_blueprint(logout_section)
 app.register_blueprint(del_question)
 
 if __name__ == "__main__":
-    wykonaj_skrypt_sql()
-    create_admin()
     app.run(debug=True)
 
