@@ -34,7 +34,7 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Uruchom plik data_init.py</li>
 <li>W celu utworzenia dodatkowych kont "Admin" uruchom plik createAdminScript.py</li>
 <li>W pliku session_k.txt wpisz dowolny ciąg znaków</li>
-<li>Uruchom plik formSQL.py</li>
+<li>Uruchom plik app.py</li>
 </ol>
 
 ----------
