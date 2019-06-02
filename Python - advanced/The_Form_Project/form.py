@@ -42,7 +42,7 @@ def form():
             (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
             key in request.form.keys())
         lg.info(f'Przechwytywanie odpowiedzi formularza: {answers}')
-        # print(answers)
+        print(answers)
 
         answers_dict = {}
 
@@ -59,20 +59,29 @@ def form():
             # l = l.strip()
             answers_dict[id] = odp
         # print(answers_dict)
-        lg.info(f'Tworzeni słownika z odpowiedziami: {answers_dict}')
+        lg.info(f'Tworzenie słownika z odpowiedziami: {answers_dict}')
 
         for k, volume in answers_dict.items():
             add_answers_to_data = """
-                    INSERT INTO "answers" ("id", "id_user", "id_question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?);
+                    INSERT INTO "answers" ("id", "id_user", "id_question", "question", "answer", "is_answer") VALUES (NULL, ?, ?, ?, ?, ?);
                     """
             id_user = session.get('user_id')
             id_question = k
+
+            zapytanie = """
+                        SELECT question FROM "questions" WHERE id = ?;
+                        """
+            c.execute(zapytanie, (id_question,))
+            odp_na_zapytanie = c.fetchone()
+            print(list(odp_na_zapytanie))
+            question = odp_na_zapytanie[0]
+            print(question)
             answer = volume
             is_answer = 1
             # print(add_answers_to_data)
 
             try:
-                c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
+                c.execute(add_answers_to_data, (id_user, id_question, question, answer, is_answer))
                 conn.commit()
                 lg.info('Zapisanie odpowedzi do bazy danych')
             except sqlite3.OperationalError:

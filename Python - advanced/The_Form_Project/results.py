@@ -32,7 +32,8 @@ def results():
 
     def odpowiedzi_na_pytanie(id_question):
         zapytanie2 = """
-        SELECT id_question, answer, question FROM "answers" INNER JOIN "questions" ON answers.id_question = questions.id WHERE id_question = ?;"""
+        SELECT id_question, answer, question FROM "answers" WHERE id_question = ?;"""
+         # INNER JOIN "questions" ON answers.id_question = questions.id WHERE id_question = ?;"""
 
         c.execute(zapytanie2, (id_question,))
         odpowiedzi = c.fetchall()
