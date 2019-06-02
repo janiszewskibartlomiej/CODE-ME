@@ -1,5 +1,5 @@
 from zadanie08_funkcje import policz_linie, policz_wyrazy, policz_bajty
-import logging, time, datetime
+import log, time, datetime
 
 start = datetime.datetime.now()
 
@@ -8,7 +8,7 @@ format = '%(asctime)s, %(levelname)s, %(message)s'
 datefmt = '%d-%m-%Y %H:%M:%S'
 
 
-logging.basicConfig(level=logging.DEBUG, format=format, datefmt=datefmt)
+log.basicConfig(level=log.DEBUG, format=format, datefmt=datefmt)
 nazwa_pliku = 'zen.txt'
 
 try:

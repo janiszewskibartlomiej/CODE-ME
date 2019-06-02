@@ -1,4 +1,4 @@
-import logging
+import log
 
 
 def policz_linie(s):
@@ -15,16 +15,16 @@ def policz_bajty(s):
 
 def ustaw_logger(poziom_logowania):
     format = '%(levelname)s [%(asctime)s] - %(message)s'
-    logging.basicConfig(format=format, level=poziom_logowania)
+    log.basicConfig(format=format, level=poziom_logowania)
 
 
 def wc(nazwa_pliku, wybrany_szablon):
     try:
         with open(nazwa_pliku) as f:
-            logging.info(f'otwarto plik {nazwa_pliku}')
+            log.info(f'otwarto plik {nazwa_pliku}')
             zawartosc = f.read()
     except FileNotFoundError:
-        logging.warning(f'nie znaleziono pliku {nazwa_pliku}')
+        log.warning(f'nie znaleziono pliku {nazwa_pliku}')
         exit()
 
     szablony = {'pelny': '{linie} {wyrazy} {bajty} {nazwa_pliku}',
@@ -32,7 +32,7 @@ def wc(nazwa_pliku, wybrany_szablon):
                 'words': '{wyrazy}',
                 'bytes': '{bajty}'}
 
-    logging.info('wybrano szablon pełny')
+    log.info('wybrano szablon pełny')
     szablon = szablony[wybrany_szablon]
 
     wynik = szablon.format(linie=policz_linie(zawartosc),

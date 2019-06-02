@@ -1,11 +1,11 @@
-import logging
+import log
 
-logger = logging.getLogger('moj_logger')
+logger = log.getLogger('moj_logger')
 
-handler = logging.StreamHandler()
+handler = log.StreamHandler()
 logger.addHandler(handler)
 
-logger.setLevel(logging.INFO)
+logger.setLevel(log.INFO)
 
 logger.info('informacja')
 logger.warning('ostrzeżenie')

@@ -1,20 +1,20 @@
-import logging
+import log
 
-formatter = logging.Formatter('%(asctime)s, %(levelname)s, %(message)s')
+formatter = log.Formatter('%(asctime)s, %(levelname)s, %(message)s')
 
 # logowanie do pliku
-logger_plik = logging.getLogger('log_do_pliku')
+logger_plik = log.getLogger('log_do_pliku')
 
-file_handler = logging.FileHandler('z_file_handlera2.log')
+file_handler = log.FileHandler('z_file_handlera2.log')
 file_handler.setFormatter(formatter)
 
 logger_plik.addHandler(file_handler)
-logger_plik.setLevel(logging.INFO)
+logger_plik.setLevel(log.INFO)
 
 # logowanie na ekran
-logger_ekran = logging.getLogger('log_na_ekran')
+logger_ekran = log.getLogger('log_na_ekran')
 
-scr_handler = logging.StreamHandler()
+scr_handler = log.StreamHandler()
 scr_handler.setFormatter(formatter)
 
 logger_ekran.addHandler(scr_handler)

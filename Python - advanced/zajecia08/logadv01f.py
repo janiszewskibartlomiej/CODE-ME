@@ -1,20 +1,20 @@
-import logging
+import log
 
-logger = logging.getLogger('moj_logger')
+logger = log.getLogger('moj_logger')
 
-handler = logging.StreamHandler()
-formatter = logging.Formatter('%(asctime)s, %(levelname)s, %(message)s')
+handler = log.StreamHandler()
+formatter = log.Formatter('%(asctime)s, %(levelname)s, %(message)s')
 handler.setFormatter(formatter)
 
 logger.addHandler(handler)
 
-logger.setLevel(logging.INFO)
+logger.setLevel(log.INFO)
 
 logger.info('informacja')
 logger.warning('ostrzeżenie')
 logger.critical('JEST ŹLE')
 
-logger.setLevel(logging.ERROR)
+logger.setLevel(log.ERROR)
 
 input('Wciśnij enter...')  # Uwaga, komunikat może pojawić się w dziwnych miejscach
 

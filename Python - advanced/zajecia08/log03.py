@@ -1,7 +1,7 @@
-import logging
+import log
 
-logging.basicConfig(filename='przyklad.log', level=logging.DEBUG)
+log.basicConfig(filename='przyklad.log', level=log.DEBUG)
 
-logging.debug('Logujemy szczególiki')
-logging.info('Informuję, że to już drugi komunikat')
-logging.warning('Uwaga! Skrypt się kończy!')
+log.debug('Logujemy szczególiki')
+log.info('Informuję, że to już drugi komunikat')
+log.warning('Uwaga! Skrypt się kończy!')

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, session, redirect
-
+from log import logi
 from get_connection import polaczenie
 
 form_results = Blueprint('/wyniki', __name__)
@@ -7,9 +7,14 @@ form_results = Blueprint('/wyniki', __name__)
 
 @form_results.route('/wyniki', methods=['GET', 'POST'])
 def results():
+    lg = logi()
     if not session:
+        lg.warning('Brak sesji')
         return redirect('/login')
+
     if session['is_admin'] == False:
+        user = session['user']
+        lg.warning(f'Użytkowanik {user} próbował się dostać do bazy wyników')
         return redirect('ankieta')
 
     conn = polaczenie()
@@ -22,6 +27,7 @@ def results():
         c.execute(zapytanie1)
         lista_id_pytan = c.fetchall()
         # print(lista_id_pytan)
+        lg.info(f'Sprawdzenie listy id pytań z odpowiedziami: {lista_id_pytan}')
         return lista_id_pytan
 
     def odpowiedzi_na_pytanie(id_question):
@@ -31,6 +37,7 @@ def results():
         c.execute(zapytanie2, (id_question,))
         odpowiedzi = c.fetchall()
         # print(odpowiedzi)
+        lg.info(f'Pobranie odpowiedzi do pytania: {id_question}')
         return odpowiedzi
 
     def policz_odpowiedzi(odpowiedzi):
@@ -43,6 +50,7 @@ def results():
             pytanie = question
         wynik = {'id_question': id_question, 'pytanie': pytanie, 'odp_tak': odp_tak, 'odp_nie': odp_nie}
         # print(wynik)
+        lg.info(f'Policzenie odpowiedzi dla {wynik}')
         return wynik
 
     pogrupowana_lista_odpowiedzi = []
@@ -65,6 +73,7 @@ def results():
         na_nie = na_nie.replace('.', ',')
         tresc_pytania = i['pytanie']
         wynik = {'id_pytania': id_question, 'pytanie': tresc_pytania, 'na tak': na_tak, 'na nie:': na_nie}
+        lg.info(f'Dokonuję obliczeń procentowych: {wynik}')
         return wynik
 
     def spr_ilosci_wszystkich_pytan():
@@ -73,6 +82,7 @@ def results():
         """
         c.execute(zapytanie)
         lista_id = c.fetchall()
+        lg.info(f'Sprawdznie ilości wszystkich pytań: {lista_id}')
         return lista_id
 
     wyniki = []
@@ -92,6 +102,7 @@ def results():
                 if i[0] == element[0]:
                     lista_wszystkich_pytan.remove(element)
             # print('lista do dodania: ', lista_wszystkich_pytan)
+        lg.warning(f'Sprawdzenie pytań bez odpowiedzi: {lista_wszystkich_pytan}')
         return lista_wszystkich_pytan
 
     def dodanie_do_wyniku_pytan_bez_odp(lista_bez_odp):
@@ -101,11 +112,13 @@ def results():
             tresc_pytania = pytanie[1]
             wynik = {'id_pytania': id_pytania, 'pytanie': tresc_pytania, 'na tak': '0,00 %', 'na nie:': '0,00 %'}
             wyniki.append(wynik)
+            lg.warning(f'Dodanie do wyników pytania bez odpowiedzi: {wynik}')
 
     pytania = id_pytan_z_odp()
     sprawdzenie = spr_pytan_bez_odp(pytania)
     dodanie = dodanie_do_wyniku_pytan_bez_odp(sprawdzenie)
     print(wyniki)
+    lg.info(f'Wszytskie wyniki obliczeń: {wyniki}')
 
     context = {'wyniki': wyniki}
     return render_template('results.html', **context)

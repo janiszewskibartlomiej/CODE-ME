@@ -1,6 +1,6 @@
 import sqlite3
 from flask import Blueprint, session, request, render_template, redirect
-
+from log import logi
 from get_connection import polaczenie
 
 users_from = Blueprint('/ankieta', __name__)
@@ -8,6 +8,8 @@ users_from = Blueprint('/ankieta', __name__)
 
 @users_from.route('/ankieta', methods=['GET', 'POST'])
 def form():
+    lg = logi()
+    lg.warning('Brak sesji')
     if not session:
         return redirect('/login')
 
@@ -29,7 +31,7 @@ def form():
             slownik.update(dodaj_do_slownika)
         # print(slownik)
         context = {'pytania': slownik}
-
+        lg.info(f'Prezentuję formulrza z pytaniami: {slownik}')
         return render_template('form_for_user.html', **context)
 
     if request.method == 'POST':
@@ -39,6 +41,7 @@ def form():
         answers = dict(
             (key, request.form.getlist(key) if len(request.form.getlist(key)) > 1 else request.form.getlist(key)[0]) for
             key in request.form.keys())
+        lg.info(f'Przechwytywanie odpowiedzi formularza: {answers}')
         # print(answers)
 
         answers_dict = {}
@@ -56,6 +59,7 @@ def form():
             # l = l.strip()
             answers_dict[id] = odp
         # print(answers_dict)
+        lg.info(f'Tworzeni słownika z odpowiedziami: {answers_dict}')
 
         for k, volume in answers_dict.items():
             add_answers_to_data = """
@@ -70,12 +74,16 @@ def form():
             try:
                 c.execute(add_answers_to_data, (id_user, id_question, answer, is_answer))
                 conn.commit()
+                lg.info('Zapisanie odpowedzi do bazy danych')
             except sqlite3.OperationalError:
                 conn.close()
+                lg.warning('SQLite3 zwrócił błąd: OperationalError i nastąpiło przekierowanie do /ankieta')
                 return redirect('/ankieta')
 
             except sqlite3.IntegrityError:
+                lg.warning('SQLite3 zwrócił błąd: IntegrityError i nastąpiło przekierowanie do strony startowej')
                 redirect('/')
 
     session.clear()
+    lg.info('Nastąpiło wypełnineie ankiety oraz prawidłowy zapis w bazie danych')
     return render_template('thank_you.html')

@@ -1,6 +1,6 @@
-import logging
+import log
 
-logger = logging.getLogger('moj_logger')
+logger = log.getLogger('moj_logger')
 
 logger.info('informacja')
 logger.warning('ostrzeżenie')

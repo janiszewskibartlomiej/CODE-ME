@@ -1,6 +1,6 @@
 # Bartłomiej Janiszewski
 from wc_funkcje import ustaw_logger, wc, policz_wyrazy
-import logging
+import log
 import datetime
 import argparse
 
@@ -10,8 +10,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='Program like WC in linux', description='Prosty program do logów.')
     parser.add_argument('filename', help='Nazwa pliku który zostanie użyty do analizy')
 
-    parser.add_argument('-l', '--loglevel', choices=logging._nameToLevel, default='WARNING',
-                       help='Uruchomienia programu w trybie logging LEVEL')
+    parser.add_argument('-l', '--loglevel', choices=log._nameToLevel, default='WARNING',
+                        help='Uruchomienia programu w trybie logging LEVEL')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-ln', '--line', action='store_const', const='linie',
                        help='Uruchomienie programu w trybie liczenia linii')
@@ -47,4 +47,4 @@ if __name__ == '__main__':
     print(wynik)
 
     czas_wykonania = datetime.datetime.now() - start
-    logging.debug(f'czas wykonywania programu: {czas_wykonania}')
+    log.debug(f'czas wykonywania programu: {czas_wykonania}')

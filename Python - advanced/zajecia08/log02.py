@@ -1,9 +1,9 @@
-import logging
+import log
 
-logging.basicConfig(level=logging.DEBUG)  # basicConfig działa tylko przed pierwszym logowaniem
+log.basicConfig(level=log.DEBUG)  # basicConfig działa tylko przed pierwszym logowaniem
 
-logging.debug('Najbardziej szczegółowy poziom.')
-logging.info('Gdy aplikacja działa dobrze, informacyjnie.')
-logging.warning('Wszystko działa, ale użytkownik musi być powiadomiony o czymś niepokojącym.')
-logging.error('Program napotkał błąd uniemożliwiający poprawne działanie.')
-logging.critical('Najpoważniejszy błąd, często oznajmiający zakończenie działania programu.')
+log.debug('Najbardziej szczegółowy poziom.')
+log.info('Gdy aplikacja działa dobrze, informacyjnie.')
+log.warning('Wszystko działa, ale użytkownik musi być powiadomiony o czymś niepokojącym.')
+log.error('Program napotkał błąd uniemożliwiający poprawne działanie.')
+log.critical('Najpoważniejszy błąd, często oznajmiający zakończenie działania programu.')

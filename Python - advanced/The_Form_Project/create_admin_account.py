@@ -1,8 +1,9 @@
 import sqlite3
 from werkzeug.security import generate_password_hash
-
+from log import logi
 
 def create_admin():
+    lg = logi()
     conn = sqlite3.connect('questionDataBase.db')
     c = conn.cursor()
 
@@ -24,6 +25,7 @@ def create_admin():
     c.execute(zapytanie, (login, haslo_hash, admin))
     conn.commit()
     conn.close()
+    lg.debug(f'Stworzenie konta admina o loginie: {login} i haśle: {haslo_hash}')
     return
 
 

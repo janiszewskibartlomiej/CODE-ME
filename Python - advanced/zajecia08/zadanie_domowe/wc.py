@@ -1,6 +1,6 @@
 # Bartłomiej Janiszewski
 from wc_funkcje import ustaw_logger, wc
-import logging
+import log
 import datetime
 
 if __name__ == '__main__':
@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     nazwa_pliku = 'zen.txt'
     wybrany_szablon = 'pelny'
-    poziom_logowania = logging.DEBUG
+    poziom_logowania = log.DEBUG
 
     ustaw_logger(poziom_logowania)
     wynik = wc(nazwa_pliku, wybrany_szablon)
@@ -16,4 +16,4 @@ if __name__ == '__main__':
     print(wynik)
 
     czas_wykonania = datetime.datetime.now() - start
-    logging.debug(f'czas wykonywania programu: {czas_wykonania}')
+    log.debug(f'czas wykonywania programu: {czas_wykonania}')
