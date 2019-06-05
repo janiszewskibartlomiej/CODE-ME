@@ -29,7 +29,7 @@ def add():
         c = conn.cursor()
 
         question = request.form['question']
-        autor = session.get('user_id')
+        autor = session['user_id']
         user = session['user']
 
         # print(type(question))
