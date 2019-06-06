@@ -37,6 +37,10 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 <li>Uruchom plik app.py</li>
 </ol>
 
+<h3>Wideoprezentacja:</h3>
+
+<link>https://drive.google.com/file/d/1nu_cm0YdQcsIRkd0MiTHicBg5JA0hcEB/view</link>
+
 ----------
 
  NARZĘDZIA: 
