@@ -20,12 +20,12 @@
                 <h3 class="header">Lista pytań</h3>
             </th>
         </tr>
-        {% for klucz, wartosc in pytania.items() %}
+        {% for key, volume in questions.items() %}
 
         <tr>
-            <td class="questions_list">{{loop.index}}.  {{ wartosc }}</td>
+            <td class="questions_list">{{loop.index}}.  {{ volume }}</td>
 
-            <td ><a class="del" href="/usun?id={{ klucz }}" role="button"/> usuń</td>
+            <td ><a class="del" href="/usun?id={{ key }}" role="button"/> usuń</td>
 
 
         </tr>

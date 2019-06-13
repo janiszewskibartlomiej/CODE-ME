@@ -21,19 +21,19 @@
                 <h3 class="header">Wyniki ankiety</h3>
             </th>
         </tr>
-        {% for i in wyniki %}
+        {% for i in results %}
         <tr>
-            <td class="questions_list" style="font-size: 1.5vw;">{{loop.index}}. {{i['pytanie']}}
+            <td class="questions_list" style="font-size: 1.5vw;">{{loop.index}}. {{i['question']}}
                 <br>
                 <br>
                 <div class="two_button" style="margin: auto;">
                     <div>
-                        Na "Tak": <a class="green">{{i['na tak']}}</a>
+                        Na "Tak": <a class="green">{{i['answer_yes']}}</a>
                     </div>
                     <div class="no">
-                        Na "Nie": <a class="red">{{i['na nie:']}}</a>
+                        Na "Nie": <a class="red">{{i['answer_no']}}</a>
                     </div>
-                    {% if i['na tak']=='' and i['na nie:']=='' %}
+                    {% if i['answer_yes']=='' and i['answer_no']=='' %}
                     <a>Brak wyników dla tego pytania</a>
                     {%endif%}
                 </div>
