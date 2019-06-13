@@ -56,22 +56,23 @@ def przedmioty():
         return '{"message": "nowy przedmiot został utworzony"}', 201
 
 
-@api_bp.route('/usun', methods=['GET', 'POST'])
-def usun():
+@api_bp.route('/przedmioty/<id>', methods=['GET', 'POST'])
+def przedmiot_po_id(id):
     conn = get_connection()
     c = conn.cursor()
 
     if request.method == 'GET':
-        result = c.execute('SELECT * FROM plecak')
+        zapytanie = 'SELECT * FROM plecak WHERE id = ?;'
+        # id = request.args.get('id')
+        print(id)
+        print(type(id))
+        result = c.execute(zapytanie, (id,))
         przedmioty = result.fetchall()
-
+        print('z bazy danych: ', list(przedmioty))
         # przepakowanie z obiektów Row na słowniki
         przedmioty = [dict(p) for p in przedmioty]
-
-        suma = _policz_sume(przedmioty)
-
-        wynik = {'przedmioty': przedmioty,
-                 'suma': suma}
+        print('po dict: ', przedmioty)
+        wynik = {'przedmioty': przedmioty}
 
         return json.dumps(wynik)
 
@@ -92,5 +93,5 @@ def usun():
 
         c.execute(zapytanie, parametry)
         conn.commit()
-
-        return '{"message": "Przedmiot został usuniety"}', 302
+        conn.close()
+        return str({"message": "Przedmiot o numerze id: {} został usuniety".format(usun_id)}), 302

@@ -49,7 +49,7 @@ def usun():
         print('id ze strony przekazane postem:', id)
         payload = {'id': id}
 
-        r_del = requests.post(f'http://{request.host}/api/usun', json=payload)
+        r_del = requests.post(f'http://{request.host}/api/przedmioty/{id}', json=payload)
 
         print('zapytanie:', r_del)
 
