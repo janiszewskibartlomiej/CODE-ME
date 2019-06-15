@@ -121,3 +121,27 @@ def add_to_results_questions_without_answer(list_without_answers=verify_question
     log.warning(f'Dodanie do wyników pytania bez odpowiedzi: {result_no_answer}')
     # print(results)
     return results
+
+
+def prepare_data_with_every_answers():
+    id_question_which_answer()
+
+    group_by_list_of_answers = []
+    for id in id_question_which_answer():
+        id = id[0]
+        answers = answers_of_question(id)
+        result = count_answers(answers)
+        group_by_list_of_answers.append(result)
+
+    results = []
+    for i in group_by_list_of_answers:
+        result = percentage_share(i)
+        results.append(result)
+
+    verify_questions_without_answer()
+
+    no_answers_results = add_to_results_questions_without_answer()
+    for element in no_answers_results:
+        results.append(element)
+    # print('add: ', results)
+    return results

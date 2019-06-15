@@ -1,6 +1,5 @@
 import json
-
-import requests
+from definitions_of_results import prepare_data_with_every_answers
 from flask import Blueprint, request, session, redirect
 from get_connection import connect
 
@@ -49,11 +48,12 @@ def questions():
 def login():
     if request.method == 'GET':
 
-        results_with_json = requests.head(f'http://{request.host}/wyniki')
-        print('wynik api: ', results_with_json)
-        list_of_results = json.loads(results_with_json)
+        results = prepare_data_with_every_answers()
+        list_of_json = json.dumps(results)
+
+        print('wynik api: ', list_of_json)
 
         if session:
             if session['is_admin'] == True:
-                return list_of_results
+                return list_of_json
         return redirect('/login')
