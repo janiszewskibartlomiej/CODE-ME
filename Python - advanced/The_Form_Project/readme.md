@@ -2,7 +2,7 @@
 
 <h3>Cel:</h3> 
 
-Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
+Zbieranie wyników wypełnionych formularzy, poddanie ich analizie i wyświetlenie wyników.
 
 <h3>Opis działania:</h3>
 
@@ -54,4 +54,4 @@ Zbieranie wyników wypełnionych formularzy w celu ich analizy lub oceny.
 ----------
 
  NARZĘDZIA: 
-<h3>Python 3.7, SQLite3, SQL, Flask, Jinja2, HTML5, CSS, HTTP, Git.</h3>
+<h3>Python 3.7, SQLite3, SQL, Flask, Jinja2, HTML5, CSS3, HTTP, Git.</h3>
