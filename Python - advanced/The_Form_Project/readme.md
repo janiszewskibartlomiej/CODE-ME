@@ -34,7 +34,7 @@ Zbieranie wyników wypełnionych formularzy, poddanie ich analizie i wyświetlen
 <ol>
 <li>Uruchom plik data_init.py</li>
 <li>W celu utworzenia dodatkowych kont "Admin" uruchom plik create_Admin_account.py</li>
-<li>W pliku session_k.txt wpisz dowolny ciąg znaków</li>
+<li>W pliku secret_k.txt wpisz dowolny ciąg znaków</li>
 <li>Uruchom plik app.py</li>
 </ol>
 
