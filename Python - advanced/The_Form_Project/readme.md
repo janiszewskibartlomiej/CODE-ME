@@ -41,7 +41,7 @@ Zbieranie wyników wypełnionych formularzy, poddanie ich analizie i wyświetlen
 <h3>API {"json"}:</h3>
 <h5> Dostępne tylko dla zalogowanych użytkowników z uprawnieniami 'Admin'</h5>
 <ul>
-<li>"/api/uzytkownicy"  - zestawienie wszystkich dostępnych użytkowników.</li>
+<li>"/api/wyniki"  - zestawienie wszystkich wyników.</li>
 <li>"/api/pytania"  - zestawienie pytań wykożystywanych obecnie do ankiety.</li>
 <li>"/api/odpowiedzi"  - zestawienie wszystkich odpowiedzi z przeprowadzonych ankiet.</li>
 
