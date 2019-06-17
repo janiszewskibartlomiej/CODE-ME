@@ -93,7 +93,7 @@ def verify_questions_without_answer(list_of_answers=id_question_which_answer(),
                                     list_of_every_questions=verify_number_of_every_questions()):
     log = add_log()
     log.warning('sprawdzenie pytań bez odpowiedzi')
-
+    # print('bez odp', list_of_answers)
     for i in list_of_answers:
         # print(i)
         # print(list_of_answers)
@@ -101,11 +101,11 @@ def verify_questions_without_answer(list_of_answers=id_question_which_answer(),
             # print(element)
             if i[0] == element[0]:
                 list_of_every_questions.remove(element)
-    # print('lista do dodania: ', list_of_every_questions)
+    # print('sprawdzanie pytań bez odpowiedzi: ', list_of_every_questions)
 
     return list_of_every_questions
 
-
+results=[]
 def add_to_results_questions_without_answer(list_without_answers=verify_questions_without_answer()):
     log = add_log()
     for question in list_without_answers:
