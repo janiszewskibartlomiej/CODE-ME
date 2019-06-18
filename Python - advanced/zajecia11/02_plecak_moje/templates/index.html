@@ -1,0 +1,44 @@
+<h1>Plecak</h1>
+
+<h2>zawartość:</h2>
+<table>
+    <tr>
+        <th>id</th>
+        <th>nazwa</th>
+        <th>rodzaj</th>
+        <th>ilość</th>
+        <th>waga (w kg)</th>
+    </tr>
+    {% for p in przedmioty %}
+    <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.nazwa }}</td>
+        <td>{{ p.rodzaj }}</td>
+        <td>{{ p.ilosc }}</td>
+        {% if p.waga != None%}
+        <td>{{p.waga}}kg</td>
+        {%else%}
+        <td>-</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+<br>
+
+<h3>Waga wszytskich przedmiotów: {{ suma }}</h3>
+
+<style>
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    h3 {
+    color: red;}
+
+</style>
