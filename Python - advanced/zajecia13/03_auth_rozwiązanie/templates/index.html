@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<div class="container">
+    {{ username }} [<a href="/logout">wyloguj</a>]
+    <hr>
+
+    <h1>Przedmioty :</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            {% if is_admin %}
+            <th scope="col">Właściciel</th>
+            {% endif %}
+            <th scope="col">Nazwa</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for przedmiot in przedmioty %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            {% if is_admin %}
+            <td>{{ przedmiot.user_id }}</td>
+            {% endif %}
+            <td>{{ przedmiot.nazwa }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
