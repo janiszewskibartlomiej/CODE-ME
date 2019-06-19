@@ -93,7 +93,7 @@ def verify_questions_without_answer(list_of_answers=id_question_whith_answer(),
                                     list_of_every_questions=verify_number_of_every_questions()):
     log = add_log()
     log.warning('sprawdzenie pytań bez odpowiedzi')
-    # print('bez odp', list_of_answers)
+
     for i in list_of_answers:
         # print(i)
         # print(list_of_answers)
@@ -101,11 +101,14 @@ def verify_questions_without_answer(list_of_answers=id_question_whith_answer(),
             # print(element)
             if i[0] == element[0]:
                 list_of_every_questions.remove(element)
-    # print('sprawdzanie pytań bez odpowiedzi: ', list_of_every_questions)
+    # print('lista do dodania: ', list_of_every_questions)
 
     return list_of_every_questions
 
-results=[]
+
+results = []
+
+
 def add_to_results_questions_without_answer(list_without_answers=verify_questions_without_answer()):
     log = add_log()
     for question in list_without_answers:
@@ -115,7 +118,7 @@ def add_to_results_questions_without_answer(list_without_answers=verify_question
                             'answer_no': '0,00 %'}
         results.append(result_no_answer)
 
-    log.warning(f'Dodanie do wyników pytania bez odpowiedzi: {result_no_answer}')
+        log.warning(f'Dodanie do wyników pytania bez odpowiedzi: {result_no_answer}')
     # print(results)
     return results
 
@@ -130,15 +133,15 @@ def prepare_data_with_every_answers():
         result = count_answers(answers)
         group_by_list_of_answers.append(result)
 
-    results = []
+    results_in_prep = []
     for i in group_by_list_of_answers:
         result = percentage_share(i)
-        results.append(result)
+        results_in_prep.append(result)
 
     verify_questions_without_answer()
 
     no_answers_results = add_to_results_questions_without_answer()
     for element in no_answers_results:
-        results.append(element)
+        results_in_prep.append(element)
     # print('add: ', results)
-    return results
+    return results_in_prep
