@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Results of the form</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image/png" sizes="150x150" href="static/mstile-150x150.png">
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+<div class="list">
+    <table>
+        <tr>
+            <th>
+
+                <h3 class="header">Wyniki ankiety</h3>
+            </th>
+        </tr>
+        {% for i in results %}
+        <tr>
+            <td class="questions_list" style="font-size: 1.5vw;">{{loop.index}}. {{i['question']}}
+                <br>
+                <br>
+                <div class="two_button" style="margin: auto;">
+                    <div>
+                        Na "Tak": <a class="green">{{i['answer_yes']}}</a>
+                    </div>
+                    <div class="no">
+                        Na "Nie": <a class="red">{{i['answer_no']}}</a>
+                    </div>
+                    <br>
+                </div>
+               <section class="results_zero">
+                    <br>
+                    <div>
+                        {% if i['answer_yes']=='0,00 %' and i['answer_no']=='0,00 %'%}
+                        <p>Żaden użytkownik nie odpowiedział na to pytanie</p>
+                        {%endif%}
+                    </div>
+                </section>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class="three_button">
+
+    <div class="logout_results">
+        <a href="/logout" style="color: #dc3b3b;">Log out</a>
+    </div>
+
+</div>
+</body>
+
+</html>
+
+
