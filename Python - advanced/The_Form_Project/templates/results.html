@@ -33,10 +33,15 @@
                     <div class="no">
                         Na "Nie": <a class="red">{{i['answer_no']}}</a>
                     </div>
-                    {% if i['answer_yes']=='' and i['answer_no']=='' %}
-                    <a>Brak wyników dla tego pytania</a>
-                    {%endif%}
                 </div>
+                 <section class="results_zero">
+                    <br>
+                    <div>
+                        {% if i['answer_yes']=='0,00 %' and i['answer_no']=='0,00 %'%}
+                        <p>Żaden użytkownik nie odpowiedział na to pytanie</p>
+                        {%endif%}
+                    </div>
+                </section>
             </td>
         </tr>
         {% endfor %}
