@@ -25,6 +25,7 @@ Zbieranie wyników wypełnionych formularzy, poddanie ich analizie i wyświetlen
 <ul>
 <li>Dodano konta z nowymi uprawnieniami - przeglądanie tylko samych wyników ankiety.</li>
 <li>Dodano prezentację wyników w postaci diagramu słubkowego.</li>
+<li>Dodanie informacji ilu użytkowników odpowiedziało na poszególne pytanie</li>
 </ul>
 
 <h4>Lista alertów:<h4>
