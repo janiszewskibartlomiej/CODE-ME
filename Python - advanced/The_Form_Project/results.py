@@ -30,6 +30,7 @@ def results():
 
         elif session['is_admin'] == True:
             every_results = prepare_data_with_every_answers()
+            print('wszystkie odp: ', every_results)
             context = {'results': every_results}
             log.info(f'Wszytskie results obliczeń: {every_results}')
             print(session)
